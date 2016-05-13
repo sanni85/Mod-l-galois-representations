@@ -11,7 +11,7 @@ Each line in a data file will contain a single comma-separated list (enclosed in
 * **primes_dividing_conductor_with_exponents** (list of lists of ints): [[p,e]: p prime dividing conductor, e exponent]
 * **weight** (integer): "weight" of the representation, integer modulo ell - 1 determined by the determinant of the rep
 * **absirred_boolean** (int): 0 or 1 depending on whether the rep is absolutely irreducible
-* **"type"** (string): "lin" = linear, "orth" = orthogonal, or "sym" = symplectic 
+* **"type"** (string): "lin" = linear, "orth" = orthogonal, or "symp" = symplectic 
 * **"image_type"** (string): "big" = contains SL_n; rest is TBD
 * **"image_label"** (string): if known, label of group cf. Sutherland; if not "". 
 * **"image_attribute"** (string): "solvable" or TBD
