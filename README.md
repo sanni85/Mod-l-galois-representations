@@ -20,6 +20,7 @@ Each line in a data file will contain a single comma-separated list (enclosed in
 * **"projective_type"** (string): "A5" or similar
 * **"projective_label"** (string): if known
 * **bad_prime_list** (list of various attributes): [[int(p), "polynomial", "type", int(order), int(proj_order)] for p dividing conductor]
+  * type = "irred", "decomp", "semistable", etc. 
 * **good_prime_list** (list of various attributes): [[int(p), ["tr1", "tr2", ...], "factored_char_poly", int(order), int(proj_order) for p prime < 100 not dividing N*ell]
 * **"poly_ker"** (string): polynomial carving out the number field fixed by the kernel of rep
 * **"poly_proj_ker"** (string): same, but for the projective rep
