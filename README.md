@@ -54,6 +54,6 @@ for primes p< 100 (we will decide later about number fields) **unramified** (inc
          
 * **poly_ker** (list of lists of strings): if this list has length one, it contains the list of coefficients of an irreducible polynomial whose splitting field is isomorphic to the splitting field of the representation. If the length is greater than 1, it contains lists of coefficients of irreducible polynomials whose common splitting field is isomorphic to the splitting field of the representation;
 * **poly_proj_ker** (list of lists of strings): same, but for the projective representation;
-* **[related_objects]** (list of pairs of strings): each pair is of the form ["object_type", "object_label"] for objects related to representation, e.g. ["Dirichlet character", "label_of"]. This is a list containing a finite number of samples.
+* **related_objects** (list of pairs of strings): each pair is of the form ["object_type", "object_label"] for objects related to representation, e.g. ["Dirichlet character", "label_of"]. This is a list containing a finite number of samples.
 
 We insist that all strings be enclosed in straight double quotes, "like so"; unknown strings should look like "".
