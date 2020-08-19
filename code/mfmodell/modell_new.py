@@ -48,6 +48,8 @@ def Hecke_field_primes(fpol, ell, degree=None, verbose=False):
 def make_an_decoder(nf):
     """Given a newform nf, return a function which converts vectors of
     coefficients (in QQ) to elements of the Hecke field of nf.
+
+    Not currently used.
     """
     K = nf.hecke_field
     if K==QQ:
