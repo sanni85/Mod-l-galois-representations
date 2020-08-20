@@ -8,7 +8,9 @@
 # database.
 #
 
-from sage.all import ZZ, QQ, GF, PolynomialRing, NumberField, primes_first_n, Matrix, FiniteDimensionalAlgebra
+from sage.all import ZZ, QQ, GF, PolynomialRing, NumberField, primes, prime_pi, primes_first_n, Matrix, FiniteDimensionalAlgebra
+from sage.databases.cremona import class_to_int
+from mf_compare import read_dtp
 from lmfdb import db
 from lmfdb.classical_modular_forms.web_newform import WebNewform
 import logging
@@ -158,25 +160,19 @@ def make_reductions(nf, ell, verbose=False):
     if verbose:
         print("Making reduction mod ell={}".format(ell))
     if K==QQ:
-        # if verbose:
-        #     print("K=QQ, easy")
+        nf.betas = [[1]] # for consistency, not actually used
         Fl = GF(ell)
-        return [lambda elt: Fl(QQ(elt))]
+        return [Fl(1)]
     
-    assert nf.hecke_ring_cyclotomic_generator==0
-
-    if not nf.hecke_ring_numerators:#nf.hecke_ring_power_basis:
-        a = K.gen()
-        betas = [a**i for i in range(K.degree())]
-        # if verbose:
-        #     print("power basis case, Z-basis {}".format(betas))
-    else: # generic
-        # if verbose:
-        #     print("Hecke ring numerators: {}".format(nf.hecke_ring_numerators))
-        #     print("Hecke ring denominators: {}".format(nf.hecke_ring_denominators))
-        betas = [K(c)/d for c,d in zip(nf.hecke_ring_numerators, nf.hecke_ring_denominators)]
-        # if verbose:
-        #     print("non-power basis case, Z-basis {}".format(betas))
+    try:
+        betas = nf.betas # we'll have them already if the data came from a file
+    except AttributeError:
+        if not nf.hecke_ring_numerators:#nf.hecke_ring_power_basis:
+            a = K.gen()
+            betas = [a**i for i in range(K.degree())]
+        else: # generic
+            betas = [K(c)/d for c,d in zip(nf.hecke_ring_numerators, nf.hecke_ring_denominators)]
+        nf.betas = betas
     return reduction_maps(betas, ell, verbose)
 
 def apply_red(coeffs, red):
@@ -237,6 +233,7 @@ def reduce_chi_mod_ell(nf, red):
     """
     if nf.char_order==1:
         return []
+
     return [[a,apply_red(coeffs, red)] for a, coeffs in nf.hecke_ring_character_values]
 
 ########################################################################
@@ -277,11 +274,23 @@ def get_forms(N, k, ell, verbose=False):
     if verbose:
         print("After char order check, forms with (N,k,ell)=({},{},{}): {}".format(N,k,ell,[(f.label,f.dim) for f in forms]))
 
-    # identify forms with no Hecke field:
-    
-    forms_with_no_field = [(f.label,f.dim,ell) for f in forms if f.field_poly==None]
+    # for forms with no Hecke field, try to read from a data file
 
-    # Now exclude these:
+    forms_with_no_field = [f for f in forms if f.field_poly is None]
+
+    if forms_with_no_field:
+        if verbose:
+            print("Before reading data files, {} forms have no Hecke field data".format(len(forms_with_no_field)))
+
+        for f in forms:
+            if f.field_poly is None:
+                f = get_form_data_from_file(f)
+
+        forms_with_no_field = [(f.label,f.dim,ell) for f in forms if f.field_poly is None]
+        if verbose:
+            print("After reading data files, {} forms have no Hecke field data".format(len(forms_with_no_field)))
+
+    # Now exclude any forms which still have no Hecke data:
 
     forms = [f for f in forms if f.field_poly]
     
@@ -297,16 +306,17 @@ def get_forms(N, k, ell, verbose=False):
         if verbose:
             print("finished making reductions for {} mod {}".format(f.label, ell))
 
-        # get extra ap from the second table:
-        anap = heckes.lucky({'label':f.label}, projection=['ap','an'])
-        f.an = anap['an']
-        f.ap = anap['ap']
+        try:
+            assert f.an
+        except AttributeError:
+            # get extra ap from the second table:
+            anap = heckes.lucky({'label':f.label}, projection=['ap','an'])
+            f.an = anap['an']
+            f.ap = anap['ap']
 
-        if verbose:
-            nap = len(f.ap)
-            print("Found {} ap and {} an in the second table".format(nap,len(f.an)))
-            # for p,ap in zip(primes_first_n(nap),f.ap):
-            #     print("p={}, ap={}".format(p,ap))
+            if verbose:
+                nap = len(f.ap)
+                print("Found {} ap and {} an in the second table".format(nap,len(f.an)))
         
     # Exclude forms with no mod-ell reductions:
         
@@ -318,6 +328,83 @@ def get_forms(N, k, ell, verbose=False):
 
     return forms, forms_with_no_field
 
+########################################################################
+#
+# Function to get a single form from a data file output by the Magma
+# OneSpace function in bigspaces.m, which just calls NewspaceData and
+# outputs to a file.
+#
+# The filename is expected to be a space label N.k.c or a newform
+# label N.k.c.i.  In either case it contains data for all newforms in
+# the space N.k.c and we use i (converted to an integer) to know which
+# newform we want from that space.
+#
+########################################################################
+
+DATA_DIR="/scratch/home/jcremona/Mod-l-galois-representations/data/mfmodell"
+
+def get_form_data_from_file(nf, data_dir=DATA_DIR):
+    """Fill in data for an incomplete WebNewform object by reading from a
+    data file.  If a suitable file does not exist, the original
+    WebNewform object is returned unchanged, with a message output.
+    """
+    if not nf.field_poly is None:
+        return nf
+    fname = label = nf.label
+    try:
+        data = read_dtp(DATA_DIR+"/"+fname, verbose=False)
+    except FileNotFoundError:
+        fname = fname[:fname.rindex(".")]
+        try:
+            data = read_dtp(DATA_DIR+"/"+fname, verbose=False)
+        except FileNotFoundError:
+            print("No file {} or {} found: no data available".format(DATA_DIR+"/"+fname,label))
+            return nf
+    # Now we have data.  It is a dict with a single key (N,k,o) where
+    # o is the character orbit number and value so we just extract the
+    # single value for this key, which is another dict:
+
+    data = list(data.values())[0]
+
+    # This dict has keys ['dims', 'traces', 'ALs', 'polys',
+    # 'eigdata'], and each value is a list, one per newform, so we
+    # need to extract just one item from the relevant lists, according
+    # to the newform we want.  This is determined by the 4th (last)
+    # part of the label we have, which we need to convert to an
+    # integer (from 0).
+
+    # NB eigdata is a list of dicts (see later comment for details)
+    # but *only* for components of dimension>1
+    
+    nf_index = class_to_int(label.split(".")[3])
+    dims = data['dims']
+    nf_eigdata_index = nf_index - dims.count(1)
+    if False: # debug
+        print("Newform label = {}".format(label))
+        print("nf_index = {}".format(nf_index))
+        print("len(polys) = {}".format(len(data['polys'])))
+        print("len(dims) = {}".format(len(dims)))
+        print("#dims>1 = {}".format(len(dims)-dims.count(1)))
+        print("len(eigdata) = {}".format(len(data['eigdata'])))
+        print("nf_eigdata_index = {}".format(nf_eigdata_index))
+    dim = data['dims'][nf_index]
+    assert dim == nf.dim
+    nf.field_poly = data['polys'][nf_index]
+
+    eigdata = data['eigdata'][nf_eigdata_index]
+
+    # eigdata is a dict with keys  ['poly', 'basis', 'n', 'm', 'ans', 'char']
+    chi_gens, chi_vals = eigdata['char']
+    nf.hecke_ring_character_values = zip(chi_gens, chi_vals)
+    # we will not ned to access the char_order since this space has
+    # already been selected to have an appropriate character.
+
+    Qx = PolynomialRing(QQ,'x')
+    nf.hecke_field = K = NumberField(Qx(nf.field_poly), 'a_')
+    nf.betas = [K(b) for b in eigdata['basis']]
+    nf.an = eigdata['ans']
+    nf.ap = [nf.an[p] for p in primes(prime_pi(len(nf.an)))]
+    
 ########################################################################
 #
 # Some utility functions
@@ -494,6 +581,5 @@ awk -F ":" '$8==1{print $8;}' mod_5_100.txt | wc -l
 
 To see the largest multiplicities:
 awk -F ":" '$8>1{print $8;}' mod_2_100.txt | sort -n | uniq | tail
-
 
 """

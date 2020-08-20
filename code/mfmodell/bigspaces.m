@@ -19,12 +19,22 @@ procedure OneSpace(label: Coeffs:=100)
   print "...done";
 end procedure;
 
-procedure DoAll(fname)
+procedure DoAll(fname :  spaces_done := [])
   s:=Read(fname);
   for dat in Split(s) do
       lab,dim := Explode(Split(dat," "));
       print lab, " has dimension ", dim; 
-  OneSpace(lab : Coeffs:=1000);
+      N,k,c,i := Explode(Split(lab,"."));
+      chi_label := &cat [N, ".", c];
+      chi := DirichletCharacter(chi_label);
+      space := [chi_label,k];
+      if space in spaces_done then
+        print "Skipping ",lab," as space ",space, " done already";
+      else
+	OneSpace(lab : Coeffs:=1000);
+      end if;
   end for;
 end procedure;
-  
+
+sp_done := [["37.d", "5"],  ["51.b", "5"],  ["53.b", "6"], ["56.g", "5"], ["89.b", "4"], ["89.a", "6"], ["91.c", "4"], ["97.b", "4"],
+			 ["97.a", "6"] , ["91.e", "4"], ["92.c", "3"] ];
