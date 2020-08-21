@@ -342,8 +342,9 @@ def get_forms(N, k, ell, verbose=False):
 ########################################################################
 
 DATA_DIR="/scratch/home/jcremona/Mod-l-galois-representations/data/mfmodell"
+NF_DIR="/scratch/home/jcremona/Mod-l-galois-representations/data/mfmodell/0"
 
-def get_form_data_from_file(nf, data_dir=DATA_DIR):
+def get_form_data_from_file(nf, data_dir=NF_DIR):
     """Fill in data for an incomplete WebNewform object by reading from a
     data file.  If a suitable file does not exist, the original
     WebNewform object is returned unchanged, with a message output.
@@ -352,11 +353,11 @@ def get_form_data_from_file(nf, data_dir=DATA_DIR):
         return nf
     fname = label = nf.label
     try:
-        data = read_dtp(DATA_DIR+"/"+fname, verbose=False)
+        data = read_dtp(data_dir+"/"+fname, verbose=False)
     except FileNotFoundError:
         fname = fname[:fname.rindex(".")]
         try:
-            data = read_dtp(DATA_DIR+"/"+fname, verbose=False)
+            data = read_dtp(data_dir+"/"+fname, verbose=False)
         except FileNotFoundError:
             print("No file {} or {} found: no data available".format(DATA_DIR+"/"+fname,label))
             return nf
@@ -530,8 +531,8 @@ def run(levels, ells=[2,3,5], verbose=True):
     nfx = dict([(ell,[]) for ell in ells])
 
     for ell in ells:
-        for k in range(2,1+max(ell+1,4)):
-            for N in levels:
+        for N in levels:
+            for k in range(2,1+max(ell+1,4)):
                 if verbose:
                     print("(ell,k,N) = ({},{},{})".format(ell,k,N))
                 ff, ff_no_field = get_forms(N,k,ell, verbose=verbose)
