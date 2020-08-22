@@ -284,7 +284,9 @@ def get_forms(N, k, ell, verbose=False):
 
         for f in forms:
             if f.field_poly is None:
-                f = get_form_data_from_file(f)
+                if verbose:
+                    print("looking for a data file for form {}".format(f.label))
+                f = get_form_data_from_file(f, verbose=verbose)
 
         forms_with_no_field = [(f.label,f.dim,ell) for f in forms if f.field_poly is None]
         if verbose:
@@ -344,7 +346,7 @@ def get_forms(N, k, ell, verbose=False):
 DATA_DIR="/scratch/home/jcremona/Mod-l-galois-representations/data/mfmodell"
 NF_DIR="/scratch/home/jcremona/Mod-l-galois-representations/data/mfmodell/0"
 
-def get_form_data_from_file(nf, data_dir=NF_DIR):
+def get_form_data_from_file(nf, data_dir=NF_DIR, verbose=False):
     """Fill in data for an incomplete WebNewform object by reading from a
     data file.  If a suitable file does not exist, the original
     WebNewform object is returned unchanged, with a message output.
@@ -359,8 +361,12 @@ def get_form_data_from_file(nf, data_dir=NF_DIR):
         try:
             data = read_dtp(data_dir+"/"+fname, verbose=False)
         except FileNotFoundError:
-            print("No file {} or {} found: no data available".format(DATA_DIR+"/"+fname,label))
+            print("No file {} or {} found: no data available".format(data_dir+"/"+fname,label))
             return nf
+
+    if verbose:
+        print("Successfully read data for {} from file".format(label))
+        
     # Now we have data.  It is a dict with a single key (N,k,o) where
     # o is the character orbit number and value so we just extract the
     # single value for this key, which is another dict:
@@ -380,7 +386,7 @@ def get_form_data_from_file(nf, data_dir=NF_DIR):
     nf_index = class_to_int(label.split(".")[3])
     dims = data['dims']
     nf_eigdata_index = nf_index - dims.count(1)
-    if False: # debug
+    if verbose: # debug
         print("Newform label = {}".format(label))
         print("nf_index = {}".format(nf_index))
         print("len(polys) = {}".format(len(data['polys'])))
@@ -396,16 +402,22 @@ def get_form_data_from_file(nf, data_dir=NF_DIR):
 
     # eigdata is a dict with keys  ['poly', 'basis', 'n', 'm', 'ans', 'char']
     chi_gens, chi_vals = eigdata['char']
-    nf.hecke_ring_character_values = zip(chi_gens, chi_vals)
-    # we will not ned to access the char_order since this space has
+    nf.hecke_ring_character_values = list(zip(chi_gens, chi_vals))
+    # we will not need to access the char_order since this space has
     # already been selected to have an appropriate character.
 
+    if verbose:
+        print("hecke_ring_character_values = {}".format(nf.hecke_ring_character_values))
+    
     Qx = PolynomialRing(QQ,'x')
     nf.hecke_field = K = NumberField(Qx(nf.field_poly), 'a_')
     nf.betas = [K(b) for b in eigdata['basis']]
     nf.an = eigdata['ans']
-    nf.ap = [nf.an[p] for p in primes(prime_pi(len(nf.an)))]
-    
+    nf.ap = [nf.an[p] for p in primes(len(nf.an))]
+    if verbose: # debug
+        print("We have {} a_n and {} a_p for newforms {}".format(len(nf.an), len(nf.ap), label))
+    return nf
+
 ########################################################################
 #
 # Some utility functions

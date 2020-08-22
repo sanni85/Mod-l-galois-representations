@@ -1,5 +1,7 @@
-procedure OneSpace(label: Coeffs:=100)
-// e.g. label := "89.4.b.a";
+load "mf.m";
+
+procedure OneSpace(label: Coeffs:=100, Detail:=0)
+// e.g. label := "89.4.b.a" or "89.4.b"
   t := Split(label,".");
   if #t eq 4 then
     N,k,c,i := Explode(t);
@@ -12,14 +14,15 @@ procedure OneSpace(label: Coeffs:=100)
   s := NewspaceData(chi, weight, 0:
 		    ComputeEigenvalues:=true,
 		    NumberOfCoefficients:=Coeffs,
-		    ReturnDecomposition:=true);
+		    ReturnDecomposition:=true,
+		    Detail:=Detail);
   SetColumns(0);
   print "...done, outputting to ", label;
   PrintFile(label,s: Overwrite:=true);
   print "...done";
 end procedure;
 
-procedure DoAll(fname :  spaces_done := [])
+procedure DoAll(fname :  spaces_done := [], Detail:=0)
   s:=Read(fname);
   for dat in Split(s) do
       lab,dim := Explode(Split(dat," "));
@@ -31,7 +34,7 @@ procedure DoAll(fname :  spaces_done := [])
       if space in spaces_done then
         print "Skipping ",lab," as space ",space, " done already";
       else
-	OneSpace(lab : Coeffs:=1000);
+	OneSpace(lab : Coeffs:=1000, Detail:=Detail);
       end if;
   end for;
 end procedure;
