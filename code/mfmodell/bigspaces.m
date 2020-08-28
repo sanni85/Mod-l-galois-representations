@@ -1,13 +1,15 @@
 load "mf.m";
 
-procedure OneSpace(label: Coeffs:=100, Detail:=0)
+procedure OneSpace(label: Coeffs:=100, DegreeBound:=0, Detail:=0)
 // e.g. label := "89.4.b.a" or "89.4.b"
   t := Split(label,".");
   if #t eq 4 then
     N,k,c,i := Explode(t);
+    space_label := &cat [N, ".", k, ".", c];
   else
     N,k,c := Explode(t);
-  end if;
+    space_label := label;
+end if;
   chi := DirichletCharacter(&cat [N, ".", c]);
   weight := StringToInteger(k);
   print "Computing space at level ",N,"; character ",chi,"; weight ",weight;
@@ -15,17 +17,20 @@ procedure OneSpace(label: Coeffs:=100, Detail:=0)
 		    ComputeEigenvalues:=true,
 		    NumberOfCoefficients:=Coeffs,
 		    ReturnDecomposition:=true,
+		    DegreeBound:= DegreeBound,
 		    Detail:=Detail);
   SetColumns(0);
+  print "--------------------------------------------";
   print "...done, outputting to ", label;
-  PrintFile(label,s: Overwrite:=true);
+  PrintFile(space_label,s: Overwrite:=true);
   print "...done";
 end procedure;
 
-procedure DoAll(fname :  spaces_done := [], Detail:=0)
+procedure DoAll(fname :  spaces_done := [], DegreeBound:=0, Detail:=0)
   s:=Read(fname);
   for dat in Split(s) do
       lab,dim := Explode(Split(dat," "));
+      print "############################################";
       print lab, " has dimension ", dim; 
       N,k,c,i := Explode(Split(lab,"."));
       chi_label := &cat [N, ".", c];
@@ -34,10 +39,8 @@ procedure DoAll(fname :  spaces_done := [], Detail:=0)
       if space in spaces_done then
         print "Skipping ",lab," as space ",space, " done already";
       else
-	OneSpace(lab : Coeffs:=1000, Detail:=Detail);
-      end if;
+	OneSpace(lab : Coeffs:=1000,  DegreeBound:= DegreeBound, Detail:=Detail);
+        Append(~spaces_done,space);
+        end if;
   end for;
 end procedure;
-
-sp_done := [["37.d", "5"],  ["51.b", "5"],  ["53.b", "6"], ["56.g", "5"], ["89.b", "4"], ["89.a", "6"], ["91.c", "4"], ["97.b", "4"],
-			 ["97.a", "6"] , ["91.e", "4"], ["92.c", "3"] ];

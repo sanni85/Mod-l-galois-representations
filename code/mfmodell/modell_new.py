@@ -244,7 +244,7 @@ def reduce_chi_mod_ell(nf, red):
 #
 ########################################################################
 
-def get_forms(N, k, ell, verbose=False):
+def get_forms(N, k, ell, max_dim=50, verbose=False):
     """
     Input: N (level), k (weight), ell (prime); and a verbosity flag
 
@@ -280,13 +280,13 @@ def get_forms(N, k, ell, verbose=False):
 
     if forms_with_no_field:
         if verbose:
-            print("Before reading data files, {} forms have no Hecke field data".format(len(forms_with_no_field)))
+            print("Before reading data files, {} forms have no Hecke field data: {}".format(len(forms_with_no_field), [f.label for f in forms_with_no_field]))
 
         for f in forms:
-            if f.field_poly is None:
+            if f.field_poly is None and f.dim <= max_dim:
                 if verbose:
                     print("looking for a data file for form {}".format(f.label))
-                f = get_form_data_from_file(f, verbose=verbose)
+                f = get_form_data_from_file(f, max_dim=max_dim, verbose=verbose)
 
         forms_with_no_field = [(f.label,f.dim,ell) for f in forms if f.field_poly is None]
         if verbose:
@@ -346,10 +346,15 @@ def get_forms(N, k, ell, verbose=False):
 DATA_DIR="/scratch/home/jcremona/Mod-l-galois-representations/data/mfmodell"
 NF_DIR="/scratch/home/jcremona/Mod-l-galois-representations/data/mfmodell/0"
 
-def get_form_data_from_file(nf, data_dir=NF_DIR, verbose=False):
+def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
     """Fill in data for an incomplete WebNewform object by reading from a
     data file.  If a suitable file does not exist, the original
     WebNewform object is returned unchanged, with a message output.
+
+    The data files only contain the extra data for dimensions less
+    than some bound.  If the newform's dimension is greater then we do
+    nothing.
+
     """
     if not nf.field_poly is None:
         return nf
@@ -365,7 +370,7 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, verbose=False):
             return nf
 
     if verbose:
-        print("Successfully read data for {} from file".format(label))
+        print("Successfully read data for {} from file {}".format(label, fname))
         
     # Now we have data.  It is a dict with a single key (N,k,o) where
     # o is the character orbit number and value so we just extract the
@@ -491,7 +496,8 @@ def data_output(nf_list, filename, mode='w', nap=None):
     for nf in nf_list:
         o.write(nf_to_string(nf, nap) + "\n")
     o.close()
-    print("{} forms output to {}".format(len(nf_list),filename))
+    nuniq = len([nf['label'] for nf in nf_list if nf['index']==1])
+    print("{} forms (with {} unique reductions) output to {}".format(len(nf_list),nuniq,filename))
 
 def extra_output(nf_list, filename, mode='w'):
     """Output a list of basic newform info to the given file.
@@ -504,7 +510,10 @@ def extra_output(nf_list, filename, mode='w'):
     o = open(filename, mode=mode)
     for nf in nf_list:
         # each is a tuple (label, dim, ell)
-        o.write("{}:{}:{}\n".format(nf[0],nf[1],nf[2]))
+        lab = nf[0]
+        space = lab[:lab.rfind(".")]
+        id = lab[1+lab.rfind("."):]
+        o.write("{}:{}:{}:{}\n".format(space, id, nf[1], nf[2]))
     o.close()
     print("{} unprocessed forms output to {}".format(len(nf_list),filename))
 
@@ -522,7 +531,7 @@ def extra_output(nf_list, filename, mode='w'):
 #
 ########################################################################
     
-def run(levels, ells=[2,3,5], verbose=True):
+def run(levels, ells=[2,3,5], max_dim=50, verbose=True):
     """
     Input:
 
@@ -545,9 +554,9 @@ def run(levels, ells=[2,3,5], verbose=True):
     for ell in ells:
         for N in levels:
             for k in range(2,1+max(ell+1,4)):
-                if verbose:
+                if True:#verbose:
                     print("(ell,k,N) = ({},{},{})".format(ell,k,N))
-                ff, ff_no_field = get_forms(N,k,ell, verbose=verbose)
+                ff, ff_no_field = get_forms(N,k,ell, max_dim=max_dim, verbose=verbose)
                 if ff_no_field:
                     if verbose:
                         print("No Hecke field exists for {}".format(ff_no_field))
@@ -572,8 +581,11 @@ def run(levels, ells=[2,3,5], verbose=True):
 
         print("{} mod {} newforms found, with {} distinct".format(len(nf[ell]), ell, nnf[ell]))
         if nfx[ell]:
-            for f in nfx[ell]:
-                print("Unable to reduce {} mod {} (dimension={})".format(f[0],f[2],f[1]))
+            if verbose:
+                for f in nfx[ell]:
+                    print("Unable to reduce {} mod {} (dimension={})".format(f[0],f[2],f[1]))
+            else:
+                print("Unable to reduce {} newforms mod {}".format(len(nfx[ell]), ell))
     return nf, nfx
 
 def compare_new_old(new_f, old_f):
