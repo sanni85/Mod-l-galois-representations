@@ -8,7 +8,7 @@
 # database.
 #
 
-from sage.all import ZZ, QQ, GF, PolynomialRing, NumberField, primes, prime_pi, primes_first_n, Matrix, FiniteDimensionalAlgebra
+from sage.all import ZZ, QQ, GF, PolynomialRing, NumberField, primes, primes_first_n, Matrix, FiniteDimensionalAlgebra
 from sage.databases.cremona import class_to_int
 from mf_compare import read_dtp
 from lmfdb import db
@@ -115,6 +115,8 @@ def reduction_maps(betas, ell, verbose=False):
     #print("A = {}".format(A))
     MM = A.maximal_ideals()
     d = len(betas)
+    # dd = [M.basis_matrix().transpose().nullity() for M in MM]
+    # print("Algebra over GF({}) of dimension {}  has {} maximal ideals of residue degrees {}".format(ell,len(betas),len(MM), dd))
     vv = [list(M.basis_matrix().right_kernel().basis()[0])
           for M in MM  if M.basis_matrix().rank()==d-1]
 
@@ -359,14 +361,16 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
     if not nf.field_poly is None:
         return nf
     fname = label = nf.label
+    datafile = "/".join([data_dir, fname])
     try:
-        data = read_dtp(data_dir+"/"+fname, verbose=False)
+        data = read_dtp(datafile, verbose=False)
     except FileNotFoundError:
         fname = fname[:fname.rindex(".")]
+        datafile = "/".join([data_dir, fname])
         try:
-            data = read_dtp(data_dir+"/"+fname, verbose=False)
+            data = read_dtp(datafile, verbose=False)
         except FileNotFoundError:
-            print("No file {} or {} found: no data available".format(data_dir+"/"+fname,label))
+            print("No file {} or {} found: no data available".format(datafile,label))
             return nf
 
     if verbose:
@@ -418,7 +422,8 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
     nf.hecke_field = K = NumberField(Qx(nf.field_poly), 'a_')
     nf.betas = [K(b) for b in eigdata['basis']]
     nf.an = eigdata['ans']
-    nf.ap = [nf.an[p] for p in primes(len(nf.an))]
+    nf.ap = [nf.an[p-1] for p in primes(len(nf.an))]
+
     if verbose: # debug
         print("We have {} a_n and {} a_p for newforms {}".format(len(nf.an), len(nf.ap), label))
     return nf
@@ -430,12 +435,11 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
 ########################################################################
 
 def nf_mod_ell(nf, red):
-    """
-    Input: a newforms and a mod-ell reduction
+    """Input: a newform and one mod-ell reduction.
 
-    Output: a newform-mod-elll dictionary (used for output) with
-    entries for the label, level, weight, dimension, reduced ap's and
-    reduced character values.
+    Output: a newform-mod-ell dict (used for output) with entries for
+    the label, level, weight, dimension, reduced ap's and reduced
+    character values.
 
     """
     return {'label': nf.label,
