@@ -1,0 +1,1515 @@
+5.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+7.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+7.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+8.3.d.a mod 3:  reducible
+8.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 4*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+10.4.a.a mod 3:  reducible
+11.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 + x^6 - 2*x^5 - x^4 - 2*x^3 + x^2 - x + 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + x - 1; determinant field discriminant -3
+11.3.b.a mod 3:  reducible
+13.2.e.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - x^2 - x + 1) * (x^4 - x^3 + 2*x^2 - 2*x + 1);
+           projective image V4, splitting field polynomial (x^2 - 13) * (x^2 + 3); determinant field discriminant -39
+13.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 5*x - 3; determinant field discriminant -3
+14.2.a.a mod 3:  reducible
+14.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 5*x^6 - 2*x^5 - 2*x^4 + 20*x^3 - 20*x^2 + 28*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+16.3.c.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 - 2*x + 1) * (x^4 - 2*x^3 + 6*x^2 - 8*x + 4);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 3); determinant field discriminant -4
+16.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 4*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+17.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 4*x^2 - 4*x + 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 9*x - 3; determinant field discriminant -3
+17.4.a.a mod 3:  reducible
+19.2.a.a mod 3:  reducible
+19.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 6*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 3*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 57) * (x^2 + 3); determinant field discriminant -19
+19.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 34*x^2 + 25*x - 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 + 8*x - 5; determinant field discriminant -3
+19.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 11*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 11*x - 3; determinant field discriminant -3
+20.2.a.a mod 3:  reducible
+20.3.d.a mod 3:  reducible
+20.3.d.b mod 3:  reducible
+22.3.b.a mod 3:  reducible
+22.3.b.a mod 3:  reducible
+22.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 8*x^2 - 8*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 8*x + 2; determinant field discriminant -3
+22.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 + 12*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 33*x + 84; determinant field discriminant -3
+22.4.a.c mod 3:  reducible
+23.3.b.a mod 3:  reducible
+23.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 90*x^2 + 81*x - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 + 6*x + 75; determinant field discriminant -3
+25.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+25.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 + 22*x^2 - 16*x + 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+26.2.a.a mod 3:  reducible
+26.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 2*x^2 - 4*x - 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 - 4*x - 2; determinant field discriminant -3
+26.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 20*x^2 - 11*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 11*x - 4; determinant field discriminant -3
+28.2.e.a mod 3:  reducible
+28.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 5*x^6 - 2*x^5 - 2*x^4 + 20*x^3 - 20*x^2 + 28*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+29.2.b.a mod 3:  reducible
+29.2.b.a mod 3:  reducible
+31.3.b.a mod 3:  reducible
+31.3.b.a mod 3:  reducible
+31.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 15*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 93) * (x^2 + 3); determinant field discriminant -31
+32.2.a.a mod 3:  linear image Nn, splitting field polynomial x^8 + 6*x^4 - 3;
+           projective image D4, splitting field polynomial x^4 - 2*x^3 - 2*x + 1; determinant field discriminant -3
+32.3.d.a mod 3:  reducible
+32.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 40*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+32.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 40*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+34.2.a.a mod 3:  reducible
+34.2.b.a mod 3:  reducible
+34.2.b.a mod 3:  reducible
+34.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 22*x^4 - 37*x^3 + 30*x^2 - 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 18*x^2 - 30*x - 12; determinant field discriminant -3
+34.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 - 92*x^2 + 80*x - 32;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 10*x - 12; determinant field discriminant -3
+34.4.a.c mod 3:  reducible
+35.2.a.a mod 3:  reducible
+35.3.c.a mod 3:  reducible
+35.3.c.b mod 3:  reducible
+35.3.d.a mod 3:  reducible
+35.3.d.a mod 3:  reducible
+35.3.h.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+35.3.h.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+35.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 13*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 13*x - 3; determinant field discriminant -3
+37.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 3*x^6 + 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 + 3*x^2 - 7*x + 1; determinant field discriminant -3
+37.2.a.b mod 3:  reducible
+37.2.h.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 8*x^2 + 18*x - 9) * (x^4 - x^3 - 2*x^2 + 3);
+           projective image V4, splitting field polynomial (x^2 - 37) * (x^2 + 3); determinant field discriminant -111
+38.2.a.a mod 3:  reducible
+38.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 10*x^2 + 4*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 + 4*x - 4; determinant field discriminant -3
+38.2.c.b mod 3:  reducible
+38.3.b.a mod 3:  reducible
+38.3.b.a mod 3:  reducible
+38.3.f.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 6*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 3*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 57) * (x^2 + 3); determinant field discriminant -19
+38.3.f.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 6*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 3*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 57) * (x^2 + 3); determinant field discriminant -19
+38.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 + 34*x^2 - 28*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 - 28*x + 4; determinant field discriminant -3
+40.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 12*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 12*x - 3; determinant field discriminant -3
+40.3.e.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 12*x + 3) * (x^4 + 6*x^2 + 24);
+           projective image V4, splitting field polynomial (x^2 - 6) * (x^2 + 15); determinant field discriminant -40
+40.3.e.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 - 3*x^2 - 2*x + 1) * (x^4 + 6*x^3 + 9*x^2 + 60*x + 240);
+           projective image V4, splitting field polynomial (x^2 - 6) * (x^2 + 15); determinant field discriminant -40
+40.3.g.a mod 3:  reducible
+40.3.g.a mod 3:  reducible
+40.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 4*x^6 - 2*x^5 - 4*x^4 - 2*x^3 + 4*x^2 - 4*x + 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x - 3; determinant field discriminant -3
+40.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 28*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 28*x + 59; determinant field discriminant -3
+41.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 2*x^6 - x^5 + 2*x^4 + x^3 - 5*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 2*x - 1; determinant field discriminant -123
+41.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 6*x^5 - 3*x^4 + 9*x^3 - x^2 - 5*x - 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 2*x - 1; determinant field discriminant -123
+41.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 17*x^6 - 37*x^5 + 52*x^4 - 47*x^3 + 22*x^2 - 4*x - 16;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 44*x - 16; determinant field discriminant -3
+41.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 9*x - 9;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 + 9*x - 9; determinant field discriminant -3
+43.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 - 3*x^6 + 23*x^5 + x^4 - 45*x^3 + 4*x^2 + 23*x - 9;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + 9*x - 3; determinant field discriminant -3
+43.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^3 + 59*x - 29) * (x^4 - 7*x^3 + 27*x^2 - 46*x + 28);
+           projective image V4, splitting field polynomial (x^2 - 129) * (x^2 + 3); determinant field discriminant -43
+43.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 32*x^2 - 32*x + 8;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 65*x - 48; determinant field discriminant -3
+44.2.a.a mod 3:  reducible
+44.3.b.a mod 3:  reducible
+44.3.b.a mod 3:  reducible
+44.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 + 12*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 33*x + 84; determinant field discriminant -3
+44.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 8*x^2 - 8*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 8*x + 2; determinant field discriminant -3
+46.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 2*x^6 + 2*x^5 - 17*x^4 - x^3 - 26*x^2 + 20*x - 8;
+           projective image S4, splitting field polynomial x^4 - x^3 + 3*x^2 + 5*x - 2; determinant field discriminant -3
+46.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + x^4 + 5*x^3 + 16*x^2 - 19*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 19*x + 4; determinant field discriminant -3
+46.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 28*x^4 - 49*x^3 + 88*x^2 - 64*x - 32;
+           projective image S4, splitting field polynomial x^4 - 36*x^2 - 114*x - 108; determinant field discriminant -3
+46.4.a.d mod 3:  reducible
+47.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 + 2*x^2 - 8*x - 1;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 41*x - 27; determinant field discriminant -3
+47.3.b.a mod 3:  reducible
+47.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 44*x^2 - 35*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 35*x + 2; determinant field discriminant -3
+47.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 + 147*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 + 12*x - 3; determinant field discriminant -3
+47.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 + 6*x^2 - 15*x - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 - 15*x - 3; determinant field discriminant -3
+49.2.a.a mod 3:  linear image Nn, splitting field polynomial x^8 - 2*x^7 + x^6 - 5*x^5 + 7*x^4 - 2*x^3 + x^2 - 5*x + 1;
+           projective image D4, splitting field polynomial x^4 - x^3 - 3*x^2 - x + 1; determinant field discriminant -3
+49.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+49.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 2*x^6 - x^5 - 10*x^4 - 23*x^3 + 22*x^2 + 7*x - 13;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+49.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+50.2.a.a mod 3:  reducible
+50.2.a.b mod 3:  reducible
+50.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 + 13*x^5 + 4*x^4 - 23*x^3 + 30*x^2 + 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+50.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 - 38*x^2 + 44*x - 14;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+52.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 2*x^2 - 4*x - 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 - 4*x - 2; determinant field discriminant -3
+52.2.e.b mod 3:  reducible
+52.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 + 3*x^2 - 18*x - 18) * (x^4 + 9*x^2 + 108);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 39); determinant field discriminant -52
+52.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^2 - 6*x - 3) * (x^4 - 3*x^2 + 12);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 39); determinant field discriminant -52
+52.3.c.a mod 3:  reducible
+52.3.c.a mod 3:  reducible
+52.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 20*x^2 - 11*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 11*x - 4; determinant field discriminant -3
+53.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 14*x^2 + 8*x - 5;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 + 8*x - 5; determinant field discriminant -3
+53.4.a.a mod 3:  reducible
+55.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 3*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 3*x - 3; determinant field discriminant -3
+55.2.b.a mod 3:  reducible
+55.2.b.a mod 3:  reducible
+55.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 5*x^2 - 3*x - 1) * (x^4 - x^3 - 2*x^2 + 8*x + 9);
+           projective image V4, splitting field polynomial (x^2 - 5) * (x^2 + 11); determinant field discriminant -55
+55.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 5*x^2 - 3*x - 1) * (x^4 - x^3 - 2*x^2 + 8*x + 9);
+           projective image V4, splitting field polynomial (x^2 - 5) * (x^2 + 11); determinant field discriminant -55
+55.4.a.d mod 3:  reducible
+56.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 2*x^6 - 2*x^5 + 4*x^4 + 22*x^3 + 10*x^2 - 26*x - 17;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 6*x - 3; determinant field discriminant -3
+56.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 4*x^6 - 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 6*x + 18; determinant field discriminant -3
+56.2.b.a mod 3:  reducible
+56.2.b.a mod 3:  reducible
+56.3.h.a mod 3:  reducible
+56.3.h.a mod 3:  reducible
+56.3.k.a mod 3:  reducible
+56.3.k.b mod 3:  reducible
+56.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 20*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 20*x - 3; determinant field discriminant -3
+58.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 7*x^4 - 7*x^3 - 26*x^2 + 29*x - 8;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 6*x^2 + 4*x - 5; determinant field discriminant -3
+58.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - 20*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 20*x - 3; determinant field discriminant -3
+58.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 9*x^6 - 21*x^5 + 93*x^4 + 81*x^3 - 123*x^2 - 759*x + 1026;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 12*x - 24; determinant field discriminant -3
+58.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 22*x^2 + 13*x - 10;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 13*x - 10; determinant field discriminant -3
+58.4.a.d mod 3:  reducible
+58.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 - 52*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 52*x - 48; determinant field discriminant -3
+59.3.b.a mod 3:  reducible
+61.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^6 + 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 - 3; determinant field discriminant -3
+61.2.f.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^2 - 3) * (x^4 + 13*x^2 + 61);
+           projective image V4, splitting field polynomial (x^2 - 61) * (x^2 + 3); determinant field discriminant -183
+62.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 8*x^6 + 8*x^5 + 4*x^4 - 16*x^3 - 20*x^2 - 4*x - 8;
+           projective image S4, splitting field polynomial x^4 - x^3 + 8*x - 2; determinant field discriminant -3
+62.2.a.b mod 3:  reducible
+62.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 3*x^6 - 2*x^5 + 10*x^4 + 24*x^3 - 68*x^2 + 148*x - 156;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 + 36*x - 36; determinant field discriminant -3
+62.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 6*x^2 - 3*x - 6;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 - 3*x - 6; determinant field discriminant -3
+62.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 - 20*x^2 + 8*x - 14;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 + 8*x - 14; determinant field discriminant -3
+64.2.a.a mod 3:  linear image Nn, splitting field polynomial x^8 - 6*x^4 - 3;
+           projective image D4, splitting field polynomial x^4 - 2*x^3 - 2*x + 1; determinant field discriminant -3
+64.3.c.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 27) * (x^4 + 6*x^2 + 12);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 3); determinant field discriminant -4
+64.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 16*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+64.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 10*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+64.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 10*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+64.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 16*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+65.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - x - 3; determinant field discriminant -3
+65.2.a.c mod 3:  reducible
+65.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+65.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 73*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 48*x^2 + 2*x + 685; determinant field discriminant -3
+67.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^6 - 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 - 3; determinant field discriminant -3
+67.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 9*x^2 - 22*x + 28) * (x^4 + 36*x^3 + 534*x^2 + 3780*x - 1839);
+           projective image V4, splitting field polynomial (x^2 - 201) * (x^2 + 3); determinant field discriminant -67
+67.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 30*x^4 + 91*x^2 - 75;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 - 28*x - 5; determinant field discriminant -3
+68.2.b.a mod 3:  reducible
+68.2.b.a mod 3:  reducible
+68.3.d.a mod 3:  reducible
+68.3.d.a mod 3:  reducible
+68.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 22*x^4 - 37*x^3 + 30*x^2 - 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 18*x^2 - 30*x - 12; determinant field discriminant -3
+68.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 - 92*x^2 + 80*x - 32;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 10*x - 12; determinant field discriminant -3
+70.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 - 6*x^6 + 18*x^5 + 12*x^4 - 24*x^3 - 12*x - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 29*x - 14; determinant field discriminant -3
+70.2.e.b mod 3:  reducible
+70.2.e.c mod 3:  reducible
+70.2.e.d mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + x^6 - 6*x^5 - 3*x^4 - 216*x^3 + 65*x^2 - 520*x + 320;
+           projective image S4, splitting field polynomial x^4 - x^3 - 45*x^2 + 105*x + 120; determinant field discriminant -3
+70.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 56*x^2 - 56*x + 14;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 34*x - 48; determinant field discriminant -3
+70.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 + 76*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 + 105*x^2 + 65*x + 10; determinant field discriminant -3
+71.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 12*x^4 - 21*x^2 - 12;
+           projective image S4, splitting field polynomial x^4 - 12*x^2 - 21*x - 12; determinant field discriminant -3
+71.3.b.b mod 3:  reducible
+71.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 - 33*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 33*x - 27; determinant field discriminant -3
+71.4.a.b mod 3:  reducible
+73.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 + 3*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 3*x - 3; determinant field discriminant -3
+73.2.a.c mod 3:  reducible
+73.2.i.a mod 3:  linear image Ns, splitting field polynomial (x^4 + 23*x^2 + 6*x + 31) * (x^4 + 34*x^2 - 3);
+           projective image V4, splitting field polynomial (x^2 - 73) * (x^2 + 3); determinant field discriminant -219
+73.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 82*x^4 - 157*x^3 + 262*x^2 - 184*x - 461;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 + x - 7; determinant field discriminant -3
+73.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + x^6 - 11*x^5 + 51*x^4 - 80*x^3 + 61*x^2 - 30*x + 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x + 3; determinant field discriminant -219
+73.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 2*x^6 - 6*x^5 + 30*x^3 + 67*x^2 + 53*x + 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x + 3; determinant field discriminant -219
+74.2.a.a mod 3:  reducible
+74.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + 4*x^6 + 7*x^5 - 6*x^4 + 7*x^3 + 4*x^2 - 3*x + 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 11*x + 2; determinant field discriminant -3
+74.2.c.c mod 3:  reducible
+74.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + 2*x^6 - 43*x^5 + 90*x^4 + 109*x^3 + 436*x^2 + 633*x - 1057;
+           projective image S4, splitting field polynomial x^4 - x^3 - 27*x^2 + 93*x - 84; determinant field discriminant -3
+74.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 22*x^4 - 37*x^3 - 34*x^2 + 52*x - 40;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 84*x - 27; determinant field discriminant -3
+76.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 10*x^2 + 4*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 + 4*x - 4; determinant field discriminant -3
+76.3.c.a mod 3:  reducible
+76.3.c.a mod 3:  reducible
+76.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 + 34*x^2 - 28*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 - 28*x + 4; determinant field discriminant -3
+77.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 - 57*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 28*x + 64; determinant field discriminant -3
+77.2.a.b mod 3:  reducible
+77.2.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 + x^6 - 2*x^5 - x^4 - 2*x^3 + x^2 - x + 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + x - 1; determinant field discriminant -3
+77.2.b.b mod 3:  reducible
+77.2.b.b mod 3:  reducible
+77.2.b.b mod 3:  reducible
+77.2.b.b mod 3:  reducible
+77.3.h.b mod 3:  reducible
+77.3.h.b mod 3:  reducible
+77.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 41*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 41*x - 3; determinant field discriminant -3
+77.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 10*x^2 + x - 7;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + x - 7; determinant field discriminant -3
+79.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^6 - 15*x^4 + 141*x^2 - 243;
+           projective image S4, splitting field polynomial x^4 - 30*x^2 - 89*x - 75; determinant field discriminant -3
+79.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 18*x^2 + 98*x + 361) * (x^4 - x^3 + 6*x^2 - 22*x + 19);
+           projective image V4, splitting field polynomial (x^2 - 237) * (x^2 + 3); determinant field discriminant -79
+79.3.b.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 6*x^6 - 12*x^4 + 9*x^3 - 2*x^2 - 13*x + 3;
+           projective image S4, splitting field polynomial x^4 - 3*x^2 - 5*x + 9; determinant field discriminant -79
+79.3.b.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 6*x^6 - 12*x^4 + 9*x^3 - 2*x^2 - 13*x + 3;
+           projective image S4, splitting field polynomial x^4 - 3*x^2 - 5*x + 9; determinant field discriminant -79
+80.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 12*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 12*x - 3; determinant field discriminant -3
+80.2.a.b mod 3:  reducible
+80.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 28*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 28*x + 59; determinant field discriminant -3
+80.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 36*x^4 + 132*x^2 - 108;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x - 3; determinant field discriminant -3
+80.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 7*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+82.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 19*x^4 - 31*x^3 + 42*x^2 - 27*x - 12;
+           projective image S4, splitting field polynomial x^4 - 12*x^2 - 26*x - 12; determinant field discriminant -3
+82.2.b.a mod 3:  reducible
+82.2.b.a mod 3:  reducible
+82.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 - 4*x^2 + 13*x - 10;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 + 13*x - 10; determinant field discriminant -3
+82.4.a.b mod 3:  reducible
+82.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 - 100*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 - 45*x^2 + 51*x + 372; determinant field discriminant -3
+82.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 17*x^6 - 37*x^5 + 52*x^4 - 47*x^3 + 22*x^2 - 4*x - 16;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 44*x - 16; determinant field discriminant -3
+82.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 17*x^6 - 37*x^5 + 52*x^4 - 47*x^3 + 22*x^2 - 4*x - 16;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 44*x - 16; determinant field discriminant -3
+83.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 7*x^6 + 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 + 28*x - 19; determinant field discriminant -3
+83.3.b.a mod 3:  reducible
+83.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 + 232*x^2 - 244*x + 49;
+           projective image S4, splitting field polynomial x^4 - 42*x^2 - 149*x - 147; determinant field discriminant -3
+85.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 + 19*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 30*x^2 + 34*x + 299; determinant field discriminant -3
+85.2.a.c mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 10*x^6 + 9*x^4 - 228*x^2 - 768;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 89*x - 48; determinant field discriminant -3
+85.4.a.c mod 3:  reducible
+86.2.a.a mod 3:  reducible
+86.3.b.a mod 3:  reducible
+86.3.b.a mod 3:  reducible
+86.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^3 + 59*x - 29) * (x^4 - 7*x^3 + 27*x^2 - 46*x + 28);
+           projective image V4, splitting field polynomial (x^2 - 129) * (x^2 + 3); determinant field discriminant -43
+86.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^3 + 59*x - 29) * (x^4 - 7*x^3 + 27*x^2 - 46*x + 28);
+           projective image V4, splitting field polynomial (x^2 - 129) * (x^2 + 3); determinant field discriminant -43
+86.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 10*x^6 + 20*x^5 + 20*x^4 - 140*x^3 + 628*x^2 - 296*x - 640;
+           projective image S4, splitting field polynomial x^4 - 60*x^2 - 254*x - 300; determinant field discriminant -3
+86.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 32*x^2 - 32*x + 8;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 65*x - 48; determinant field discriminant -3
+86.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^6 - 36*x^4 - 108;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 2*x - 12; determinant field discriminant -3
+86.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 32*x^2 - 32*x + 8;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 65*x - 48; determinant field discriminant -3
+86.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 - 13*x^6 + 53*x^5 + 34*x^4 - 161*x^3 + 184*x^2 - 94*x - 154;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 18*x^2 - 22*x - 16; determinant field discriminant -3
+86.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 126*x^2 + 117*x - 36;
+           projective image S4, splitting field polynomial x^4 - 3*x^3 - 33*x^2 + 67*x + 246; determinant field discriminant -3
+88.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 8*x^6 - 14*x^5 - 14*x^4 - 14*x^3 - 14*x^2 - 8*x - 2;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 6*x^2 - 2*x - 2; determinant field discriminant -3
+88.2.g.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 6*x^3 + 2*x^2 - 12*x + 136) * (x^4 - 6*x^3 + 19*x^2 - 54*x + 73);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 2); determinant field discriminant -264
+88.2.g.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 - 9*x^2 + 26*x - 32) * (x^4 - 4*x^3 + 14*x^2 + 44*x + 73);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 2); determinant field discriminant -264
+88.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 45*x^2 - 82*x + 16) * (x^4 - 4*x^3 + 60*x^2 - 184*x + 151);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 6); determinant field discriminant -88
+88.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 6*x^2 - 24) * (x^4 - 12*x + 15);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 6); determinant field discriminant -88
+88.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 4*x^6 - 6*x^5 + 24*x^4 - 42*x^3 + 42*x^2 - 24*x + 6;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 14*x - 3; determinant field discriminant -3
+88.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 12*x^4 - 4*x^2 - 12;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 2*x + 150; determinant field discriminant -3
+88.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 184*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 48*x^2 - 34*x + 6; determinant field discriminant -3
+89.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 5*x - 3; determinant field discriminant -3
+89.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 5*x - 3; determinant field discriminant -3
+89.4.a.c mod 3:  reducible
+89.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 44*x^4 + 95*x^3 - 272*x^2 + 224*x - 248;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 17*x - 12; determinant field discriminant -3
+91.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 3*x^6 - 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 17*x - 11; determinant field discriminant -3
+91.2.a.b mod 3:  reducible
+91.2.k.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - x^2 - x + 1) * (x^4 - x^3 + 2*x^2 - 2*x + 1);
+           projective image V4, splitting field polynomial (x^2 - 13) * (x^2 + 3); determinant field discriminant -39
+91.2.r.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - x^2 - x + 1) * (x^4 - x^3 + 2*x^2 - 2*x + 1);
+           projective image V4, splitting field polynomial (x^2 - 13) * (x^2 + 3); determinant field discriminant -39
+91.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 - 48*x^2 + 49*x - 14) * (x^4 - 2*x^3 - 15*x^2 - 32*x + 307);
+           projective image V4, splitting field polynomial (x^2 - 273) * (x^2 + 3); determinant field discriminant -91
+91.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 15*x^2 - 28*x + 28) * (x^4 - 4*x^3 + 21*x^2 - 34*x + 4);
+           projective image V4, splitting field polynomial (x^2 - 273) * (x^2 + 3); determinant field discriminant -91
+91.3.m.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+91.3.v.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+91.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+91.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 5*x - 3; determinant field discriminant -3
+92.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 2*x^6 + 2*x^5 - 17*x^4 - x^3 - 26*x^2 + 20*x - 8;
+           projective image S4, splitting field polynomial x^4 - x^3 + 3*x^2 + 5*x - 2; determinant field discriminant -3
+92.2.a.b mod 3:  reducible
+92.2.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 + 5*x^2 - 12*x + 4) * (x^4 + 13*x^2 + 48);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 23); determinant field discriminant -276
+92.2.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 + 3*x^2 - 38*x + 37) * (x^4 - 2*x^3 + 9*x^2 - 54*x + 108);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 23); determinant field discriminant -276
+92.3.c.a mod 3:  reducible
+92.3.c.a mod 3:  reducible
+92.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + x^4 + 5*x^3 + 16*x^2 - 19*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 19*x + 4; determinant field discriminant -3
+92.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 28*x^4 - 49*x^3 + 88*x^2 - 64*x - 32;
+           projective image S4, splitting field polynomial x^4 - 36*x^2 - 114*x - 108; determinant field discriminant -3
+94.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 9*x^6 + 36*x^4 - 108;
+           projective image S4, splitting field polynomial x^4 - 12*x^2 - 18*x - 12; determinant field discriminant -3
+94.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 44*x^2 - 35*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 35*x + 2; determinant field discriminant -3
+94.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 53*x^4 + 113*x^3 + 178*x^2 - 235*x - 212;
+           projective image S4, splitting field polynomial x^4 - 72*x^2 - 330*x - 432; determinant field discriminant -3
+94.4.a.d mod 3:  reducible
+94.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 44*x^2 - 35*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 35*x + 2; determinant field discriminant -3
+95.2.a.b mod 3:  reducible
+95.2.b.b mod 3:  reducible
+95.2.b.b mod 3:  reducible
+95.2.e.c mod 3:  reducible
+95.3.d.b mod 3:  reducible
+95.3.d.b mod 3:  reducible
+95.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 71*x^4 + 149*x^3 + 220*x^2 - 295*x - 395;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 48*x - 15; determinant field discriminant -3
+95.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 34*x^2 + 25*x - 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 + 8*x - 5; determinant field discriminant -3
+95.4.a.g mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+95.4.a.g mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 34*x^2 + 25*x - 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 + 8*x - 5; determinant field discriminant -3
+97.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 3*x^6 - 5*x^5 - 7*x^4 - 6*x^3 - 11*x^2 - 4*x - 9;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + 3*x + 3; determinant field discriminant -291
+97.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 3*x^6 - x^5 + 11*x^4 - 8*x^2 - 2*x + 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + 3*x + 3; determinant field discriminant -291
+97.2.e.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 + 8*x^2 + 26*x + 79) * (x^4 - 2*x^3 + 30*x^2 - 29*x - 8);
+           projective image V4, splitting field polynomial (x^2 - 97) * (x^2 + 3); determinant field discriminant -291
+97.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 23*x^4 + 53*x^3 - 124*x^2 + 97*x - 85;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 + 44*x - 23; determinant field discriminant -3
+97.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 89*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 89*x - 3; determinant field discriminant -3
+97.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 35*x^4 + 77*x^3 - 164*x^2 + 125*x - 158;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 19*x - 12; determinant field discriminant -3
+97.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 50*x^4 + 107*x^3 + 74*x^2 - 128*x - 211;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 51*x - 27; determinant field discriminant -3
+97.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + 9*x^6 - 45*x^5 + 93*x^4 - 117*x^3 + 202*x^2 - 264*x + 159;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 3*x - 3; determinant field discriminant -291
+97.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 8*x^6 + 47*x^5 - 116*x^4 + 176*x^3 - 166*x^2 + 91*x - 31;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 3*x - 3; determinant field discriminant -291
+98.2.a.a mod 3:  reducible
+98.2.c.b mod 3:  reducible
+98.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 14*x^4 + 35*x^3 - 126*x^2 + 108*x - 54;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+98.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 5*x^6 - 2*x^5 - 2*x^4 + 20*x^3 - 20*x^2 + 28*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+98.4.a.h mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 - 38*x^5 - 29*x^4 - 38*x^3 + 65*x^2 + 26*x + 8;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 14*x - 12; determinant field discriminant -3
+98.4.a.h mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 + 25*x^5 - 29*x^4 - 101*x^3 + 156*x^2 - 51*x - 6;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 14*x - 12; determinant field discriminant -3
+100.2.a.a mod 3:  reducible
+100.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 6*x^2 - 4*x - 59) * (x^4 - 4*x^3 + 6*x^2 - 4*x + 16);
+           projective image V4, splitting field polynomial (x^2 - 15) * (x^2 + 15); determinant field discriminant -4
+100.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 22*x^3 + 144*x^2 - 88*x + 16) * (x^4 - 15*x^2 + 30*x - 15);
+           projective image V4, splitting field polynomial (x^2 - 15) * (x^2 + 15); determinant field discriminant -4
+100.4.a.c mod 3:  reducible
+100.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 - 38*x^2 + 44*x - 14;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+100.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 + 13*x^5 + 4*x^4 - 23*x^3 + 30*x^2 + 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+5.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+7.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+7.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+8.3.d.a mod 3:  reducible
+8.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 4*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+10.4.a.a mod 3:  reducible
+11.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 + x^6 - 2*x^5 - x^4 - 2*x^3 + x^2 - x + 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + x - 1; determinant field discriminant -3
+11.3.b.a mod 3:  reducible
+13.2.e.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - x^2 - x + 1) * (x^4 - x^3 + 2*x^2 - 2*x + 1);
+           projective image V4, splitting field polynomial (x^2 - 13) * (x^2 + 3); determinant field discriminant -39
+13.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 5*x - 3; determinant field discriminant -3
+14.2.a.a mod 3:  reducible
+14.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 5*x^6 - 2*x^5 - 2*x^4 + 20*x^3 - 20*x^2 + 28*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+16.3.c.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 - 2*x + 1) * (x^4 - 2*x^3 + 6*x^2 - 8*x + 4);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 3); determinant field discriminant -4
+16.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 4*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+17.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 4*x^2 - 4*x + 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 9*x - 3; determinant field discriminant -3
+17.4.a.a mod 3:  reducible
+19.2.a.a mod 3:  reducible
+19.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 6*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 3*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 57) * (x^2 + 3); determinant field discriminant -19
+19.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 34*x^2 + 25*x - 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 + 8*x - 5; determinant field discriminant -3
+19.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 11*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 11*x - 3; determinant field discriminant -3
+20.2.a.a mod 3:  reducible
+20.3.d.a mod 3:  reducible
+20.3.d.b mod 3:  reducible
+22.3.b.a mod 3:  reducible
+22.3.b.a mod 3:  reducible
+22.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 8*x^2 - 8*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 8*x + 2; determinant field discriminant -3
+22.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 + 12*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 33*x + 84; determinant field discriminant -3
+22.4.a.c mod 3:  reducible
+23.3.b.a mod 3:  reducible
+23.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 90*x^2 + 81*x - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 + 6*x + 75; determinant field discriminant -3
+25.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+25.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 + 22*x^2 - 16*x + 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+26.2.a.a mod 3:  reducible
+26.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 2*x^2 - 4*x - 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 - 4*x - 2; determinant field discriminant -3
+26.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 20*x^2 - 11*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 11*x - 4; determinant field discriminant -3
+28.2.e.a mod 3:  reducible
+28.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 5*x^6 - 2*x^5 - 2*x^4 + 20*x^3 - 20*x^2 + 28*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+29.2.b.a mod 3:  reducible
+29.2.b.a mod 3:  reducible
+31.3.b.a mod 3:  reducible
+31.3.b.a mod 3:  reducible
+31.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 15*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 93) * (x^2 + 3); determinant field discriminant -31
+32.2.a.a mod 3:  linear image Nn, splitting field polynomial x^8 + 6*x^4 - 3;
+           projective image D4, splitting field polynomial x^4 - 2*x^3 - 2*x + 1; determinant field discriminant -3
+32.3.d.a mod 3:  reducible
+32.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 40*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+32.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 40*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+34.2.a.a mod 3:  reducible
+34.2.b.a mod 3:  reducible
+34.2.b.a mod 3:  reducible
+34.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 22*x^4 - 37*x^3 + 30*x^2 - 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 18*x^2 - 30*x - 12; determinant field discriminant -3
+34.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 - 92*x^2 + 80*x - 32;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 10*x - 12; determinant field discriminant -3
+34.4.a.c mod 3:  reducible
+35.2.a.a mod 3:  reducible
+35.3.c.a mod 3:  reducible
+35.3.c.b mod 3:  reducible
+35.3.d.a mod 3:  reducible
+35.3.d.a mod 3:  reducible
+35.3.h.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+35.3.h.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+35.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 13*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 13*x - 3; determinant field discriminant -3
+37.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 3*x^6 + 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 + 3*x^2 - 7*x + 1; determinant field discriminant -3
+37.2.a.b mod 3:  reducible
+37.2.h.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 8*x^2 + 18*x - 9) * (x^4 - x^3 - 2*x^2 + 3);
+           projective image V4, splitting field polynomial (x^2 - 37) * (x^2 + 3); determinant field discriminant -111
+38.2.a.a mod 3:  reducible
+38.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 10*x^2 + 4*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 + 4*x - 4; determinant field discriminant -3
+38.2.c.b mod 3:  reducible
+38.3.b.a mod 3:  reducible
+38.3.b.a mod 3:  reducible
+38.3.f.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 6*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 3*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 57) * (x^2 + 3); determinant field discriminant -19
+38.3.f.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 6*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 3*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 57) * (x^2 + 3); determinant field discriminant -19
+38.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 + 34*x^2 - 28*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 - 28*x + 4; determinant field discriminant -3
+40.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 12*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 12*x - 3; determinant field discriminant -3
+40.3.e.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 12*x + 3) * (x^4 + 6*x^2 + 24);
+           projective image V4, splitting field polynomial (x^2 - 6) * (x^2 + 15); determinant field discriminant -40
+40.3.e.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 - 3*x^2 - 2*x + 1) * (x^4 + 6*x^3 + 9*x^2 + 60*x + 240);
+           projective image V4, splitting field polynomial (x^2 - 6) * (x^2 + 15); determinant field discriminant -40
+40.3.g.a mod 3:  reducible
+40.3.g.a mod 3:  reducible
+40.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 4*x^6 - 2*x^5 - 4*x^4 - 2*x^3 + 4*x^2 - 4*x + 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x - 3; determinant field discriminant -3
+40.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 28*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 28*x + 59; determinant field discriminant -3
+41.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 2*x^6 - x^5 + 2*x^4 + x^3 - 5*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 2*x - 1; determinant field discriminant -123
+41.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 6*x^5 - 3*x^4 + 9*x^3 - x^2 - 5*x - 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 2*x - 1; determinant field discriminant -123
+41.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 17*x^6 - 37*x^5 + 52*x^4 - 47*x^3 + 22*x^2 - 4*x - 16;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 44*x - 16; determinant field discriminant -3
+41.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 9*x - 9;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 + 9*x - 9; determinant field discriminant -3
+43.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 - 3*x^6 + 23*x^5 + x^4 - 45*x^3 + 4*x^2 + 23*x - 9;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + 9*x - 3; determinant field discriminant -3
+43.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^3 + 59*x - 29) * (x^4 - 7*x^3 + 27*x^2 - 46*x + 28);
+           projective image V4, splitting field polynomial (x^2 - 129) * (x^2 + 3); determinant field discriminant -43
+43.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 32*x^2 - 32*x + 8;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 65*x - 48; determinant field discriminant -3
+44.2.a.a mod 3:  reducible
+44.3.b.a mod 3:  reducible
+44.3.b.a mod 3:  reducible
+44.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 + 12*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 33*x + 84; determinant field discriminant -3
+44.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 8*x^2 - 8*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 8*x + 2; determinant field discriminant -3
+46.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 2*x^6 + 2*x^5 - 17*x^4 - x^3 - 26*x^2 + 20*x - 8;
+           projective image S4, splitting field polynomial x^4 - x^3 + 3*x^2 + 5*x - 2; determinant field discriminant -3
+46.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + x^4 + 5*x^3 + 16*x^2 - 19*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 19*x + 4; determinant field discriminant -3
+46.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 28*x^4 - 49*x^3 + 88*x^2 - 64*x - 32;
+           projective image S4, splitting field polynomial x^4 - 36*x^2 - 114*x - 108; determinant field discriminant -3
+46.4.a.d mod 3:  reducible
+47.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 + 2*x^2 - 8*x - 1;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 41*x - 27; determinant field discriminant -3
+47.3.b.a mod 3:  reducible
+47.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 44*x^2 - 35*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 35*x + 2; determinant field discriminant -3
+47.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 + 147*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 + 12*x - 3; determinant field discriminant -3
+47.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 + 6*x^2 - 15*x - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 - 15*x - 3; determinant field discriminant -3
+49.2.a.a mod 3:  linear image Nn, splitting field polynomial x^8 - 2*x^7 + x^6 - 5*x^5 + 7*x^4 - 2*x^3 + x^2 - 5*x + 1;
+           projective image D4, splitting field polynomial x^4 - x^3 - 3*x^2 - x + 1; determinant field discriminant -3
+49.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+49.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 2*x^6 - x^5 - 10*x^4 - 23*x^3 + 22*x^2 + 7*x - 13;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+49.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+50.2.a.a mod 3:  reducible
+50.2.a.b mod 3:  reducible
+50.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 + 13*x^5 + 4*x^4 - 23*x^3 + 30*x^2 + 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+50.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 - 38*x^2 + 44*x - 14;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+52.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 2*x^2 - 4*x - 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 - 4*x - 2; determinant field discriminant -3
+52.2.e.b mod 3:  reducible
+52.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 + 3*x^2 - 18*x - 18) * (x^4 + 9*x^2 + 108);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 39); determinant field discriminant -52
+52.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^2 - 6*x - 3) * (x^4 - 3*x^2 + 12);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 39); determinant field discriminant -52
+52.3.c.a mod 3:  reducible
+52.3.c.a mod 3:  reducible
+52.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 20*x^2 - 11*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 11*x - 4; determinant field discriminant -3
+53.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 14*x^2 + 8*x - 5;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 + 8*x - 5; determinant field discriminant -3
+53.4.a.a mod 3:  reducible
+55.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 3*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 3*x - 3; determinant field discriminant -3
+55.2.b.a mod 3:  reducible
+55.2.b.a mod 3:  reducible
+55.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 5*x^2 - 3*x - 1) * (x^4 - x^3 - 2*x^2 + 8*x + 9);
+           projective image V4, splitting field polynomial (x^2 - 5) * (x^2 + 11); determinant field discriminant -55
+55.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 5*x^2 - 3*x - 1) * (x^4 - x^3 - 2*x^2 + 8*x + 9);
+           projective image V4, splitting field polynomial (x^2 - 5) * (x^2 + 11); determinant field discriminant -55
+55.4.a.d mod 3:  reducible
+56.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 2*x^6 - 2*x^5 + 4*x^4 + 22*x^3 + 10*x^2 - 26*x - 17;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 6*x - 3; determinant field discriminant -3
+56.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 4*x^6 - 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 6*x + 18; determinant field discriminant -3
+56.2.b.a mod 3:  reducible
+56.2.b.a mod 3:  reducible
+56.3.h.a mod 3:  reducible
+56.3.h.a mod 3:  reducible
+56.3.k.a mod 3:  reducible
+56.3.k.b mod 3:  reducible
+56.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 20*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 20*x - 3; determinant field discriminant -3
+58.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 7*x^4 - 7*x^3 - 26*x^2 + 29*x - 8;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 6*x^2 + 4*x - 5; determinant field discriminant -3
+58.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - 20*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 20*x - 3; determinant field discriminant -3
+58.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 9*x^6 - 21*x^5 + 93*x^4 + 81*x^3 - 123*x^2 - 759*x + 1026;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 12*x - 24; determinant field discriminant -3
+58.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 22*x^2 + 13*x - 10;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 13*x - 10; determinant field discriminant -3
+58.4.a.d mod 3:  reducible
+58.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 - 52*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 52*x - 48; determinant field discriminant -3
+59.3.b.a mod 3:  reducible
+61.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^6 + 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 - 3; determinant field discriminant -3
+61.2.f.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^2 - 3) * (x^4 + 13*x^2 + 61);
+           projective image V4, splitting field polynomial (x^2 - 61) * (x^2 + 3); determinant field discriminant -183
+62.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 8*x^6 + 8*x^5 + 4*x^4 - 16*x^3 - 20*x^2 - 4*x - 8;
+           projective image S4, splitting field polynomial x^4 - x^3 + 8*x - 2; determinant field discriminant -3
+62.2.a.b mod 3:  reducible
+62.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 3*x^6 - 2*x^5 + 10*x^4 + 24*x^3 - 68*x^2 + 148*x - 156;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 + 36*x - 36; determinant field discriminant -3
+62.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 6*x^2 - 3*x - 6;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 - 3*x - 6; determinant field discriminant -3
+62.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 - 20*x^2 + 8*x - 14;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 + 8*x - 14; determinant field discriminant -3
+64.2.a.a mod 3:  linear image Nn, splitting field polynomial x^8 - 6*x^4 - 3;
+           projective image D4, splitting field polynomial x^4 - 2*x^3 - 2*x + 1; determinant field discriminant -3
+64.3.c.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 27) * (x^4 + 6*x^2 + 12);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 3); determinant field discriminant -4
+64.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 16*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+64.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 10*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+64.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 10*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+64.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 16*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+65.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - x - 3; determinant field discriminant -3
+65.2.a.c mod 3:  reducible
+65.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+65.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 73*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 48*x^2 + 2*x + 685; determinant field discriminant -3
+67.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^6 - 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 - 3; determinant field discriminant -3
+67.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 9*x^2 - 22*x + 28) * (x^4 + 36*x^3 + 534*x^2 + 3780*x - 1839);
+           projective image V4, splitting field polynomial (x^2 - 201) * (x^2 + 3); determinant field discriminant -67
+67.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 30*x^4 + 91*x^2 - 75;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 - 28*x - 5; determinant field discriminant -3
+68.2.b.a mod 3:  reducible
+68.2.b.a mod 3:  reducible
+68.3.d.a mod 3:  reducible
+68.3.d.a mod 3:  reducible
+68.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 22*x^4 - 37*x^3 + 30*x^2 - 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 18*x^2 - 30*x - 12; determinant field discriminant -3
+68.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 - 92*x^2 + 80*x - 32;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 10*x - 12; determinant field discriminant -3
+70.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 - 6*x^6 + 18*x^5 + 12*x^4 - 24*x^3 - 12*x - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 29*x - 14; determinant field discriminant -3
+70.2.e.b mod 3:  reducible
+70.2.e.c mod 3:  reducible
+70.2.e.d mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + x^6 - 6*x^5 - 3*x^4 - 216*x^3 + 65*x^2 - 520*x + 320;
+           projective image S4, splitting field polynomial x^4 - x^3 - 45*x^2 + 105*x + 120; determinant field discriminant -3
+70.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 56*x^2 - 56*x + 14;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 34*x - 48; determinant field discriminant -3
+70.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 + 76*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 + 105*x^2 + 65*x + 10; determinant field discriminant -3
+71.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 12*x^4 - 21*x^2 - 12;
+           projective image S4, splitting field polynomial x^4 - 12*x^2 - 21*x - 12; determinant field discriminant -3
+71.3.b.b mod 3:  reducible
+71.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 - 33*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 33*x - 27; determinant field discriminant -3
+71.4.a.b mod 3:  reducible
+73.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 + 3*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 3*x - 3; determinant field discriminant -3
+73.2.a.c mod 3:  reducible
+73.2.i.a mod 3:  linear image Ns, splitting field polynomial (x^4 + 23*x^2 + 6*x + 31) * (x^4 + 34*x^2 - 3);
+           projective image V4, splitting field polynomial (x^2 - 73) * (x^2 + 3); determinant field discriminant -219
+73.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 82*x^4 - 157*x^3 + 262*x^2 - 184*x - 461;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 + x - 7; determinant field discriminant -3
+73.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + x^6 - 11*x^5 + 51*x^4 - 80*x^3 + 61*x^2 - 30*x + 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x + 3; determinant field discriminant -219
+73.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 2*x^6 - 6*x^5 + 30*x^3 + 67*x^2 + 53*x + 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x + 3; determinant field discriminant -219
+74.2.a.a mod 3:  reducible
+74.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + 4*x^6 + 7*x^5 - 6*x^4 + 7*x^3 + 4*x^2 - 3*x + 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 11*x + 2; determinant field discriminant -3
+74.2.c.c mod 3:  reducible
+74.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + 2*x^6 - 43*x^5 + 90*x^4 + 109*x^3 + 436*x^2 + 633*x - 1057;
+           projective image S4, splitting field polynomial x^4 - x^3 - 27*x^2 + 93*x - 84; determinant field discriminant -3
+74.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 22*x^4 - 37*x^3 - 34*x^2 + 52*x - 40;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 84*x - 27; determinant field discriminant -3
+76.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 10*x^2 + 4*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 + 4*x - 4; determinant field discriminant -3
+76.3.c.a mod 3:  reducible
+76.3.c.a mod 3:  reducible
+76.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 + 34*x^2 - 28*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 - 28*x + 4; determinant field discriminant -3
+77.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 - 57*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 28*x + 64; determinant field discriminant -3
+77.2.a.b mod 3:  reducible
+77.2.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 + x^6 - 2*x^5 - x^4 - 2*x^3 + x^2 - x + 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + x - 1; determinant field discriminant -3
+77.2.b.b mod 3:  reducible
+77.2.b.b mod 3:  reducible
+77.2.b.b mod 3:  reducible
+77.2.b.b mod 3:  reducible
+77.3.h.b mod 3:  reducible
+77.3.h.b mod 3:  reducible
+77.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 41*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 41*x - 3; determinant field discriminant -3
+77.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 10*x^2 + x - 7;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + x - 7; determinant field discriminant -3
+79.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^6 - 15*x^4 + 141*x^2 - 243;
+           projective image S4, splitting field polynomial x^4 - 30*x^2 - 89*x - 75; determinant field discriminant -3
+79.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 18*x^2 + 98*x + 361) * (x^4 - x^3 + 6*x^2 - 22*x + 19);
+           projective image V4, splitting field polynomial (x^2 - 237) * (x^2 + 3); determinant field discriminant -79
+79.3.b.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 6*x^6 - 12*x^4 + 9*x^3 - 2*x^2 - 13*x + 3;
+           projective image S4, splitting field polynomial x^4 - 3*x^2 - 5*x + 9; determinant field discriminant -79
+79.3.b.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 6*x^6 - 12*x^4 + 9*x^3 - 2*x^2 - 13*x + 3;
+           projective image S4, splitting field polynomial x^4 - 3*x^2 - 5*x + 9; determinant field discriminant -79
+80.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 12*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 12*x - 3; determinant field discriminant -3
+80.2.a.b mod 3:  reducible
+80.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 28*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 28*x + 59; determinant field discriminant -3
+80.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 36*x^4 + 132*x^2 - 108;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x - 3; determinant field discriminant -3
+80.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 7*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+82.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 19*x^4 - 31*x^3 + 42*x^2 - 27*x - 12;
+           projective image S4, splitting field polynomial x^4 - 12*x^2 - 26*x - 12; determinant field discriminant -3
+82.2.b.a mod 3:  reducible
+82.2.b.a mod 3:  reducible
+82.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 - 4*x^2 + 13*x - 10;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 + 13*x - 10; determinant field discriminant -3
+82.4.a.b mod 3:  reducible
+82.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 - 100*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 - 45*x^2 + 51*x + 372; determinant field discriminant -3
+82.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 17*x^6 - 37*x^5 + 52*x^4 - 47*x^3 + 22*x^2 - 4*x - 16;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 44*x - 16; determinant field discriminant -3
+82.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 17*x^6 - 37*x^5 + 52*x^4 - 47*x^3 + 22*x^2 - 4*x - 16;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 44*x - 16; determinant field discriminant -3
+83.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 7*x^6 + 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 + 28*x - 19; determinant field discriminant -3
+83.3.b.a mod 3:  reducible
+83.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 + 232*x^2 - 244*x + 49;
+           projective image S4, splitting field polynomial x^4 - 42*x^2 - 149*x - 147; determinant field discriminant -3
+85.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 + 19*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 30*x^2 + 34*x + 299; determinant field discriminant -3
+85.2.a.c mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 10*x^6 + 9*x^4 - 228*x^2 - 768;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 89*x - 48; determinant field discriminant -3
+85.4.a.c mod 3:  reducible
+86.2.a.a mod 3:  reducible
+86.3.b.a mod 3:  reducible
+86.3.b.a mod 3:  reducible
+86.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^3 + 59*x - 29) * (x^4 - 7*x^3 + 27*x^2 - 46*x + 28);
+           projective image V4, splitting field polynomial (x^2 - 129) * (x^2 + 3); determinant field discriminant -43
+86.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^3 + 59*x - 29) * (x^4 - 7*x^3 + 27*x^2 - 46*x + 28);
+           projective image V4, splitting field polynomial (x^2 - 129) * (x^2 + 3); determinant field discriminant -43
+86.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 10*x^6 + 20*x^5 + 20*x^4 - 140*x^3 + 628*x^2 - 296*x - 640;
+           projective image S4, splitting field polynomial x^4 - 60*x^2 - 254*x - 300; determinant field discriminant -3
+86.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 32*x^2 - 32*x + 8;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 65*x - 48; determinant field discriminant -3
+86.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^6 - 36*x^4 - 108;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 2*x - 12; determinant field discriminant -3
+86.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 32*x^2 - 32*x + 8;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 65*x - 48; determinant field discriminant -3
+86.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 - 13*x^6 + 53*x^5 + 34*x^4 - 161*x^3 + 184*x^2 - 94*x - 154;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 18*x^2 - 22*x - 16; determinant field discriminant -3
+86.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 126*x^2 + 117*x - 36;
+           projective image S4, splitting field polynomial x^4 - 3*x^3 - 33*x^2 + 67*x + 246; determinant field discriminant -3
+88.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 8*x^6 - 14*x^5 - 14*x^4 - 14*x^3 - 14*x^2 - 8*x - 2;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 6*x^2 - 2*x - 2; determinant field discriminant -3
+88.2.g.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 6*x^3 + 2*x^2 - 12*x + 136) * (x^4 - 6*x^3 + 19*x^2 - 54*x + 73);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 2); determinant field discriminant -264
+88.2.g.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 - 9*x^2 + 26*x - 32) * (x^4 - 4*x^3 + 14*x^2 + 44*x + 73);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 2); determinant field discriminant -264
+88.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 45*x^2 - 82*x + 16) * (x^4 - 4*x^3 + 60*x^2 - 184*x + 151);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 6); determinant field discriminant -88
+88.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 6*x^2 - 24) * (x^4 - 12*x + 15);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 6); determinant field discriminant -88
+88.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 4*x^6 - 6*x^5 + 24*x^4 - 42*x^3 + 42*x^2 - 24*x + 6;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 14*x - 3; determinant field discriminant -3
+88.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 12*x^4 - 4*x^2 - 12;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 2*x + 150; determinant field discriminant -3
+88.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 184*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 48*x^2 - 34*x + 6; determinant field discriminant -3
+89.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 5*x - 3; determinant field discriminant -3
+89.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 5*x - 3; determinant field discriminant -3
+89.4.a.c mod 3:  reducible
+89.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 44*x^4 + 95*x^3 - 272*x^2 + 224*x - 248;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 17*x - 12; determinant field discriminant -3
+91.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 3*x^6 - 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 17*x - 11; determinant field discriminant -3
+91.2.a.b mod 3:  reducible
+91.2.k.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - x^2 - x + 1) * (x^4 - x^3 + 2*x^2 - 2*x + 1);
+           projective image V4, splitting field polynomial (x^2 - 13) * (x^2 + 3); determinant field discriminant -39
+91.2.r.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - x^2 - x + 1) * (x^4 - x^3 + 2*x^2 - 2*x + 1);
+           projective image V4, splitting field polynomial (x^2 - 13) * (x^2 + 3); determinant field discriminant -39
+91.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 - 48*x^2 + 49*x - 14) * (x^4 - 2*x^3 - 15*x^2 - 32*x + 307);
+           projective image V4, splitting field polynomial (x^2 - 273) * (x^2 + 3); determinant field discriminant -91
+91.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 15*x^2 - 28*x + 28) * (x^4 - 4*x^3 + 21*x^2 - 34*x + 4);
+           projective image V4, splitting field polynomial (x^2 - 273) * (x^2 + 3); determinant field discriminant -91
+91.3.m.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+91.3.v.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+91.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+91.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 5*x - 3; determinant field discriminant -3
+92.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 2*x^6 + 2*x^5 - 17*x^4 - x^3 - 26*x^2 + 20*x - 8;
+           projective image S4, splitting field polynomial x^4 - x^3 + 3*x^2 + 5*x - 2; determinant field discriminant -3
+92.2.a.b mod 3:  reducible
+92.2.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 + 5*x^2 - 12*x + 4) * (x^4 + 13*x^2 + 48);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 23); determinant field discriminant -276
+92.2.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 + 3*x^2 - 38*x + 37) * (x^4 - 2*x^3 + 9*x^2 - 54*x + 108);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 23); determinant field discriminant -276
+92.3.c.a mod 3:  reducible
+92.3.c.a mod 3:  reducible
+92.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + x^4 + 5*x^3 + 16*x^2 - 19*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 19*x + 4; determinant field discriminant -3
+92.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 28*x^4 - 49*x^3 + 88*x^2 - 64*x - 32;
+           projective image S4, splitting field polynomial x^4 - 36*x^2 - 114*x - 108; determinant field discriminant -3
+94.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 9*x^6 + 36*x^4 - 108;
+           projective image S4, splitting field polynomial x^4 - 12*x^2 - 18*x - 12; determinant field discriminant -3
+94.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 44*x^2 - 35*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 35*x + 2; determinant field discriminant -3
+94.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 53*x^4 + 113*x^3 + 178*x^2 - 235*x - 212;
+           projective image S4, splitting field polynomial x^4 - 72*x^2 - 330*x - 432; determinant field discriminant -3
+94.4.a.d mod 3:  reducible
+94.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 44*x^2 - 35*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 35*x + 2; determinant field discriminant -3
+95.2.a.b mod 3:  reducible
+95.2.b.b mod 3:  reducible
+95.2.b.b mod 3:  reducible
+95.2.e.c mod 3:  reducible
+95.3.d.b mod 3:  reducible
+95.3.d.b mod 3:  reducible
+95.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 71*x^4 + 149*x^3 + 220*x^2 - 295*x - 395;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 48*x - 15; determinant field discriminant -3
+95.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 34*x^2 + 25*x - 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 + 8*x - 5; determinant field discriminant -3
+95.4.a.g mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+95.4.a.g mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 34*x^2 + 25*x - 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 + 8*x - 5; determinant field discriminant -3
+97.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 3*x^6 - 5*x^5 - 7*x^4 - 6*x^3 - 11*x^2 - 4*x - 9;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + 3*x + 3; determinant field discriminant -291
+97.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 3*x^6 - x^5 + 11*x^4 - 8*x^2 - 2*x + 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + 3*x + 3; determinant field discriminant -291
+97.2.e.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 + 8*x^2 + 26*x + 79) * (x^4 - 2*x^3 + 30*x^2 - 29*x - 8);
+           projective image V4, splitting field polynomial (x^2 - 97) * (x^2 + 3); determinant field discriminant -291
+97.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 23*x^4 + 53*x^3 - 124*x^2 + 97*x - 85;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 + 44*x - 23; determinant field discriminant -3
+97.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 89*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 89*x - 3; determinant field discriminant -3
+97.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 35*x^4 + 77*x^3 - 164*x^2 + 125*x - 158;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 19*x - 12; determinant field discriminant -3
+97.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 50*x^4 + 107*x^3 + 74*x^2 - 128*x - 211;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 51*x - 27; determinant field discriminant -3
+97.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + 9*x^6 - 45*x^5 + 93*x^4 - 117*x^3 + 202*x^2 - 264*x + 159;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 3*x - 3; determinant field discriminant -291
+97.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 8*x^6 + 47*x^5 - 116*x^4 + 176*x^3 - 166*x^2 + 91*x - 31;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 3*x - 3; determinant field discriminant -291
+98.2.a.a mod 3:  reducible
+98.2.c.b mod 3:  reducible
+98.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 14*x^4 + 35*x^3 - 126*x^2 + 108*x - 54;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+98.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 5*x^6 - 2*x^5 - 2*x^4 + 20*x^3 - 20*x^2 + 28*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+98.4.a.h mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 - 38*x^5 - 29*x^4 - 38*x^3 + 65*x^2 + 26*x + 8;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 14*x - 12; determinant field discriminant -3
+98.4.a.h mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 + 25*x^5 - 29*x^4 - 101*x^3 + 156*x^2 - 51*x - 6;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 14*x - 12; determinant field discriminant -3
+100.2.a.a mod 3:  reducible
+100.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 6*x^2 - 4*x - 59) * (x^4 - 4*x^3 + 6*x^2 - 4*x + 16);
+           projective image V4, splitting field polynomial (x^2 - 15) * (x^2 + 15); determinant field discriminant -4
+100.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 22*x^3 + 144*x^2 - 88*x + 16) * (x^4 - 15*x^2 + 30*x - 15);
+           projective image V4, splitting field polynomial (x^2 - 15) * (x^2 + 15); determinant field discriminant -4
+100.4.a.c mod 3:  reducible
+100.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 - 38*x^2 + 44*x - 14;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+100.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 + 13*x^5 + 4*x^4 - 23*x^3 + 30*x^2 + 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+5.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+7.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+7.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+8.3.d.a mod 3:  reducible
+8.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 4*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+10.4.a.a mod 3:  reducible
+11.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 + x^6 - 2*x^5 - x^4 - 2*x^3 + x^2 - x + 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + x - 1; determinant field discriminant -3
+11.3.b.a mod 3:  reducible
+13.2.e.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - x^2 - x + 1) * (x^4 - x^3 + 2*x^2 - 2*x + 1);
+           projective image V4, splitting field polynomial (x^2 - 13) * (x^2 + 3); determinant field discriminant -39
+13.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 5*x - 3; determinant field discriminant -3
+14.2.a.a mod 3:  reducible
+14.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 5*x^6 - 2*x^5 - 2*x^4 + 20*x^3 - 20*x^2 + 28*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+16.3.c.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 - 2*x + 1) * (x^4 - 2*x^3 + 6*x^2 - 8*x + 4);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 3); determinant field discriminant -4
+16.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 4*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+17.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 4*x^2 - 4*x + 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 9*x - 3; determinant field discriminant -3
+17.4.a.a mod 3:  reducible
+19.2.a.a mod 3:  reducible
+19.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 6*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 3*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 57) * (x^2 + 3); determinant field discriminant -19
+19.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 34*x^2 + 25*x - 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 + 8*x - 5; determinant field discriminant -3
+19.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 11*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 11*x - 3; determinant field discriminant -3
+20.2.a.a mod 3:  reducible
+20.3.d.a mod 3:  reducible
+20.3.d.b mod 3:  reducible
+22.3.b.a mod 3:  reducible
+22.3.b.a mod 3:  reducible
+22.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 8*x^2 - 8*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 8*x + 2; determinant field discriminant -3
+22.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 + 12*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 33*x + 84; determinant field discriminant -3
+22.4.a.c mod 3:  reducible
+23.3.b.a mod 3:  reducible
+23.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 90*x^2 + 81*x - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 + 6*x + 75; determinant field discriminant -3
+25.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+25.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 + 22*x^2 - 16*x + 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+26.2.a.a mod 3:  reducible
+26.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 2*x^2 - 4*x - 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 - 4*x - 2; determinant field discriminant -3
+26.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 20*x^2 - 11*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 11*x - 4; determinant field discriminant -3
+28.2.e.a mod 3:  reducible
+28.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 5*x^6 - 2*x^5 - 2*x^4 + 20*x^3 - 20*x^2 + 28*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+29.2.b.a mod 3:  reducible
+29.2.b.a mod 3:  reducible
+31.3.b.a mod 3:  reducible
+31.3.b.a mod 3:  reducible
+31.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 15*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 93) * (x^2 + 3); determinant field discriminant -31
+32.2.a.a mod 3:  linear image Nn, splitting field polynomial x^8 + 6*x^4 - 3;
+           projective image D4, splitting field polynomial x^4 - 2*x^3 - 2*x + 1; determinant field discriminant -3
+32.3.d.a mod 3:  reducible
+32.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 40*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+32.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 40*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+34.2.a.a mod 3:  reducible
+34.2.b.a mod 3:  reducible
+34.2.b.a mod 3:  reducible
+34.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 22*x^4 - 37*x^3 + 30*x^2 - 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 18*x^2 - 30*x - 12; determinant field discriminant -3
+34.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 - 92*x^2 + 80*x - 32;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 10*x - 12; determinant field discriminant -3
+34.4.a.c mod 3:  reducible
+35.2.a.a mod 3:  reducible
+35.3.c.a mod 3:  reducible
+35.3.c.b mod 3:  reducible
+35.3.d.a mod 3:  reducible
+35.3.d.a mod 3:  reducible
+35.3.h.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+35.3.h.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+35.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 13*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 13*x - 3; determinant field discriminant -3
+37.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 3*x^6 + 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 + 3*x^2 - 7*x + 1; determinant field discriminant -3
+37.2.a.b mod 3:  reducible
+37.2.h.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 8*x^2 + 18*x - 9) * (x^4 - x^3 - 2*x^2 + 3);
+           projective image V4, splitting field polynomial (x^2 - 37) * (x^2 + 3); determinant field discriminant -111
+38.2.a.a mod 3:  reducible
+38.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 10*x^2 + 4*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 + 4*x - 4; determinant field discriminant -3
+38.2.c.b mod 3:  reducible
+38.3.b.a mod 3:  reducible
+38.3.b.a mod 3:  reducible
+38.3.f.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 6*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 3*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 57) * (x^2 + 3); determinant field discriminant -19
+38.3.f.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 - 6*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 3*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 57) * (x^2 + 3); determinant field discriminant -19
+38.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 + 34*x^2 - 28*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 - 28*x + 4; determinant field discriminant -3
+40.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 12*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 12*x - 3; determinant field discriminant -3
+40.3.e.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 12*x + 3) * (x^4 + 6*x^2 + 24);
+           projective image V4, splitting field polynomial (x^2 - 6) * (x^2 + 15); determinant field discriminant -40
+40.3.e.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 - 3*x^2 - 2*x + 1) * (x^4 + 6*x^3 + 9*x^2 + 60*x + 240);
+           projective image V4, splitting field polynomial (x^2 - 6) * (x^2 + 15); determinant field discriminant -40
+40.3.g.a mod 3:  reducible
+40.3.g.a mod 3:  reducible
+40.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 4*x^6 - 2*x^5 - 4*x^4 - 2*x^3 + 4*x^2 - 4*x + 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x - 3; determinant field discriminant -3
+40.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 28*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 28*x + 59; determinant field discriminant -3
+41.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 2*x^6 - x^5 + 2*x^4 + x^3 - 5*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 2*x - 1; determinant field discriminant -123
+41.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 6*x^5 - 3*x^4 + 9*x^3 - x^2 - 5*x - 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 2*x - 1; determinant field discriminant -123
+41.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 17*x^6 - 37*x^5 + 52*x^4 - 47*x^3 + 22*x^2 - 4*x - 16;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 44*x - 16; determinant field discriminant -3
+41.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 9*x - 9;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 + 9*x - 9; determinant field discriminant -3
+43.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 - 3*x^6 + 23*x^5 + x^4 - 45*x^3 + 4*x^2 + 23*x - 9;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + 9*x - 3; determinant field discriminant -3
+43.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^3 + 59*x - 29) * (x^4 - 7*x^3 + 27*x^2 - 46*x + 28);
+           projective image V4, splitting field polynomial (x^2 - 129) * (x^2 + 3); determinant field discriminant -43
+43.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 32*x^2 - 32*x + 8;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 65*x - 48; determinant field discriminant -3
+44.2.a.a mod 3:  reducible
+44.3.b.a mod 3:  reducible
+44.3.b.a mod 3:  reducible
+44.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 + 12*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 33*x + 84; determinant field discriminant -3
+44.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 8*x^2 - 8*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 8*x + 2; determinant field discriminant -3
+46.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 2*x^6 + 2*x^5 - 17*x^4 - x^3 - 26*x^2 + 20*x - 8;
+           projective image S4, splitting field polynomial x^4 - x^3 + 3*x^2 + 5*x - 2; determinant field discriminant -3
+46.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + x^4 + 5*x^3 + 16*x^2 - 19*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 19*x + 4; determinant field discriminant -3
+46.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 28*x^4 - 49*x^3 + 88*x^2 - 64*x - 32;
+           projective image S4, splitting field polynomial x^4 - 36*x^2 - 114*x - 108; determinant field discriminant -3
+46.4.a.d mod 3:  reducible
+47.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 + 2*x^2 - 8*x - 1;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 41*x - 27; determinant field discriminant -3
+47.3.b.a mod 3:  reducible
+47.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 44*x^2 - 35*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 35*x + 2; determinant field discriminant -3
+47.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 + 147*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - x^3 + 12*x - 3; determinant field discriminant -3
+47.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 + 6*x^2 - 15*x - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 - 15*x - 3; determinant field discriminant -3
+49.2.a.a mod 3:  linear image Nn, splitting field polynomial x^8 - 2*x^7 + x^6 - 5*x^5 + 7*x^4 - 2*x^3 + x^2 - 5*x + 1;
+           projective image D4, splitting field polynomial x^4 - x^3 - 3*x^2 - x + 1; determinant field discriminant -3
+49.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+49.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 2*x^6 - x^5 - 10*x^4 - 23*x^3 + 22*x^2 + 7*x - 13;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+49.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+50.2.a.a mod 3:  reducible
+50.2.a.b mod 3:  reducible
+50.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 + 13*x^5 + 4*x^4 - 23*x^3 + 30*x^2 + 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+50.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 - 38*x^2 + 44*x - 14;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+52.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 2*x^2 - 4*x - 2;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 - 4*x - 2; determinant field discriminant -3
+52.2.e.b mod 3:  reducible
+52.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 + 3*x^2 - 18*x - 18) * (x^4 + 9*x^2 + 108);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 39); determinant field discriminant -52
+52.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^2 - 6*x - 3) * (x^4 - 3*x^2 + 12);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 39); determinant field discriminant -52
+52.3.c.a mod 3:  reducible
+52.3.c.a mod 3:  reducible
+52.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 20*x^2 - 11*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 11*x - 4; determinant field discriminant -3
+53.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 14*x^2 + 8*x - 5;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 + 8*x - 5; determinant field discriminant -3
+53.4.a.a mod 3:  reducible
+55.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 3*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 3*x - 3; determinant field discriminant -3
+55.2.b.a mod 3:  reducible
+55.2.b.a mod 3:  reducible
+55.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 5*x^2 - 3*x - 1) * (x^4 - x^3 - 2*x^2 + 8*x + 9);
+           projective image V4, splitting field polynomial (x^2 - 5) * (x^2 + 11); determinant field discriminant -55
+55.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 5*x^2 - 3*x - 1) * (x^4 - x^3 - 2*x^2 + 8*x + 9);
+           projective image V4, splitting field polynomial (x^2 - 5) * (x^2 + 11); determinant field discriminant -55
+55.4.a.d mod 3:  reducible
+56.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 2*x^6 - 2*x^5 + 4*x^4 + 22*x^3 + 10*x^2 - 26*x - 17;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 6*x - 3; determinant field discriminant -3
+56.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 4*x^6 - 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 6*x + 18; determinant field discriminant -3
+56.2.b.a mod 3:  reducible
+56.2.b.a mod 3:  reducible
+56.3.h.a mod 3:  reducible
+56.3.h.a mod 3:  reducible
+56.3.k.a mod 3:  reducible
+56.3.k.b mod 3:  reducible
+56.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 20*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 20*x - 3; determinant field discriminant -3
+58.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 7*x^4 - 7*x^3 - 26*x^2 + 29*x - 8;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 6*x^2 + 4*x - 5; determinant field discriminant -3
+58.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - 20*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 20*x - 3; determinant field discriminant -3
+58.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 9*x^6 - 21*x^5 + 93*x^4 + 81*x^3 - 123*x^2 - 759*x + 1026;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 12*x - 24; determinant field discriminant -3
+58.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 22*x^2 + 13*x - 10;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 13*x - 10; determinant field discriminant -3
+58.4.a.d mod 3:  reducible
+58.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 - 52*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 52*x - 48; determinant field discriminant -3
+59.3.b.a mod 3:  reducible
+61.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^6 + 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 - 3; determinant field discriminant -3
+61.2.f.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^2 - 3) * (x^4 + 13*x^2 + 61);
+           projective image V4, splitting field polynomial (x^2 - 61) * (x^2 + 3); determinant field discriminant -183
+62.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 8*x^6 + 8*x^5 + 4*x^4 - 16*x^3 - 20*x^2 - 4*x - 8;
+           projective image S4, splitting field polynomial x^4 - x^3 + 8*x - 2; determinant field discriminant -3
+62.2.a.b mod 3:  reducible
+62.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 3*x^6 - 2*x^5 + 10*x^4 + 24*x^3 - 68*x^2 + 148*x - 156;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 + 36*x - 36; determinant field discriminant -3
+62.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 6*x^2 - 3*x - 6;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 - 3*x - 6; determinant field discriminant -3
+62.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 - 20*x^2 + 8*x - 14;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 + 8*x - 14; determinant field discriminant -3
+64.2.a.a mod 3:  linear image Nn, splitting field polynomial x^8 - 6*x^4 - 3;
+           projective image D4, splitting field polynomial x^4 - 2*x^3 - 2*x + 1; determinant field discriminant -3
+64.3.c.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 27) * (x^4 + 6*x^2 + 12);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 3); determinant field discriminant -4
+64.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 16*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+64.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 10*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+64.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 10*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x + 6; determinant field discriminant -3
+64.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 16*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 4*x + 2; determinant field discriminant -3
+65.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - x - 3; determinant field discriminant -3
+65.2.a.c mod 3:  reducible
+65.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+65.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 73*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 48*x^2 + 2*x + 685; determinant field discriminant -3
+67.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^6 - 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 - 3; determinant field discriminant -3
+67.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 9*x^2 - 22*x + 28) * (x^4 + 36*x^3 + 534*x^2 + 3780*x - 1839);
+           projective image V4, splitting field polynomial (x^2 - 201) * (x^2 + 3); determinant field discriminant -67
+67.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 30*x^4 + 91*x^2 - 75;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 - 28*x - 5; determinant field discriminant -3
+68.2.b.a mod 3:  reducible
+68.2.b.a mod 3:  reducible
+68.3.d.a mod 3:  reducible
+68.3.d.a mod 3:  reducible
+68.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 22*x^4 - 37*x^3 + 30*x^2 - 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 18*x^2 - 30*x - 12; determinant field discriminant -3
+68.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 - 92*x^2 + 80*x - 32;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 10*x - 12; determinant field discriminant -3
+70.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 - 6*x^6 + 18*x^5 + 12*x^4 - 24*x^3 - 12*x - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 29*x - 14; determinant field discriminant -3
+70.2.e.b mod 3:  reducible
+70.2.e.c mod 3:  reducible
+70.2.e.d mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.3.d.a mod 3:  reducible
+70.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + x^6 - 6*x^5 - 3*x^4 - 216*x^3 + 65*x^2 - 520*x + 320;
+           projective image S4, splitting field polynomial x^4 - x^3 - 45*x^2 + 105*x + 120; determinant field discriminant -3
+70.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 56*x^2 - 56*x + 14;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 34*x - 48; determinant field discriminant -3
+70.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 + 76*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 + 105*x^2 + 65*x + 10; determinant field discriminant -3
+71.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 12*x^4 - 21*x^2 - 12;
+           projective image S4, splitting field polynomial x^4 - 12*x^2 - 21*x - 12; determinant field discriminant -3
+71.3.b.b mod 3:  reducible
+71.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 18*x^4 - 33*x^2 - 27;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 33*x - 27; determinant field discriminant -3
+71.4.a.b mod 3:  reducible
+73.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 + 3*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 3*x - 3; determinant field discriminant -3
+73.2.a.c mod 3:  reducible
+73.2.i.a mod 3:  linear image Ns, splitting field polynomial (x^4 + 23*x^2 + 6*x + 31) * (x^4 + 34*x^2 - 3);
+           projective image V4, splitting field polynomial (x^2 - 73) * (x^2 + 3); determinant field discriminant -219
+73.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 82*x^4 - 157*x^3 + 262*x^2 - 184*x - 461;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 + x - 7; determinant field discriminant -3
+73.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + x^6 - 11*x^5 + 51*x^4 - 80*x^3 + 61*x^2 - 30*x + 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x + 3; determinant field discriminant -219
+73.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 2*x^6 - 6*x^5 + 30*x^3 + 67*x^2 + 53*x + 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x + 3; determinant field discriminant -219
+74.2.a.a mod 3:  reducible
+74.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + 4*x^6 + 7*x^5 - 6*x^4 + 7*x^3 + 4*x^2 - 3*x + 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 11*x + 2; determinant field discriminant -3
+74.2.c.c mod 3:  reducible
+74.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + 2*x^6 - 43*x^5 + 90*x^4 + 109*x^3 + 436*x^2 + 633*x - 1057;
+           projective image S4, splitting field polynomial x^4 - x^3 - 27*x^2 + 93*x - 84; determinant field discriminant -3
+74.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 22*x^4 - 37*x^3 - 34*x^2 + 52*x - 40;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 84*x - 27; determinant field discriminant -3
+76.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 2*x^4 + 11*x^3 - 10*x^2 + 4*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 6*x^2 + 4*x - 4; determinant field discriminant -3
+76.3.c.a mod 3:  reducible
+76.3.c.a mod 3:  reducible
+76.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 + 34*x^2 - 28*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 - 28*x + 4; determinant field discriminant -3
+77.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 - 57*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 28*x + 64; determinant field discriminant -3
+77.2.a.b mod 3:  reducible
+77.2.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 + x^6 - 2*x^5 - x^4 - 2*x^3 + x^2 - x + 1;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + x - 1; determinant field discriminant -3
+77.2.b.b mod 3:  reducible
+77.2.b.b mod 3:  reducible
+77.2.b.b mod 3:  reducible
+77.2.b.b mod 3:  reducible
+77.3.h.b mod 3:  reducible
+77.3.h.b mod 3:  reducible
+77.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 41*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 41*x - 3; determinant field discriminant -3
+77.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 10*x^2 + x - 7;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + x - 7; determinant field discriminant -3
+79.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^6 - 15*x^4 + 141*x^2 - 243;
+           projective image S4, splitting field polynomial x^4 - 30*x^2 - 89*x - 75; determinant field discriminant -3
+79.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - 18*x^2 + 98*x + 361) * (x^4 - x^3 + 6*x^2 - 22*x + 19);
+           projective image V4, splitting field polynomial (x^2 - 237) * (x^2 + 3); determinant field discriminant -79
+79.3.b.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 6*x^6 - 12*x^4 + 9*x^3 - 2*x^2 - 13*x + 3;
+           projective image S4, splitting field polynomial x^4 - 3*x^2 - 5*x + 9; determinant field discriminant -79
+79.3.b.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 6*x^6 - 12*x^4 + 9*x^3 - 2*x^2 - 13*x + 3;
+           projective image S4, splitting field polynomial x^4 - 3*x^2 - 5*x + 9; determinant field discriminant -79
+80.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 12*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 12*x - 3; determinant field discriminant -3
+80.2.a.b mod 3:  reducible
+80.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 + 28*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 28*x + 59; determinant field discriminant -3
+80.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 36*x^4 + 132*x^2 - 108;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 2*x - 3; determinant field discriminant -3
+80.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 7*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+82.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 19*x^4 - 31*x^3 + 42*x^2 - 27*x - 12;
+           projective image S4, splitting field polynomial x^4 - 12*x^2 - 26*x - 12; determinant field discriminant -3
+82.2.b.a mod 3:  reducible
+82.2.b.a mod 3:  reducible
+82.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 - 4*x^2 + 13*x - 10;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 + 13*x - 10; determinant field discriminant -3
+82.4.a.b mod 3:  reducible
+82.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 24*x^4 - 100*x^2 - 48;
+           projective image S4, splitting field polynomial x^4 - x^3 - 45*x^2 + 51*x + 372; determinant field discriminant -3
+82.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 17*x^6 - 37*x^5 + 52*x^4 - 47*x^3 + 22*x^2 - 4*x - 16;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 44*x - 16; determinant field discriminant -3
+82.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 17*x^6 - 37*x^5 + 52*x^4 - 47*x^3 + 22*x^2 - 4*x - 16;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 44*x - 16; determinant field discriminant -3
+83.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 7*x^6 + 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 + 28*x - 19; determinant field discriminant -3
+83.3.b.a mod 3:  reducible
+83.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 8*x^4 + 23*x^3 + 232*x^2 - 244*x + 49;
+           projective image S4, splitting field polynomial x^4 - 42*x^2 - 149*x - 147; determinant field discriminant -3
+85.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 + 19*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 30*x^2 + 34*x + 299; determinant field discriminant -3
+85.2.a.c mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.2.c.a mod 3:  reducible
+85.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 10*x^6 + 9*x^4 - 228*x^2 - 768;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 89*x - 48; determinant field discriminant -3
+85.4.a.c mod 3:  reducible
+86.2.a.a mod 3:  reducible
+86.3.b.a mod 3:  reducible
+86.3.b.a mod 3:  reducible
+86.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^3 + 59*x - 29) * (x^4 - 7*x^3 + 27*x^2 - 46*x + 28);
+           projective image V4, splitting field polynomial (x^2 - 129) * (x^2 + 3); determinant field discriminant -43
+86.3.d.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 7*x^3 + 59*x - 29) * (x^4 - 7*x^3 + 27*x^2 - 46*x + 28);
+           projective image V4, splitting field polynomial (x^2 - 129) * (x^2 + 3); determinant field discriminant -43
+86.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 10*x^6 + 20*x^5 + 20*x^4 - 140*x^3 + 628*x^2 - 296*x - 640;
+           projective image S4, splitting field polynomial x^4 - 60*x^2 - 254*x - 300; determinant field discriminant -3
+86.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 32*x^2 - 32*x + 8;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 65*x - 48; determinant field discriminant -3
+86.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^6 - 36*x^4 - 108;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 2*x - 12; determinant field discriminant -3
+86.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 + 32*x^2 - 32*x + 8;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 65*x - 48; determinant field discriminant -3
+86.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 - 13*x^6 + 53*x^5 + 34*x^4 - 161*x^3 + 184*x^2 - 94*x - 154;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 18*x^2 - 22*x - 16; determinant field discriminant -3
+86.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 126*x^2 + 117*x - 36;
+           projective image S4, splitting field polynomial x^4 - 3*x^3 - 33*x^2 + 67*x + 246; determinant field discriminant -3
+88.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 8*x^6 - 14*x^5 - 14*x^4 - 14*x^3 - 14*x^2 - 8*x - 2;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 6*x^2 - 2*x - 2; determinant field discriminant -3
+88.2.g.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 6*x^3 + 2*x^2 - 12*x + 136) * (x^4 - 6*x^3 + 19*x^2 - 54*x + 73);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 2); determinant field discriminant -264
+88.2.g.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 - 9*x^2 + 26*x - 32) * (x^4 - 4*x^3 + 14*x^2 + 44*x + 73);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 2); determinant field discriminant -264
+88.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 45*x^2 - 82*x + 16) * (x^4 - 4*x^3 + 60*x^2 - 184*x + 151);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 6); determinant field discriminant -88
+88.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 6*x^2 - 24) * (x^4 - 12*x + 15);
+           projective image V4, splitting field polynomial (x^2 - 33) * (x^2 + 6); determinant field discriminant -88
+88.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 4*x^6 - 6*x^5 + 24*x^4 - 42*x^3 + 42*x^2 - 24*x + 6;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 14*x - 3; determinant field discriminant -3
+88.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 12*x^4 - 4*x^2 - 12;
+           projective image S4, splitting field polynomial x^4 - 24*x^2 - 2*x + 150; determinant field discriminant -3
+88.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 184*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 48*x^2 - 34*x + 6; determinant field discriminant -3
+89.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 5*x - 3; determinant field discriminant -3
+89.2.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 + 6*x^2 - 5*x - 3; determinant field discriminant -3
+89.4.a.c mod 3:  reducible
+89.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 44*x^4 + 95*x^3 - 272*x^2 + 224*x - 248;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 17*x - 12; determinant field discriminant -3
+91.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 + 3*x^6 - 6*x^4 - 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 17*x - 11; determinant field discriminant -3
+91.2.a.b mod 3:  reducible
+91.2.k.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - x^2 - x + 1) * (x^4 - x^3 + 2*x^2 - 2*x + 1);
+           projective image V4, splitting field polynomial (x^2 - 13) * (x^2 + 3); determinant field discriminant -39
+91.2.r.a mod 3:  linear image Ns, splitting field polynomial (x^4 - x^3 - x^2 - x + 1) * (x^4 - x^3 + 2*x^2 - 2*x + 1);
+           projective image V4, splitting field polynomial (x^2 - 13) * (x^2 + 3); determinant field discriminant -39
+91.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 - 48*x^2 + 49*x - 14) * (x^4 - 2*x^3 - 15*x^2 - 32*x + 307);
+           projective image V4, splitting field polynomial (x^2 - 273) * (x^2 + 3); determinant field discriminant -91
+91.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 15*x^2 - 28*x + 28) * (x^4 - 4*x^3 + 21*x^2 - 34*x + 4);
+           projective image V4, splitting field polynomial (x^2 - 273) * (x^2 + 3); determinant field discriminant -91
+91.3.m.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+91.3.v.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 3*x^3 + 3*x^2 - 9*x + 9) * (x^4 - 3*x^3 + 6*x^2 - 6*x + 3);
+           projective image V4, splitting field polynomial (x^2 - 21) * (x^2 + 3); determinant field discriminant -7
+91.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - x - 3; determinant field discriminant -3
+91.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 5*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 5*x - 3; determinant field discriminant -3
+92.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 2*x^6 + 2*x^5 - 17*x^4 - x^3 - 26*x^2 + 20*x - 8;
+           projective image S4, splitting field polynomial x^4 - x^3 + 3*x^2 + 5*x - 2; determinant field discriminant -3
+92.2.a.b mod 3:  reducible
+92.2.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 + 5*x^2 - 12*x + 4) * (x^4 + 13*x^2 + 48);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 23); determinant field discriminant -276
+92.2.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 + 3*x^2 - 38*x + 37) * (x^4 - 2*x^3 + 9*x^2 - 54*x + 108);
+           projective image V4, splitting field polynomial (x^2 - 3) * (x^2 + 23); determinant field discriminant -276
+92.3.c.a mod 3:  reducible
+92.3.c.a mod 3:  reducible
+92.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + x^4 + 5*x^3 + 16*x^2 - 19*x + 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 - 19*x + 4; determinant field discriminant -3
+92.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 28*x^4 - 49*x^3 + 88*x^2 - 64*x - 32;
+           projective image S4, splitting field polynomial x^4 - 36*x^2 - 114*x - 108; determinant field discriminant -3
+94.2.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 9*x^6 + 36*x^4 - 108;
+           projective image S4, splitting field polynomial x^4 - 12*x^2 - 18*x - 12; determinant field discriminant -3
+94.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 44*x^2 - 35*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 35*x + 2; determinant field discriminant -3
+94.4.a.c mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 53*x^4 + 113*x^3 + 178*x^2 - 235*x - 212;
+           projective image S4, splitting field polynomial x^4 - 72*x^2 - 330*x - 432; determinant field discriminant -3
+94.4.a.d mod 3:  reducible
+94.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 13*x^4 - 19*x^3 + 44*x^2 - 35*x + 2;
+           projective image S4, splitting field polynomial x^4 - x^3 + 9*x^2 - 35*x + 2; determinant field discriminant -3
+95.2.a.b mod 3:  reducible
+95.2.b.b mod 3:  reducible
+95.2.b.b mod 3:  reducible
+95.2.e.c mod 3:  reducible
+95.3.d.b mod 3:  reducible
+95.3.d.b mod 3:  reducible
+95.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 71*x^4 + 149*x^3 + 220*x^2 - 295*x - 395;
+           projective image S4, splitting field polynomial x^4 - x^3 - 18*x^2 - 48*x - 15; determinant field discriminant -3
+95.4.a.e mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 34*x^2 + 25*x - 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 + 8*x - 5; determinant field discriminant -3
+95.4.a.g mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 4*x^4 - x^3 - 4*x^2 + 4*x - 1;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 7*x - 3; determinant field discriminant -3
+95.4.a.g mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 5*x^4 + 17*x^3 - 34*x^2 + 25*x - 13;
+           projective image S4, splitting field polynomial x^4 - x^3 + 6*x^2 + 8*x - 5; determinant field discriminant -3
+97.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 3*x^6 - 5*x^5 - 7*x^4 - 6*x^3 - 11*x^2 - 4*x - 9;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + 3*x + 3; determinant field discriminant -291
+97.2.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 3*x^6 - x^5 + 11*x^4 - 8*x^2 - 2*x + 3;
+           projective image S4, splitting field polynomial x^4 - x^3 - 3*x^2 + 3*x + 3; determinant field discriminant -291
+97.2.e.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 2*x^3 + 8*x^2 + 26*x + 79) * (x^4 - 2*x^3 + 30*x^2 - 29*x - 8);
+           projective image V4, splitting field polynomial (x^2 - 97) * (x^2 + 3); determinant field discriminant -291
+97.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 23*x^4 + 53*x^3 - 124*x^2 + 97*x - 85;
+           projective image S4, splitting field polynomial x^4 - x^3 - 12*x^2 + 44*x - 23; determinant field discriminant -3
+97.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 6*x^4 - 89*x^2 - 3;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 89*x - 3; determinant field discriminant -3
+97.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 35*x^4 + 77*x^3 - 164*x^2 + 125*x - 158;
+           projective image S4, splitting field polynomial x^4 + 12*x^2 - 19*x - 12; determinant field discriminant -3
+97.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 50*x^4 + 107*x^3 + 74*x^2 - 128*x - 211;
+           projective image S4, splitting field polynomial x^4 - 18*x^2 - 51*x - 27; determinant field discriminant -3
+97.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 3*x^7 + 9*x^6 - 45*x^5 + 93*x^4 - 117*x^3 + 202*x^2 - 264*x + 159;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 3*x - 3; determinant field discriminant -291
+97.4.b.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - x^7 - 8*x^6 + 47*x^5 - 116*x^4 + 176*x^3 - 166*x^2 + 91*x - 31;
+           projective image S4, splitting field polynomial x^4 - 2*x^3 - 3*x - 3; determinant field discriminant -291
+98.2.a.a mod 3:  reducible
+98.2.c.b mod 3:  reducible
+98.4.a.a mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 - 14*x^4 + 35*x^3 - 126*x^2 + 108*x - 54;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+98.4.a.b mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 + 5*x^6 - 2*x^5 - 2*x^4 + 20*x^3 - 20*x^2 + 28*x - 4;
+           projective image S4, splitting field polynomial x^4 - x^3 - 9*x^2 + 3*x + 24; determinant field discriminant -3
+98.4.a.h mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 - 38*x^5 - 29*x^4 - 38*x^3 + 65*x^2 + 26*x + 8;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 14*x - 12; determinant field discriminant -3
+98.4.a.h mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 + 25*x^5 - 29*x^4 - 101*x^3 + 156*x^2 - 51*x - 6;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 14*x - 12; determinant field discriminant -3
+100.2.a.a mod 3:  reducible
+100.3.b.a mod 3:  linear image Ns, splitting field polynomial (x^4 - 4*x^3 + 6*x^2 - 4*x - 59) * (x^4 - 4*x^3 + 6*x^2 - 4*x + 16);
+           projective image V4, splitting field polynomial (x^2 - 15) * (x^2 + 15); determinant field discriminant -4
+100.3.b.b mod 3:  linear image Ns, splitting field polynomial (x^4 - 22*x^3 + 144*x^2 - 88*x + 16) * (x^4 - 15*x^2 + 30*x - 15);
+           projective image V4, splitting field polynomial (x^2 - 15) * (x^2 + 15); determinant field discriminant -4
+100.4.a.c mod 3:  reducible
+100.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 4*x^7 + 7*x^6 - 7*x^5 + 10*x^4 - 13*x^3 - 38*x^2 + 44*x - 14;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
+100.4.a.d mod 3:  linear image GL(2,3), splitting field polynomial x^8 - 2*x^7 - 5*x^6 + 13*x^5 + 4*x^4 - 23*x^3 + 30*x^2 + 12*x - 24;
+           projective image S4, splitting field polynomial x^4 - 6*x^2 - 10*x + 24; determinant field discriminant -3
