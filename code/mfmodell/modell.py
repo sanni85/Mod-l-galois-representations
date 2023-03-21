@@ -8,7 +8,7 @@
 # database.
 #
 
-from sage.all import ZZ, QQ, GF, PolynomialRing, NumberField, primes, primes_first_n, Matrix, FiniteDimensionalAlgebra
+from sage.all import ZZ, QQ, GF, PolynomialRing, NumberField, primes, primes_first_n, Matrix, vector, FiniteDimensionalAlgebra
 from sage.databases.cremona import class_to_int
 from mf_compare import read_dtp
 from lmfdb import db
@@ -99,9 +99,10 @@ def reduction_maps(betas, ell, verbose=False):
     basis vector for its complement.
     """
     K = betas[0].parent()
-    #print("K = {}".format(K))
-    #print("betas = {}".format(betas))
-    assert betas[0]==1
+    # print("K = {}".format(K))
+    # print("beta== 1? {}".format([b==1 for b in betas]))
+    # print("beta==-1? {}".format([b==-1 for b in betas]))
+    # assert betas[0]==1
     Fl = GF(ell)
     if verbose:
         print("creating Hecke order mod {} from betas".format(ell))
@@ -109,14 +110,12 @@ def reduction_maps(betas, ell, verbose=False):
     U = Matrix([coords(b) for b in betas]).inverse()
     structure = [(Matrix([coords(bi*bj) for bj in betas])*U).change_ring(Fl)
                  for bi in betas]
-    assert structure[0]==1
-    #print("structure = {}".format(structure))
+    one = [ZZ(c) for c in vector(coords(K(1))) * U]
+
     A = FiniteDimensionalAlgebra(Fl, structure)
-    #print("A = {}".format(A))
+
     MM = A.maximal_ideals()
     d = len(betas)
-    # dd = [M.basis_matrix().transpose().nullity() for M in MM]
-    # print("Algebra over GF({}) of dimension {}  has {} maximal ideals of residue degrees {}".format(ell,len(betas),len(MM), dd))
     vv = [list(M.basis_matrix().right_kernel().basis()[0])
           for M in MM  if M.basis_matrix().rank()==d-1]
 
@@ -125,16 +124,18 @@ def reduction_maps(betas, ell, verbose=False):
     # to be a ring homomorphism, so we must scale it so 1 maps to 1.
     # In practice Sage will always scale the basis vector so that the
     # first nonzero entry (which here must be the first entry) is 1,
-    # but we should not rely on this.
+    # but we should not rely on this.  We also do not rely on any of
+    # the basis elements (betas) beinb 1.
 
     for v in vv:
-        if v[0]!=1:
+        image_of_one = sum([r*s for r,s in zip(one,v)])
+        if image_of_one==0:
+            raise ValueError("reduction map defined by {} maps 1 to 0".format(v))
+        if image_of_one!=1:
             if verbose:
                 print("Rescaling reduction vector v={}".format(v))
-            if v[0]==0:
-                raise ValueError("reduction map defined by {} maps 1 to 0".format(v))
-            v0inv = 1/v[0]
-            v = [vi*v0inv for vi in v]
+            inv = 1/image_of_one
+            v = [vi*inv for vi in v]
             if verbose:
                 print("Rescaled reduction vector v={}".format(v))
     if verbose:
@@ -142,7 +143,6 @@ def reduction_maps(betas, ell, verbose=False):
         if vv:
             print("Reduction vector(s):")
             for v in vv: print(v)
-    #return [lambda w: Fl(sum([vi*Fl(wi) for vi,wi in zip(v,w)])) for v in vv]
     return vv
 
 # Function to construct all the reuductions of one newform at a prime
@@ -528,7 +528,7 @@ def extra_output(nf_list, filename, mode='w'):
 # After running, use data_output() and extra_output() to output to suitable files
 #
 # e.g.
-# sage: res = run([1..100],[2,3,5],True)
+# sage: res = run([1..100],[2,3,5], verbose=True)
 # sage: for ell in [2,3,5]:
 #           data_output(res[0][ell], "mod_{}_100.txt".format(ell))
 #           extra_output(res[1][ell], "mod_{}_100_missing.txt".format(ell))
