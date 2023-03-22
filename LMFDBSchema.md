@@ -12,6 +12,7 @@ Currently we are only considering representations of Gal_Q whose base ring is th
 * **base_ring_is_field** (boolean): true iff base ring is a field;
 * **conductor** (integer): prime-to-ell Artin conductor of the representation;
 * **conductor_primes** (integer[]): list of primes dividing the conductor;
+* **conductor_num_primes** (integer[]): number of primes dividing the conductor;
 * **conductor_squarefree** (boolean): true iff the conductor is squarefree;
 * **determinant_label** (text): label of the mod ell Galois character which is the determinant of the representation;
 * **cyclotomic_exponent** (integer): exponent of the cyclotomic character of the representation in the determinant of the representation, an integer modulo (l - 1);
