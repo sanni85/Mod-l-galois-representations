@@ -39,7 +39,6 @@ Currently we are only considering representations of Gal_Q whose base ring is th
    - representative_matrix (list of lists): list of length dimension^2 consisting of coefficients of a representative for the conjugacy class (inside the image) of a Frobenius matrix at p;
 
 for primes p< 100 (we will decide later about number fields) **unramified** (including finitefield_char is the representation is unramified at finitefield_char);
-* **real_place_list** (jsonb): same as for good_prime_list where the first entry is a 0-based index into the ordered list of real roots of the defining polynomial of numberfield_label;         
 * **bad_prime_list** (jsonb): list of lists. For each ramified prime give a list of 4 elements:
 
       [p, inertia_invariants, inertia_coinvariants, type] 
