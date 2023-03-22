@@ -52,3 +52,4 @@ for primes p< 100 (we will decide later about number fields) **unramified** (inc
 * **kernel_polynomial** (integer[]): list of integer coefficients of polynomial defining canonical sibling (chosen as with Artin stem fields) whose splitting field is the fixed field of the kernel of the representation;
 * **projective_kernel_polynomial** (integer[]): kernel polynomial for the projective representation
 * **related_objects** (text[]): each pair is of the form ["object_type", "object_label"] for objects related to representation.
+* **num** (integer): positive integer tiebreaker among reps of the same number field, dimension, base_ring_order, conductor.
