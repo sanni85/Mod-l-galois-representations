@@ -24,8 +24,8 @@ Currently we are only considering representations of Gal_Q whose base ring is th
 * **is_surjective** (boolean): true iff image equals codomain
 * **is_irreducible** (boolean): true iff image is irreducible (currently always true, only set when base ring is a field)
 * **is_absolutely_irreducible** (boolean): true if image is absolutely irreducible (only set when base ring is a field)
-* **projective_label** (string): TBD;
-* **projective_type** (string): human sensible descriptor of the projective image, e.g. "A5" or "trivial" similar;
+* **projective_label** (text): TBD;
+* **projective_type** (text): human sensible descriptor of the projective image, e.g. "A5" or "trivial" similar;
 * **projective_is_surjective** (boolean): true iff projective rep is surjective;
 * **good_prime_list** (jsonb): list of lists of the form 
 
