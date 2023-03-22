@@ -603,7 +603,7 @@ def compare_new_old(new_f, old_f):
 
 """
 To extract the dimensions from an "extra" output file:
-awk -F ":" '{print $2;}'  mod_5_100_missing.txt | sort -n | uniq
+awk -F ":" '{print $3;}'  mod_5_100_missing.txt | sort -n | uniq
 
 To count the distinct mod-ell reductions in a normal output file:
 awk -F ":" '$8==1{print $8;}' mod_5_100.txt | wc -l
