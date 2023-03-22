@@ -49,7 +49,7 @@ for primes p< 100 (we will decide later about number fields) **unramified** (inc
           [trace, determinant, charpoly, factorization_charpoly, order, projective_order, representative_matrix]
 
  everything represented with the same format as good_prime_list, and type is a list of descriptors. For 2-dimensional representation type = [is_reducible, is_decomposable] (list of booleans).
-* **kernel_polynomial** (integer[]): list of integer coefficients of polynomial defining canonical sibling (chosen as with Artin stem fields) whose splitting field is the fixed field of the kernel of the representation;
+* **kernel_polynomial** (integer[]): list of integer coefficients of the defining polynomial of the canonical sibling (chosen as with Artin stem fields) whose Galois closure is the fixed field of the kernel of the representation;
 * **projective_kernel_polynomial** (integer[]): kernel polynomial for the projective representation
 * **related_objects** (text[]): each pair is of the form ["object_type", "object_label"] for objects related to representation.
 * **num** (integer): positive integer tiebreaker among reps of the same number field, dimension, base_ring_order, conductor.
