@@ -23,7 +23,7 @@ cmf_logger.setLevel(logging.NOTSET)
 
 def char_order_valid(m, ell):
     """Return True iff the positive integer m has the form (ell^k)*m1
-    where m1 is 1 mod ell
+    where m1 divides ell-1
     """
     m1 = ZZ(m).prime_to_m_part(ell)
     return m1.divides(ell-1)
