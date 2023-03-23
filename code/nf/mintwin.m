@@ -10,6 +10,7 @@ function res(f,n)
   if order in Integers() then
     order := Integers() ! order;
     ss:= Subgroups(G : OrderEqual:=order);
+    R<x> := PolynomialRing(Rationals());
     return(<R ! DefiningPolynomial(NumberField( GaloisSubgroup(S, z`subgroup))) : z in ss>);
   else
     return <>;
