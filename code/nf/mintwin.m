@@ -2,21 +2,6 @@
    number field.  There is first some group theoretic data to speed
    up the search so we know where to look for the field. */
 
-/* A function to compute resolvents of f of degree n. */
-
-function res(f,n)
-  G,r,S := GaloisGroup(f);
-  order := Order(G)/n;
-  if order in Integers() then
-    order := Integers() ! order;
-    ss:= Subgroups(G : OrderEqual:=order);
-    R<x> := PolynomialRing(Rationals());
-    return(<R ! DefiningPolynomial(NumberField( GaloisSubgroup(S, z`subgroup))) : z in ss>);
-  else
-    return <>;
-  end if;
-end function;
-
 /* twindata[n,t] tells us about nTt with
    0 = no low degree siblings
    -1 = twins of the same degree
