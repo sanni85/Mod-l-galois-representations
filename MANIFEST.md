@@ -21,6 +21,7 @@ ell=2
 - data/mfmodell/2/x1-1000.txt contains  2859 undecomposed spaces, not processed for mod 2 forms
 - data/mfmodell/2/mod2bb1000.txt contains BlackBox output for 9609 mod 2 reductions (includes repeats)
     one line each saying "reducible" or "S3" or "C3" with cubics defining splitting fields
+- mod2bb1000_concise.txt concise version of previous
 
 ell=3
 
@@ -28,6 +29,7 @@ ell=3
 - data/mfmodell/3/x1-1000.txt contains  4512 undecomposed spaces, not processed for mod 3 forms
 - data/mfmodell/3/mod3bb1000nr.txt contains BlackBox output for 1550 mod 3 reductions (excludes repeats)
     one line for "reducible" or two lines for linea and projective image if irreducible with polynomials defining splitting fields
+- mod3bb1000nr_concise.txt concise version of previous
 
 ell=5
 

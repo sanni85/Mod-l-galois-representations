@@ -4,7 +4,7 @@
 #
 # "%runfile  modell_new.py"
 #
-# I only run this from legendre.mit.edu or speed of access to the
+# I only run this from legendre.mit.edu for speed of access to the
 # database.
 #
 
@@ -28,6 +28,36 @@ def char_order_valid(m, ell):
     m1 = ZZ(m).prime_to_m_part(ell)
     return m1.divides(ell-1)
 
+# Function to compute the label of the mod ell reduction of a
+# Dirichlet character, given its Conrey label.
+
+def reduced_char_label(DClabel, ell, verbose=False):
+    N, c = [ZZ(n) for n in DClabel.split(".")]
+    N1 = N.prime_to_m_part(ell)
+    N2 = N//N1
+    G = pari.znstar(N,1)
+    m = G.charorder(c).sage() # the order of X
+    m1 = m.prime_to_m_part(ell)
+    ellpow = m//m1
+    d = Mod(ell,m1).multiplicative_order()
+    if N2==1: # easy case where ell does not divide N
+        if verbose:
+            print("easy case, {} not divisible by {}".format(N,ell))
+        return "{}.{}-{}-{}".format(ell,d,N,c)
+
+    X = pari.znconreychar(G, c) # the character as a pari Conrey char
+    g = ZZ(GF(ell, d).multiplicative_generator()) # should be canonical
+    r = ZZ(m * G.chareval(X, g).sage())
+    j = Mod(ZZ(g), ellpow) ** r
+    # compute Teichmuller lift of j
+    j0 = Mod(0, ellpow)
+    while j!=j0:
+        j0 = j
+        j = j**ell
+    i = CRT(c, ZZ(j), N1, N2)
+    return "{}.{}-{}-{}".format(ell,d,N,i)
+    
+    
 # Function to find primes above ell in the Hecke field.  No longer
 # used.
 
