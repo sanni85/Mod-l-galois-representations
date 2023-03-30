@@ -1,0 +1,140 @@
+*****************************
+3 the smallest conductor is 3
+conductor  3
+['15a1']
+['15a1']
+*****************************
+4 the smallest conductor is 4
+conductor  4
+['20a1', '140b1', '460b1']
+['20a1', '140b1', '460b1']
+*****************************
+6 the smallest conductor is 6
+conductor  6
+['30a1']
+['30a1']
+*****************************
+7 the smallest conductor is 7
+conductor  7
+['35a1', '1155d1', '1785d1', '2415b1']
+['35a1', '1155d1', '1785d1', '2415b1']
+*****************************
+8 the smallest conductor is 8
+conductor  8
+['40a1', '920a1']
+['40a1', '920a1']
+*****************************
+9 the smallest conductor is 9
+conductor  9
+['45a1']
+['45a1']
+*****************************
+11 the smallest conductor is 11
+conductor  11
+['55a1']
+['55a1']
+*****************************
+13 the smallest conductor is 13
+conductor  13
+['65a1', '1495b1']
+['65a1', '1495b1']
+*****************************
+14 the smallest conductor is 14
+conductor  14
+['14a1', '182e1', '350e1']
+['14a1', '182e1', '350e1']
+*****************************
+14 the smallest conductor is 14
+conductor  14
+['70a1', '910f1', '1330g1']
+['70a1', '910f1', '1330g1']
+*****************************
+16 the smallest conductor is 16
+conductor  16
+['80a1', '1840b1']
+['80a1', '1840b1']
+*****************************
+16 the smallest conductor is 16
+conductor  16
+['80b1', '560e1', '1840h1']
+['80b1', '560e1', '1840h1']
+*****************************
+17 the smallest conductor is 17
+conductor  17
+['17a1', '9775c1']
+['17a1', '9775c1']
+*****************************
+17 the smallest conductor is 17
+conductor  17
+['85a1', '6545d1']
+['85a1', '6545d1']
+*****************************
+18 the smallest conductor is 18
+conductor  18
+['90c1']
+['90c1']
+*****************************
+18 the smallest conductor is 18
+conductor  18
+['90b1', '630g1', '1170h1']
+['90b1', '630g1', '1170h1']
+*****************************
+18 the smallest conductor is 18
+conductor  18
+['90a1', '630b1', '1170a1']
+['90a1', '630b1', '1170a1']
+*****************************
+19 the smallest conductor is 19
+conductor  19
+['19a1', '323a1', '6175b1']
+['19a1', '323a1', '6175b1']
+*****************************
+19 the smallest conductor is 19
+conductor  19
+['285a1', '665a1']
+['285a1', '665a1']
+*****************************
+21 the smallest conductor is 21
+conductor  21
+['21a1', '525d1']
+['21a1', '525d1']
+*****************************
+21 the smallest conductor is 21
+conductor  21
+['105a1', '1785n1']
+['105a1', '1785n1']
+*****************************
+22 the smallest conductor is 22
+conductor  22
+['110b1', '330d1', '5610w1']
+['110b1', '330d1', '5610w1']
+*****************************
+22 the smallest conductor is 22
+conductor  22
+['110c1', '330a1', '1870d1']
+['110c1', '330a1', '1870d1']
+*****************************
+23 the smallest conductor is 23
+conductor  23
+['46a1', '115a1', '506d1', '1150a1', '3910c1']
+['46a1', '115a1', '506d1', '1150a1', '3910c1']
+*****************************
+23 the smallest conductor is 23
+conductor  23
+['345c1', '1955a1']
+['345c1', '1955a1']
+*****************************
+24 the smallest conductor is 24
+conductor  24
+['24a1', '408c1', '600g1']
+['24a1', '408c1', '600g1']
+*****************************
+24 the smallest conductor is 24
+conductor  24
+['120a1']
+['120a1']
+*****************************
+24 the smallest conductor is 24
+conductor  24
+['120b1', '1560d1', '2040g1']
+['120b1', '1560d1', '2040g1']
