@@ -9,4 +9,5 @@ Notes:
     represented as a product of two quartic D4's
 
 Allmod3 is a magma data file for all irreducible GL(2,3) representations
-with conductor <= 1000 in the form <polynomial, conductor, top slope>.
+with conductor <= 1000 in the form <polynomial, conductor, top slope>.  The
+8T23 fields have just one per twin pair.  D_4's are given as octics.
