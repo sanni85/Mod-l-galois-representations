@@ -1,6 +1,7 @@
 resp:=3;
 G:=GL(2,3);
 sublist := Subgroups(G);
+SetColumns(0);
 
 load "mintwin.m";
 
@@ -61,7 +62,9 @@ end function;
 function makevec(ent)
   pol:=ent[1];
   ts := ent[3];
+  ts:=Coefficient(ts,0);
   c:=ent[2];
+  c:=Coefficient(c,0);
   K:=NumberField(pol);
   gal:=GaloisGroup(K);
   isisom:=false; j:=0;
@@ -106,7 +109,7 @@ function makevec(ent)
   detlabel := cyclopow eq 0 select
     Sprintf("%o.%o.1", resp, c) else Sprintf("%o.%o.%o", resp, c,c-1);
   issurj := t eq 24 select 1 else 0;
-  fc := Factorization(c);
+  fc := Factorization(Integers()!c);
   fcps := [z[1] : z in fc];
   Sort(~fcps);
   fcsf := &*[z[2] : z in fc] eq 1 select 1 else 0;
