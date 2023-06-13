@@ -2,15 +2,14 @@
 # https://github.com/LMFDB/lmfdb with appropriate configuration
 # settings, put this file in there, start Sage and type
 #
-# "%runfile  modell_new.py"
+# "%runfile  modell.py"
 #
 # I only run this from legendre.mit.edu for speed of access to the
 # database.
 #
 
-from sage.all import ZZ, QQ, GF, PolynomialRing, NumberField, primes, primes_first_n, Matrix, vector, FiniteDimensionalAlgebra
+from sage.all import ZZ, QQ, GF, PolynomialRing, NumberField, primes, primes_first_n, Matrix, vector, FiniteDimensionalAlgebra, pari, Mod, CRT
 from sage.databases.cremona import class_to_int
-from mf_compare import read_dtp
 from lmfdb import db
 from lmfdb.classical_modular_forms.web_newform import WebNewform
 import logging
@@ -332,6 +331,7 @@ def get_forms(N, k, ell, max_dim=50, verbose=False):
 
     Qx = PolynomialRing(QQ,'x')
     for f in forms:
+        f.reductions = []
         f.hecke_field = NumberField(Qx(f.field_poly), 'a_')
         if verbose:
             print("making reductions for {} mod {}".format(f.label, ell))
@@ -388,6 +388,7 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
     nothing.
 
     """
+    from mf_compare import read_dtp
     if not nf.field_poly is None:
         return nf
     fname = label = nf.label
@@ -435,7 +436,11 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
         print("nf_eigdata_index = {}".format(nf_eigdata_index))
     dim = data['dims'][nf_index]
     assert dim == nf.dim
-    nf.field_poly = data['polys'][nf_index]
+    try:
+        nf.field_poly = data['polys'][nf_index]
+    except IndexError:
+        print("********Problem with data for {} from file {}".format(label, fname))
+        return nf
 
     eigdata = data['eigdata'][nf_eigdata_index]
 
@@ -551,20 +556,27 @@ def extra_output(nf_list, filename, mode='w'):
     o.close()
     print("{} unprocessed forms output to {}".format(len(nf_list),filename))
 
+"""
 ########################################################################
-#
-# Function for a systematic run over a range of levels and primes
-#
-# After running, use data_output() and extra_output() to output to suitable files
-#
-# e.g.
-# sage: res = run([1..100],[2,3,5], verbose=True)
-# sage: for ell in [2,3,5]:
-#           data_output(res[0][ell], "mod_{}_100.txt".format(ell))
-#           extra_output(res[1][ell], "mod_{}_100_missing.txt".format(ell))
-#
+
+ Function for a systematic run over a range of levels and primes
+
+ After running, use data_output() and extra_output() to output to suitable files
+
+ e.g.
+
+ sage: N1=1
+ sage: N2=1000
+ sage: NN = range(N1,N2+1)
+ sage: ells = [2,3,5]
+ sage: res = run(NN, ells, verbose=True)
+ sage: for ell in ells:
+           data_output(res[0][ell], f"mod_{ell}_{N1}-{N2}.txt")
+           extra_output(res[1][ell], f"mod_{ell}_{N1}-{N2}_missing.txt")
+
 ########################################################################
-    
+"""
+
 def run(levels, ells=[2,3,5], max_dim=50, verbose=True):
     """
     Input:
