@@ -24,8 +24,8 @@ end function;
 
 
 function tostring(e)
-  newent:= Sprintf("[\"%o\", %o, %o, %o, %o, %o, %o,%o,%o,%o,\"%o\", %o, %o, %o,\"%o\",%o,\"%o\",%o,%o,%o,%o,%o,\"%o\",%o, %o,\"%o\",\"%o\",%o,%o,%o]",
-    e[1], e[2], e[3], e[4], e[5], e[6], e[7], e[8], e[9], e[10], e[11],e[12],e[13], e[14], e[15], e[16],e[17], e[18], e[19], e[20], e[21], e[22], e[23], e[24], e[25],e[26],e[27],e[28],e[29],e[30]);
+  newent:= Sprintf("[\"%o\", %o, %o, %o, %o, %o, %o,%o,%o,%o,\"%o\", %o, %o, %o,\"%o\",%o,\"%o\",%o,%o,%o,%o,%o,\"%o\",%o, %o,\"%o\",\"%o\",%o,%o,%o,\"%o\",\"%o\"]",
+    e[1], e[2], e[3], e[4], e[5], e[6], e[7], e[8], e[9], e[10], e[11],e[12],e[13], e[14], e[15], e[16],e[17], e[18], e[19], e[20], e[21], e[22], e[23], e[24], e[25],e[26],e[27],e[28],e[29],e[30],e[31], e[32]);
   newent:=replacestring(newent, "<", "[");
   newent:=replacestring(newent, ">", "]");
   newent:=DelSpaces(newent);
@@ -78,31 +78,39 @@ function makevec(ent)
   if t eq 1 then /* C_8 */
       imorder := 8; absirr := 0; isirr := 1; imindex:=6; imlabel:="3Cn";
 	  cyclopow:=1;reptype:="cyclic";projtype:="Cn";
+	  gal1 := "8.1"; pgal1 := "4.1";
 	  ppol:=Polredabs(res(pol,4)[1]);
   elif t eq 4 then /* D_4 */
 	  imorder := 8; absirr := 1; isirr := 1; imindex:=6; imlabel:="3Ns";
 	  cyclopow:=1;reptype:="dihedral";projtype:="Dn";
+	  gal1 := "8.3"; pgal1 := "4.2";
+	  ppol:=Polredabs(res(pol,4)[1]);
 	  ppol:=Polredabs(res2(pol,4,2)[1]);
   elif t eq 5 then /* Q_8 */
 	  imorder := 8; absirr := 1; isirr := 1; imindex:=6; imlabel:="3Nn[2]";
 	  cyclopow:=0;reptype:="other";projtype:="Dn";
+	  gal1 := "8.4"; pgal1 := "4.2";
 	  ppol:=Polredabs(res2(pol,4,2)[1]);
   elif t eq 8 then /* QD_16 */
 	  imorder := 16; absirr := 1; isirr := 1; imindex:=3; imlabel:="3Nn";
 	  cyclopow:=1;reptype:="other";projtype:="Dn";
+	  gal1 := "16.8"; pgal1 := "4.3";
 	  ppol:=Polredabs(res2(pol,4,3)[1]);
 	  ppol:=mintwin(ppol);
   elif t eq 12 then /* SL(2,3) */
 	  imorder := 24; absirr := 1; isirr := 1; imindex:=2; imlabel:="3G[]";
 	  cyclopow:=0; reptype:="big"; projtype:="A4";
+	  gal1 := "24.3"; pgal1 := "12.3";
 	  ppol:=Polredabs(res2(pol,4,4)[1]);
   elif t eq 23 then /* GL(2,3) */
 	  imorder := 48; absirr := 1; isirr := 1; imindex:=1; imlabel:="3G";
 	  cyclopow:=1; reptype:="big"; projtype:="S4";
+	  gal1 := "48.29"; pgal1 := "24.12";
 	  ppol:=Polredabs(res2(pol,4,5)[1]);
   else   /* C_4 */
 	  imorder := 4; absirr := 0; isirr := 1; imindex:=12; imlabel:="3Cn[2]";
 	  cyclopow:=1;reptype:="cyclic";projtype:="Cn";
+	  gal1 := "4.1"; pgal1 := "2.1";
 	  ppol:=Polredabs(res(pol,2)[1]);
   end if;
 
@@ -128,7 +136,7 @@ function makevec(ent)
                 imindex, imlabel, imorder, reptype, absirr, 1, 1, issurj, 
 				Coefficients(minpol),
                 baselabel, issurj, Coefficients(ppol), projtype, ts, 1.*ts, 
-				genlist, [z[2] : z in ggps]>;
+				genlist, [z[2] : z in ggps], gal1, pgal1>;
   if t eq 23 then
     elts := {z[2] : z in ggps1 | Order(z[2]) eq 8};
 	elts := [z : z in elts];
@@ -144,6 +152,15 @@ function makevec(ent)
 	    ggps2[j][2] := elts[1] eq ggps1[j][2] select elts[2] else elts[1];
 	  end if;
 	end for;
+    v2 := v;
+	v2[13] := <<z[1], Eltseq(z[2])> : z in ggps2>;
+	v2[30] := [z[2] : z in v2[13]];
+	return <v, v2>;
+  end if;
+  if t eq 1 then /* C_8 has 2 reps */
+	cc:=Classes(G);
+	cm:=ClassMap(G);
+	ggps2 := <<z[1], cc[cm(z[2]^(-1))][3]> : z in ggps1>;
     v2 := v;
 	v2[13] := <<z[1], Eltseq(z[2])> : z in ggps2>;
 	v2[30] := [z[2] : z in v2[13]];
