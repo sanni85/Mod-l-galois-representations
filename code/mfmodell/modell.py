@@ -498,6 +498,7 @@ def nf_to_string(nfr, nap=None):
 
     The string uses ":" as separators between the fields
 
+    - label
     - N   |
     - k   | (the four components of the newform label:
     - c   |   level,weight,char.orbit, nf id)
