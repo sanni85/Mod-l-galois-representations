@@ -116,7 +116,7 @@ function makevec(ent)
 
   detlabel := cyclopow eq 0 select
     Sprintf("%o.%o.1", resp, c) else Sprintf("%o.%o.%o", resp, c,c-1);
-  issurj := t eq 24 select 1 else 0;
+  issurj := t eq 23 select 1 else 0;
   fc := Factorization(Integers()!c);
   fcps := [z[1] : z in fc];
   Sort(~fcps);

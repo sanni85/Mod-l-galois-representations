@@ -1,3 +1,5 @@
+Attach("/home/jj/Programs/magma/+IdealsNF.m" );
+
 /* The main function, mintwin(f), at the bottom computes the minimal twin of a
    number field.  There is first some group theoretic data to speed
    up the search so we know where to look for the field. */
@@ -116,6 +118,7 @@ function Polredabs(f)
   R<x>:=PolynomialRing(Rationals());
   out := Sprintf("/tmp/polredabs%o.out", Random(10^30));
   txt := Sprintf("/tmp/polredabs%o.txt", Random(10^30));
+  //write(txt,Sprintf("polredabs([%o,%o])",f, rmps): rewrite:=true);
   write(txt,Sprintf("polredabs(%o)",f): rewrite:=true);
   // Avoid hardwiring gp path
   System("which sage>"*out);
@@ -131,6 +134,13 @@ function Polredabs(f)
   return f;
 end function;
 
+function absdisc(f,rmps)
+  ans:=1;
+  for p in rmps do
+    ans *:= p^pDiscriminant(f,p);
+  end for;
+  return ans;
+end function;
 
 // Assumes f is already polredabs'ed
 function mintwin(f)
@@ -149,6 +159,29 @@ function mintwin(f)
   pols := [Polredabs(g) : g in pols];
   dat := [[TransitiveGroupIdentification(GaloisGroup(z)),
     Abs(Discriminant(Integers(NumberField(z))))] cat Coefficients(z) : z in pols];
+  Sort(~dat,~P);
+  pols := PermuteSequence(pols, P);
+  return pols[1];
+end function;
+
+function mintwinx(f, rmps)
+  R<x> := PolynomialRing(Rationals());
+  n := Degree(f);
+  G,r,S := GaloisGroup(f);
+  t := TransitiveGroupIdentification(G);
+  twincode := twind(n, t);
+  if twincode eq 0 then return f; end if;
+  d:= twincode eq -1 select  n else twincode;
+  rmps:=[z : z in rmps];
+
+  order := Order(G) div d;
+  ss:= Subgroups(G : OrderEqual:=order);
+  ss:= [s : s in ss | Order(Core(G, s`subgroup)) eq 1];
+  pols := <R ! DefiningPolynomial(NumberField( GaloisSubgroup(S, z`subgroup))) : z in ss>;
+  pols := [Polredabs(g) : g in pols];
+  S<y> := PolynomialRing(Integers());
+  dat := [[TransitiveGroupIdentification(GaloisGroup(z)),
+    absdisc(S!z,rmps)] cat Coefficients(z) : z in pols];
   Sort(~dat,~P);
   pols := PermuteSequence(pols, P);
   return pols[1];
