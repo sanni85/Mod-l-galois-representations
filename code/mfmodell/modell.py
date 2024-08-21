@@ -28,7 +28,8 @@ def char_order_valid(m, ell):
     return m1.divides(ell-1)
 
 # Function to compute the label of the mod ell reduction of a
-# Dirichlet character, given its Conrey label.
+# Dirichlet character, given its Conrey label.  Edited 2024-08-21 for
+# new label format (only dots as separators and nod : "ell.N.c").
 
 def reduced_char_label(DClabel, ell, verbose=False):
     N, c = [ZZ(n) for n in DClabel.split(".")]
@@ -41,8 +42,8 @@ def reduced_char_label(DClabel, ell, verbose=False):
     d = Mod(ell,m1).multiplicative_order()
     if N2==1: # easy case where ell does not divide N
         if verbose:
-            print("easy case, {} not divisible by {}".format(N,ell))
-        return "{}.{}-{}-{}".format(ell,d,N,c)
+            print(f"easy case, {N} not divisible by {ell}")
+        return f"{ell}.{N}.{c}".format(ell,d,N,c)
 
     X = pari.znconreychar(G, c) # the character as a pari Conrey char
     g = ZZ(GF(ell, d).multiplicative_generator()) # should be canonical
@@ -54,9 +55,8 @@ def reduced_char_label(DClabel, ell, verbose=False):
         j0 = j
         j = j**ell
     i = CRT(c, ZZ(j), N1, N2)
-    return "{}.{}-{}-{}".format(ell,d,N,i)
-    
-    
+    return f"{ell}.{N}.{i}".format(ell,d,N,i)
+
 # Function to find primes above ell in the Hecke field.  No longer
 # used.
 
@@ -68,12 +68,12 @@ def Hecke_field_primes(fpol, ell, degree=None, verbose=False):
     GF(ell).
     """
     if verbose:
-        print("Checking field poly {} at ell={}".format(fpol,ell))
+        print(f"Checking field poly {pol} at {ell=}")
     Qx = PolynomialRing(QQ,'x')
     K = NumberField(Qx(fpol), 'a_')
     ellK = K.primes_above(ell, degree=degree)
     if verbose:
-        print("{} primes of norm {}".format(len(ellK),ell))
+        print(f"{len(ellK)} primes of norm {ell}")
     return ellK
 
 def make_an_decoder(nf):
@@ -128,13 +128,13 @@ def reduction_maps(betas, ell, verbose=False):
     basis vector for its complement.
     """
     K = betas[0].parent()
-    # print("K = {}".format(K))
-    # print("beta== 1? {}".format([b==1 for b in betas]))
-    # print("beta==-1? {}".format([b==-1 for b in betas]))
+    # print(f"{K = }")
+    # print(f"beta== 1? {[b==1 for b in betas]}")
+    # print(f"beta==-1? {[b==-1 for b in betas]}")
     # assert betas[0]==1
     Fl = GF(ell)
     if verbose:
-        print("creating Hecke order mod {} from betas".format(ell))
+        print(f"creating Hecke order mod {ell} from betas")
     coords = K.gen().coordinates_in_terms_of_powers()
     U = Matrix([coords(b) for b in betas]).inverse()
     structure = [(Matrix([coords(bi*bj) for bj in betas])*U).change_ring(Fl)
@@ -162,13 +162,13 @@ def reduction_maps(betas, ell, verbose=False):
             raise ValueError("reduction map defined by {} maps 1 to 0".format(v))
         if image_of_one!=1:
             if verbose:
-                print("Rescaling reduction vector v={}".format(v))
+                print(f"Rescaling reduction vector {v=}")
             inv = 1/image_of_one
             v = [vi*inv for vi in v]
             if verbose:
-                print("Rescaled reduction vector v={}".format(v))
+                print(f"Rescaled reduction vector {v=}")
     if verbose:
-        print("{} reductions found from Hecke order".format(len(vv)))
+        print(f"{len(vv)} reductions found from Hecke order")
         if vv:
             print("Reduction vector(s):")
             for v in vv: print(v)
@@ -189,7 +189,7 @@ def make_reductions(nf, ell, verbose=False):
     """
     K = nf.hecke_field
     if verbose:
-        print("Making reduction mod ell={}".format(ell))
+        print(f"Making reduction mod {ell=}")
     if K==QQ:
         nf.betas = [[1]] # for consistency, not actually used
         Fl = GF(ell)
@@ -242,10 +242,10 @@ def reduce_ap_mod_ell(nf, red, verbose=False):
 
     """
     if verbose:
-        print("Reducing {} mod ell via {}".format(nf.label, red))
+        print(f"Reducing {nf.label} mod ell via {red}")
         for i,p in enumerate(primes_first_n(10)):
             ap = nf.ap[i]
-            print("p={}, ap={}, ap mod ell = {}".format(p, ap, apply_red(ap, red)))
+            print(f"{p=}, {ap=}, ap mod ell = {apply_red(ap, red)}")
     return dict([(p,apply_red(nf.ap[i], red)) for i,p in enumerate(primes_first_n(len(nf.ap)))])
 
 def reduce_chi_mod_ell(nf, red):
@@ -297,13 +297,13 @@ def get_forms(N, k, ell, max_dim=50, verbose=False):
     forms  = [WebNewform.by_label(f_label) for f_label in
               nfs.search({'level':N, 'weight':k}, projection='label')]
     if verbose:
-        print("forms with (N,k)=({},{}): {}".format(N,k,[f.label for f in forms]))
+        print(f"forms with (N,k)=({N},{k}): {[f.label for f in forms]}")
 
     # omit forms whose character order is invalid:
     
     forms = [f for f in forms if char_order_valid(f.char_order, ell)]
     if verbose:
-        print("After char order check, forms with (N,k,ell)=({},{},{}): {}".format(N,k,ell,[(f.label,f.dim) for f in forms]))
+        print(f"After char order check, forms with (N,k,ell)=({N},{k},{ell}): {[(f.label,f.dim) for f in forms]}")
 
     # for forms with no Hecke field, try to read from a data file
 
@@ -311,17 +311,17 @@ def get_forms(N, k, ell, max_dim=50, verbose=False):
 
     if forms_with_no_field:
         if verbose:
-            print("Before reading data files, {} forms have no Hecke field data: {}".format(len(forms_with_no_field), [f.label for f in forms_with_no_field]))
+            print(f"Before reading data files, {len(forms_with_no_field)} forms have no Hecke field data: {[f.label for f in forms_with_no_field]}")
 
         for f in forms:
             if f.field_poly is None and f.dim <= max_dim:
                 if verbose:
-                    print("looking for a data file for form {}".format(f.label))
+                    print(f"looking for a data file for form {f.label}")
                 f = get_form_data_from_file(f, max_dim=max_dim, verbose=verbose)
 
         forms_with_no_field = [(f.label,f.dim,ell) for f in forms if f.field_poly is None]
         if verbose:
-            print("After reading data files, {} forms have no Hecke field data".format(len(forms_with_no_field)))
+            print(f"After reading data files, {len(forms_with_no_field)} forms have no Hecke field data")
 
     # Now exclude any forms which still have no Hecke data:
 
@@ -334,11 +334,11 @@ def get_forms(N, k, ell, max_dim=50, verbose=False):
         f.reductions = []
         f.hecke_field = NumberField(Qx(f.field_poly), 'a_')
         if verbose:
-            print("making reductions for {} mod {}".format(f.label, ell))
-            print("Hecke field is {}".format(f.hecke_field))
+            print(f"making reductions for {f.label} mod {ell}")
+            print(f"Hecke field is {f.hecke_field}")
         f.reductions = make_reductions(f, ell, verbose)
         if verbose:
-            print("finished making reductions for {} mod {}".format(f.label, ell))
+            print(f"finished making reductions for {f.label} mod {ell}")
 
         try:
             assert f.an
@@ -350,15 +350,15 @@ def get_forms(N, k, ell, max_dim=50, verbose=False):
 
             if verbose:
                 nap = len(f.ap)
-                print("Found {} ap and {} an in the second table".format(nap,len(f.an)))
+                print(f"Found {nap} ap and {len(f.an)} an in the second table")
         
     # Exclude forms with no mod-ell reductions:
         
     forms = [f for f in forms if f.reductions]
     if forms and verbose:
-        print("{}.{} forms with mod-{} reductions:".format(N,k,ell))
+        print(f"{N}.{k} forms with mod-{ell} reductions:")
         for f in forms:
-            print("{} has {} reductions mod {}".format(f.label,len(f.reductions), ell))
+            print(f"{f.label} has {len(f.reductions)} reductions mod {ell}")
 
     return forms, forms_with_no_field
 
@@ -401,11 +401,11 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
         try:
             data = read_dtp(datafile, verbose=False)
         except FileNotFoundError:
-            print("No file {} or {} found: no data available".format(datafile,label))
+            print(f"No file {datafile} or {label} found: no data available")
             return nf
 
     if verbose:
-        print("Successfully read data for {} from file {}".format(label, fname))
+        print(f"Successfully read data for {label} from file {fname}")
         
     # Now we have data.  It is a dict with a single key (N,k,o) where
     # o is the character orbit number and value so we just extract the
@@ -427,19 +427,19 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
     dims = data['dims']
     nf_eigdata_index = nf_index - dims.count(1)
     if verbose: # debug
-        print("Newform label = {}".format(label))
-        print("nf_index = {}".format(nf_index))
-        print("len(polys) = {}".format(len(data['polys'])))
-        print("len(dims) = {}".format(len(dims)))
-        print("#dims>1 = {}".format(len(dims)-dims.count(1)))
-        print("len(eigdata) = {}".format(len(data['eigdata'])))
-        print("nf_eigdata_index = {}".format(nf_eigdata_index))
+        print(f"Newform {label = label}")
+        print(f"{nf_index = }")
+        print(f"len(polys) = {len(data['polys'])}")
+        print(f"{len(dims) = }")
+        print(f"#dims>1 = {len(dims)-dims.count(1)}")
+        print(f"len(eigdata) = {len(data['eigdata'])}")
+        print(f"{nf_eigdata_index = }")
     dim = data['dims'][nf_index]
     assert dim == nf.dim
     try:
         nf.field_poly = data['polys'][nf_index]
     except IndexError:
-        print("********Problem with data for {} from file {}".format(label, fname))
+        print(f"********Problem with data for {label} from file {fname}")
         return nf
 
     eigdata = data['eigdata'][nf_eigdata_index]
@@ -451,7 +451,7 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
     # already been selected to have an appropriate character.
 
     if verbose:
-        print("hecke_ring_character_values = {}".format(nf.hecke_ring_character_values))
+        print(f"hecke_ring_character_values = {nf.hecke_ring_character_values}")
     
     Qx = PolynomialRing(QQ,'x')
     nf.hecke_field = K = NumberField(Qx(nf.field_poly), 'a_')
@@ -460,7 +460,7 @@ def get_form_data_from_file(nf, data_dir=NF_DIR, max_dim=50, verbose=False):
     nf.ap = [nf.an[p-1] for p in primes(len(nf.an))]
 
     if verbose: # debug
-        print("We have {} a_n and {} a_p for newforms {}".format(len(nf.an), len(nf.ap), label))
+        print(f"We have {len(nf.an)} a_n and {len(nf.ap)} a_p for newforms {label}")
     return nf
 
 ########################################################################
@@ -536,7 +536,7 @@ def data_output(nf_list, filename, mode='w', nap=None):
         o.write(nf_to_string(nf, nap) + "\n")
     o.close()
     nuniq = len([nf['label'] for nf in nf_list if nf['index']==1])
-    print("{} forms (with {} unique reductions) output to {}".format(len(nf_list),nuniq,filename))
+    print(f"{len(nf_list)} forms (with {nuniq} unique reductions) output to {filename}")
 
 def extra_output(nf_list, filename, mode='w'):
     """Output a list of basic newform info to the given file.
@@ -554,7 +554,7 @@ def extra_output(nf_list, filename, mode='w'):
         id = lab[1+lab.rfind("."):]
         o.write("{}:{}:{}:{}\n".format(space, id, nf[1], nf[2]))
     o.close()
-    print("{} unprocessed forms output to {}".format(len(nf_list),filename))
+    print(f"{len(nf_list)} unprocessed forms output to {filename}")
 
 """
 ########################################################################
@@ -601,14 +601,14 @@ def run(levels, ells=[2,3,5], max_dim=50, verbose=True):
         for N in levels:
             for k in range(2,1+max(ell+1,4)):
                 if True:#verbose:
-                    print("(ell,k,N) = ({},{},{})".format(ell,k,N))
+                    print(f"(ell,k,N) = ({ell},{k},{N})")
                 ff, ff_no_field = get_forms(N,k,ell, max_dim=max_dim, verbose=verbose)
                 if ff_no_field:
                     if verbose:
-                        print("No Hecke field exists for {}".format(ff_no_field))
+                        print(f"No Hecke field exists for {ff_no_field}")
                     nfx[ell] += ff_no_field
                 if ff and verbose:
-                    print("(ell,k,N) = ({},{},{})".format(ell,k,N))
+                    print(f"(ell,k,N) = ({ell},{k},{N})")
                 for f in ff:
                     for red in f.reductions:
                         nfr = nf_mod_ell(f, red)
@@ -621,17 +621,17 @@ def run(levels, ells=[2,3,5], max_dim=50, verbose=True):
                         nf[ell].append(nfr) # collect all, including repeats
                         if verbose:
                             if n_previous==0:
-                                print("New mod {} form from {} of dimension {}".format(ell,nfr['label'],nfr['d']))
+                                print(f"New mod {ell} form from {nfr['label']} of dimension {nfr['d']}")
                             else:
-                                print("Repeat (#{}) mod {} form from {} of dimension {}".format(n_previous+1,ell,nfr['label'],nfr['d']))
+                                print(f"Repeat (#{n_previous+1}) mod {ell} form from {nfr['label']} of dimension {nfr['d']}")
 
-        print("{} mod {} newforms found, with {} distinct".format(len(nf[ell]), ell, nnf[ell]))
+        print(f"{len(nf[ell])} mod {ell} newforms found, with {nnf[ell]} distinct")
         if nfx[ell]:
             if verbose:
                 for f in nfx[ell]:
-                    print("Unable to reduce {} mod {} (dimension={})".format(f[0],f[2],f[1]))
+                    print(f"Unable to reduce {f[0]} mod {f[2]} (dimension={f[1]})")
             else:
-                print("Unable to reduce {} newforms mod {}".format(len(nfx[ell]), ell))
+                print(f"Unable to reduce {len(nfx[ell])} newforms mod {ell}")
     return nf, nfx
 
 def compare_new_old(new_f, old_f):
