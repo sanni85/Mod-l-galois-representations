@@ -1,5 +1,5 @@
 /*
-  Dual pairs for Galois representations with image GL_2(F_l)
+  Dual pairs for Galois representations with big image in GL_2(F_l)
   for l = 3 and l = 5
 */
 
@@ -43,6 +43,19 @@ algtobasis_rel(g, a) =
    concat([Colrev(polcoef(a, i, 'x), l^2 - 1) | i <- [0..l^2 - l - 1]]);
 }
 
+\\ assume h square-free
+algisincl(K, h) =
+{
+   my(F = factor(h)[,1],
+      incl = [Mod(nfisincl(K, f), f) | f <- F],
+      result = []);
+   forvec(j = [[1, #i] | i <- incl],
+      print(j);
+      result = concat(result, [chinese([incl[k][j[k]] | k <- [1..#F]])]));
+   print("done");
+   result;
+}
+
 \\ construct the algebra B = Q × Q[x]/(f_B) and the pairing Phi
 make_dual_algebra_and_pairing(mu) =
 {
@@ -73,15 +86,17 @@ make_dual_algebra_and_pairing(mu) =
    [f_B, Phi];
 }
 
-dual_pair_from_GL2_field(f) =
+dual_pair_from_big_image_field(f) =
 {
    l = sqrtint(poldegree(f) + 1);
    K = nfinit(subst(f, 'x, 'y));
 
    /*
-     the coordinate ring of the group scheme is A = Q × K
-     the splitting field has degree (l^2 - 1)(l^2 - l) = #GL_2(F_l)
-     the field K = Q[x]/(f) has automorphism group of order l - 1
+     The coordinate ring of the group scheme is A = Q × K.
+     The field K = Q[y]/(f) has degree l^2 - 1 and has
+     automorphism group of order l - 1.
+     The algebra L = (Q[y]/(f))[x]/(g) has degree l^2 - l over K
+     and absolute degree (l^2 - 1)(l^2 - l).
    */
    Aut_K = nfgaloisconj(K);
    g = f / vecprod([x - Mod(u, K.pol) | u <- Aut_K]);
@@ -104,15 +119,18 @@ dual_pair_from_GL2_field(f) =
    comp = Mat(concat([[algtobasis_rel(g, y^j * x^i)
 		       | j <- [0..l^2 - 2]] | i <- [0..l^2 - 2]]));
 
-   \\ determine the subfield Lsym of L fixed under swapping x and y
+   \\ determine the subalgebra Lsym of L fixed under swapping x and y
    \\ TODO: the element x + y might not always generate Lsym
-   h = factor(norm(subst(minpoly(Mod(x + y, g)), 'x, 'z)))[1, 1];
+   if(!issquare(norm(subst(charpoly(Mod(x + y, g)), 'x, 'z)), &h),
+      error("polynomial not a square"));
+   if(!issquarefree(h),
+      error("polynomial not square-free: x + y does not generate Lsym"));
    Lsym_to_L = Mat([algtobasis_rel(g, (x + y)^i) |
 		    i <- [0..(l^2 - 1)*(l^2 - l)/2 - 1]]);
 
    \\ inclusions K → L factoring via Lsym
    inclusions = [Lsym_to_L * algebra_homomorphism_matrix(f, h, incl)
-		 | incl <- nfisincl(K, h)];
+		 | incl <- algisincl(K, h)];
 
    if(l == 3,
       \\ only possibility for the scalar multiplication maps [2]
