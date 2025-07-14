@@ -50,9 +50,7 @@ algisincl(K, h) =
       incl = [Mod(nfisincl(K, f), f) | f <- F],
       result = []);
    forvec(j = [[1, #i] | i <- incl],
-      print(j);
       result = concat(result, [chinese([incl[k][j[k]] | k <- [1..#F]])]));
-   print("done");
    result;
 }
 

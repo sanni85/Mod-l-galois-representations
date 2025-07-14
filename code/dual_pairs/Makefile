@@ -24,6 +24,9 @@ all: matches.txt
 mod-%-reps.txt:
 	$(PYTHON) download_reps.py $* > $@
 
+dim-1-reps.txt:
+	$(PYTHON) download_dim1_reps.py > $@
+
 # Evaluate $(1) in GP with arguments $(2), redirecting standard output
 # to $(3).
 gp_eval_raw = echo $(1) | $(GP) $(2) > $(3)
@@ -44,3 +47,6 @@ mod-%-matches.txt: mod-%-traces.txt mod-%-reps.txt
 mod-%-traces.txt:
 	$(MAKE) big-image-pairs
 	sage -c 'load("traces.sage"); compute_traces('$*')' | sort -V > $@
+
+dim-1-matches.txt: dim-1-reps.txt
+	sage -c 'load("dim1.sage"); match()' > $@
