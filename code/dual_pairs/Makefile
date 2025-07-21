@@ -1,6 +1,10 @@
 # Generate dual pairs of algebras corresponding to Galois
 # representations with image contained in GL_2(F_3) or GL_2(F_5).
 
+# Requires the following Python packages:
+# - dual-pairs <https://gitlab.com/pbruin/dual-pairs>
+# - lmfdb-lite <https://github.com/roed314/lmfdb-lite>
+
 GP = gp -q -D parisizemax=4G
 PYTHON = sage --python3
 
