@@ -73,7 +73,7 @@ make_dual_algebra_and_pairing(mu) =
    chi_1 = chi / ('x - a_0);
    [f_B, a_1] = polredabs(chi_1, 1);
 
-   M = matconcat([algebra_homomorphism_matrix(chi, x, a_0);
+   M = matconcat([algebra_homomorphism_matrix(chi, 'x, a_0);
 		  algebra_homomorphism_matrix(chi, f_B, a_1)]);
 
    pow_gen = vector(n);
@@ -97,7 +97,7 @@ dual_pair_from_big_image_field(f) =
      and absolute degree (l^2 - 1)(l^2 - l).
    */
    Aut_K = nfgaloisconj(K);
-   g = f / vecprod([x - Mod(u, K.pol) | u <- Aut_K]);
+   g = f / vecprod(['x - Mod(u, K.pol) | u <- Aut_K]);
 
    \\ projection maps A → Q, A → K
    proj_0 = matconcat([Mat(1), matrix(1, l^2 - 1)]);
@@ -105,25 +105,26 @@ dual_pair_from_big_image_field(f) =
    id = matid(l^2);
 
    \\ inclusion Q → K, multiplication K ⊗ K → K
-   unit_K = algebra_homomorphism_matrix(x, f, 0);
+   unit_K = algebra_homomorphism_matrix('x, f, 0);
    mul_K = multiplication_tensor(f);
 
    \\ antipode on K
-   order_2 = [u | u <- Aut_K, u != y && nfgaloisapply(K, u, u) == y][1];
+   order_2 = [u | u <- Aut_K, u != 'y && nfgaloisapply(K, u, u) == 'y][1];
    iota_K = algebra_homomorphism_matrix(K.pol, K.pol, order_2);
-   if(iota_K^2 != matid(l^2 - 1), error("bug: iota_K does not have order 2"));
+   if(iota_K^2 != matid(l^2 - 1),
+      error("bug: iota_K does not have order 2"));
 
    \\ "compositum" map K ⊗ K → L
-   comp = Mat(concat([[algtobasis_rel(g, y^j * x^i)
+   comp = Mat(concat([[algtobasis_rel(g, 'y^j * 'x^i)
 		       | j <- [0..l^2 - 2]] | i <- [0..l^2 - 2]]));
 
    \\ determine the subalgebra Lsym of L fixed under swapping x and y
    \\ TODO: the element x + y might not always generate Lsym
-   if(!issquare(norm(subst(charpoly(Mod(x + y, g)), 'x, 'z)), &h),
+   if(!issquare(norm(subst(charpoly(Mod('x + 'y, g)), 'x, 'z)), &h),
       error("polynomial not a square"));
    if(!issquarefree(h),
       error("polynomial not square-free: x + y does not generate Lsym"));
-   Lsym_to_L = Mat([algtobasis_rel(g, (x + y)^i) |
+   Lsym_to_L = Mat([algtobasis_rel(g, ('x + 'y)^i) |
 		    i <- [0..(l^2 - 1)*(l^2 - l)/2 - 1]]);
 
    \\ inclusions K → L factoring via Lsym
@@ -136,7 +137,7 @@ dual_pair_from_big_image_field(f) =
       l == 5,
       \\ multiplication maps by 2 and 3 on K, in unknown order
       mult = [algebra_homomorphism_matrix(K.pol, K.pol, u)
-	      | u <- Aut_K, u != y && u != order_2];
+	      | u <- Aut_K, u != 'y && u != order_2];
       \\ possibilities for the scalar multiplication maps [2, 3, 4]
       scalar_possibilities = [[mult[1], mult[2], iota_K],
 			      [mult[2], mult[1], iota_K]]);
@@ -164,7 +165,7 @@ dual_pair_from_big_image_field(f) =
 	 mu = matsolve(isom, M);
 	 if(mattensor(mu, id) * mu == mattensor(id, mu) * mu,
 	    [f_B, Phi] = make_dual_algebra_and_pairing(mu);
-	    return([[x, f], [x, f_B], Phi]))));
+	    return([['x, f], ['x, f_B], Phi]))));
    error("no valid Hopf algebra found");
 }
 
