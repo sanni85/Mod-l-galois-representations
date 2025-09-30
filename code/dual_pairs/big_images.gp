@@ -210,14 +210,17 @@ hopf_algebra_from_big_image_field(f) =
 
 dual_pair_from_big_image_field(f) =
 {
-   my(F, mu, G, Phi);
+   my(B = matconcat([Mat(1), 0; 0, nfinit(f)[8]]),
+      F, mu, G, Phi);
    [F, mu] = hopf_algebra_from_big_image_field(f);
+   mu = mattensor(B, B) * mu * B^-1;
    [G, Phi] = make_dual_algebra_and_pairing(mu);
-   [F, G, Phi];
+   [F, G, B~ * Phi];
 }
 
 to_lmfdb_format(D) =
 {
+   my(A, B, Phi, d);
    [A, B, Phi] = D;
    d = denominator(Phi);
    [apply(Vecrev, A), apply(Vecrev, B), [d, [v~ | v <- d*Phi~]]];
