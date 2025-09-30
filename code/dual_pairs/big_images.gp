@@ -70,7 +70,7 @@ make_dual_algebra_and_pairing(mu) =
    for(i = 2, n, pow_gen[i] = gen * pow_gen[i - 1]);
 
    Phi = Mat(pow_gen) * M^-1;
-   [f_B, Phi];
+   [['x, f_B], Phi];
 }
 
 find(v, P) = for(j = 1, #v, if(P(v[j]), return(j)));
@@ -119,7 +119,7 @@ good_inclusions(K, g, G, incl_1, scalars) =
     i == Mod(Mod(substvec(liftpol(i), ['x, 'y], ['y, 'x]), g), K.pol)];
 }
 
-dual_pair_from_big_image_field(f) =
+hopf_algebra_from_big_image_field(f) =
 {
    l = sqrtint(poldegree(f) + 1);
    K = nfinit(subst(f, 'x, 'y));
@@ -202,9 +202,15 @@ dual_pair_from_big_image_field(f) =
 			incl * proj_1]~);
 	 mu = matsolve(isom, M);
 	 if(mattensor(mu, id) * mu == mattensor(id, mu) * mu,
-	    [f_B, Phi] = make_dual_algebra_and_pairing(mu);
-	    return([['x, f], ['x, f_B], Phi]))));
-   error("no valid Hopf algebra found");
+	    return([['x, f], mu]))));
+}
+
+dual_pair_from_big_image_field(f) =
+{
+   my(F, mu, G, Phi);
+   [F, mu] = hopf_algebra_from_big_image_field(f);
+   [G, Phi] = make_dual_algebra_and_pairing(mu);
+   [F, G, Phi];
 }
 
 to_lmfdb_format(D) =
