@@ -43,21 +43,24 @@ algtobasis_rel(g, a, l) =
    concat([Colrev(polcoef(a, i, 'x), l^2 - 1) | i <- [0..l^2 - l - 1]]);
 }
 
+\\ find generator for an algebra given by a multiplication table
+find_gen(T) =
+{
+   my(chi);
+   foreach(T, gen,
+      chi = charpoly(gen);
+      if(issquarefree(chi),
+	 return([gen, chi])));
+   error("no algebra generator found");
+}
+
 \\ construct the algebra B = Q × Q[x]/(f_B) and the pairing Phi
 make_dual_algebra_and_pairing(mu) =
 {
-   T = multiplication_tensor_split(mu~);
-   n = #T;
-   if(T[1] != matid(n), error("bug: first element is not the identity"));
-   found = 0;
-   for(i = 2, n,
-      gen = T[i];
-      chi = charpoly(gen);
-      if(issquarefree(chi),
-	 found = i;
-	 break));
-   if(!found,
-      error("no algebra generator found"));
+   my(T = multiplication_tensor_split(mu~),
+      n = #T,
+      gen, chi, a_0, chi_1, f_B, a_1, M, pow_gen, Phi);
+   [gen, chi] = find_gen(T);
    a_0 = nfroots(,chi)[1];
    chi_1 = chi / ('x - a_0);
    [f_B, a_1] = polredabs(chi_1, 1);
