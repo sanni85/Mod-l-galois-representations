@@ -124,9 +124,6 @@ good_inclusions(K, g, G, incl_1, scalars) =
 
 hopf_algebra_from_big_image_field(f) =
 {
-   l = sqrtint(poldegree(f) + 1);
-   K = nfinit(subst(f, 'x, 'y));
-
    /*
      The coordinate ring of the group scheme is A = Q × K.
      The field K = Q[y]/(f) has degree l^2 - 1 and has
@@ -134,31 +131,31 @@ hopf_algebra_from_big_image_field(f) =
      The algebra L = (Q[y]/(f))[x]/(g) has degree l^2 - l over K
      and absolute degree (l^2 - 1)(l^2 - l).
    */
-   Aut_K = nfgaloisconj(K);
-   g = f / vecprod(['x - Mod(u, K.pol) | u <- Aut_K]);
+   my(l = sqrtint(poldegree(f) + 1),
+      K = nfinit(subst(f, 'x, 'y)),
+      Aut_K = nfgaloisconj(K),
+      g = f / vecprod(['x - Mod(u, K.pol) | u <- Aut_K]),
+      \\ projection maps A → Q, A → K
+      proj_0 = matconcat([Mat(1), matrix(1, l^2 - 1)]),
+      proj_1 = matconcat([matrix(l^2 - 1, 1), matid(l^2 - 1)]),
+      id = matid(l^2),
+      \\ inclusion Q → K, multiplication K ⊗ K → K
+      unit_K = algebra_homomorphism_matrix('x, f, 0),
+      mul_K = multiplication_tensor(f),
+      \\ "compositum" map K ⊗ K → L
+      comp = Mat(concat([[algtobasis_rel(g, 'y^j * 'x^i, l)
+			  | j <- [0..l^2 - 2]] | i <- [0..l^2 - 2]])),
+      G = nffactor(K, g)[,1],
+      order_2 = [u | u <- Aut_K, u != 'y && nfgaloisapply(K, u, u) == 'y][1],
+      order_4, scalar_pol, h, Lsym_to_L, inclusions, incl_1,
+      scalar_mat, isom, candidates, M, mu);
 
-   order_2 = [u | u <- Aut_K, u != 'y && nfgaloisapply(K, u, u) == 'y][1];
    if(l == 3,
       scalar_pol = [['y, order_2]],
       l == 5,
       order_4 = [u | u <- Aut_K, u != 'y && u != order_2];
       scalar_pol = [['y, order_4[1], order_4[2], order_2],
 		    ['y, order_4[2], order_4[1], order_2]]);
-
-   \\ projection maps A → Q, A → K
-   proj_0 = matconcat([Mat(1), matrix(1, l^2 - 1)]);
-   proj_1 = matconcat([matrix(l^2 - 1, 1), matid(l^2 - 1)]);
-   id = matid(l^2);
-
-   \\ inclusion Q → K, multiplication K ⊗ K → K
-   unit_K = algebra_homomorphism_matrix('x, f, 0);
-   mul_K = multiplication_tensor(f);
-
-   \\ "compositum" map K ⊗ K → L
-   comp = Mat(concat([[algtobasis_rel(g, 'y^j * 'x^i, l)
-		       | j <- [0..l^2 - 2]] | i <- [0..l^2 - 2]]));
-
-   G = nffactor(K, g)[,1];
 
    if(#G == 1,
       \\ determine the subalgebra Lsym of L fixed under swapping x and y
