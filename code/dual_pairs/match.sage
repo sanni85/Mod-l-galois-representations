@@ -28,7 +28,7 @@ def dual_pair_string(F, r, traces_big):
               if traces(D.nice_model()) == t]
         if len(Ds) != 1:
             raise ValueError('no uniquely defined dual pair')
-        s = str(Ds[0].lmfdb_export())
+        s = str(Ds[0].lmfdb_data())
     return s
 
 def match(l):
