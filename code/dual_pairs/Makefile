@@ -38,15 +38,21 @@ gp_eval = $(call gp_eval_raw,"print("$(call gp_catch,$(1))");",$(2),$(3))
 big-image-pairs: $(BIG_IMAGE_FILES)
 	$(MAKE) $(shell sed -ne 's/^"\(.*\)".*/\1.gp/p' $(BIG_IMAGE_FILES))
 
+big-image-traces:
+	$(MAKE) $(shell sed -e 's/^"\(.*\)".*/\1-traces.gp/' $(BIG_IMAGE_FILES))
+
 %.gp: | $(BIG_IMAGE_FILES)
 	$(call gp_eval,"to_lmfdb_format(dual_pair_from_big_image_field(Polrev("$(shell sed -ne "s/\"$*\".\(.*\)/\1/p" $(BIG_IMAGE_FILES))")))",big_images.gp,$@)
 
 mod-%-matches.txt: mod-%-traces.txt mod-%-reps.txt
-	sage -c 'load("match.sage"); match('$*')' | sort -V > $@
+	sage -c 'load("match.sage"); match('$*')' > $@
+
+%-traces.gp: %.gp
+	sage -c 'load("traces.sage"); compute_traces("'$<'")' > $@
 
 mod-%-traces.txt:
-	$(MAKE) big-image-pairs
-	sage -c 'load("traces.sage"); compute_traces('$*')' | sort -V > $@
+	$(MAKE) big-image-traces
+	(for f in $$(($* * $* - 1))*-traces.gp; do echo '("'$$f'", '`cat $$f`')'; done) | sed -e s/-traces\\.gp// | sort -V > $@
 
 dim-1-matches.txt: dim-1-reps.txt
 	sage -c 'load("dim1.sage"); match()' > $@
