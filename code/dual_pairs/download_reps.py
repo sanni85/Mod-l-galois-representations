@@ -4,13 +4,15 @@ with image contained in GL_2(F_l).
 """
 from sys import argv
 
-if len(argv) != 2:
-    print('usage:', argv[0], 'L')
+argc = len(argv)
+if argc < 2 or argc > 3:
+    print('usage:', argv[0], 'L [N=2]')
     exit(1)
 
 from lmf import db
 
-query = {'dimension': 2, 'base_ring_characteristic': int(argv[1])}
+query = {'dimension': int(argv[2]) if argc > 2 else 2,
+         'base_ring_characteristic': int(argv[1])}
 projection = {'label': True, 'image_type': True,
               'kernel_polynomial': True, 'traces': True}
 
