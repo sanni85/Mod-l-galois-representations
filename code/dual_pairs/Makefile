@@ -24,6 +24,9 @@ all: matches.txt
 mod-%-reps.txt:
 	$(PYTHON) download_reps.py $* > $@
 
+GSp4_F2_reps.txt:
+	$(PYTHON) download_reps.py 2 4 > $@
+
 dim-1-reps.txt:
 	$(PYTHON) download_dim1_reps.py > $@
 
