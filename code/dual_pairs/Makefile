@@ -54,7 +54,7 @@ GL2_F%-matches.txt: GL2_F%-traces.txt GL2_F%-reps.txt
 	sage -c 'load("match.sage"); match('$*')' > $@
 
 %-traces.gp: %.gp
-	sage -c 'load("traces.sage"); compute_traces("'$<'")' > $@
+	sage -c 'from dual_pairs.dual_pair_import import dual_pair_import; print(dual_pair_import("'$<'").nice_model().frobenius_traces_lmfdb())' > $@
 
 GL2_F%-traces.txt:
 	$(MAKE) big-image-traces

@@ -2,13 +2,6 @@ from dual_pairs.dual_pair_from_sub_GL2_field import dual_pair_from_sub_GL2_field
 
 R.<x> = QQ[]
 
-# copied from traces.sage
-def traces(D, B=100):
-    # variant of D.frobenius_traces(B)
-    P = D.ramified_primes()
-    return [-1 if p in P else D.frobenius_matrix(p).trace()
-            for p in primes(B)]
-
 @cached_function
 def candidates(p, F):
     return dual_pair_from_sub_GL2_field(p, F)
@@ -25,7 +18,7 @@ def dual_pair_string(F, r, traces_big):
     else:
         p = R(r['kernel_polynomial'])
         Ds = [D for D in candidates(p, F)
-              if traces(D.nice_model()) == t]
+              if D.nice_model().frobenius_traces_lmfdb() == t]
         if len(Ds) != 1:
             raise ValueError('no uniquely defined dual pair')
         s = str(Ds[0].lmfdb_data())
