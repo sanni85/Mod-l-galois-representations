@@ -16,7 +16,7 @@ all: dim-1-matches.txt GL2_F3-matches.txt GL2_F5-matches.txt GSp4_F2-matches.txt
 
 .DELETE_ON_ERROR:
 
-.PRECIOUS: %-fields.txt GL2_F%-reps.txt
+.PRECIOUS: %-fields.txt %-reps.txt %-traces.txt
 
 %-fields.txt:
 	$(PYTHON) download_nf.py $* > $@
