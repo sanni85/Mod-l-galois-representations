@@ -35,10 +35,10 @@ def match(l):
     F = GF(l)
 
     # traces for representations with big image
-    with open('mod-' + str(l) + '-traces.txt') as t:
+    with open('GL2_F' + str(l) + '-traces.txt') as t:
         traces_big = [eval(x) for x in t.readlines()]
 
-    with open('mod-' + str(l) + '-reps.txt') as f:
+    with open('GL2_F' + str(l) + '-reps.txt') as f:
         reps = [eval(x) for x in f.readlines()]
 
     for r in reps:

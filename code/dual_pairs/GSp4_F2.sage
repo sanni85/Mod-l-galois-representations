@@ -30,7 +30,7 @@ def dual_pair(h, tr):
         return D
     raise NotImplementedError
 
-with open('GSp4_F2_reps.txt') as reps:
+with open('GSp4_F2-reps.txt') as reps:
     for x in reps.readlines():
         r = eval(x)
         D = dual_pair(R(r['kernel_polynomial']), r['traces'])
