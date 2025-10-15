@@ -30,22 +30,8 @@ def dual_pair(h, tr):
         return D
     raise NotImplementedError
 
-# load dual pairs that have already been computed
-import re
-r = re.compile('(.*): (.*)')
-pairs = {}
-try:
-    with open('GSp4_F2_matches.txt') as f:
-        for x in f.readlines():
-            m = r.match(x)
-            pairs[m[1]] = eval(m[2])
-except FileNotFoundError:
-    pass
-
 with open('GSp4_F2_reps.txt') as reps:
     for x in reps.readlines():
         r = eval(x)
-        l = r['label']
-        if l not in pairs:
-            D = dual_pair(R(r['kernel_polynomial']), r['traces'])
-            print(l + ': ' + str(D.lmfdb_data()))
+        D = dual_pair(R(r['kernel_polynomial']), r['traces'])
+        print(r['label'] + ': ' + str(D.lmfdb_data()))
