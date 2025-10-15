@@ -23,8 +23,10 @@ def dual_pair(h, tr):
         return D
     raise NotImplementedError
 
-with open('GSp4_F2-reps.txt') as reps:
-    for x in reps.readlines():
-        r = eval(x)
+def match():
+    with open('GSp4_F2-reps.txt') as f:
+        reps = [eval(x) for x in f.readlines()]
+
+    for r in reps:
         D = dual_pair(R(r['kernel_polynomial']), r['traces'])
         print(r['label'] + ': ' + str(D.lmfdb_data()))
