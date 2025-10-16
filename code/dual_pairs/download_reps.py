@@ -1,6 +1,5 @@
 """
-Download mod l Galois representations from the LMFDB
-with image contained in GL_2(F_l).
+Download mod l Galois representations from the LMFDB.
 """
 from sys import argv
 

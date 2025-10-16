@@ -1,7 +1,6 @@
 """
 Download one-dimensional mod l Galois representations from the LMFDB.
 """
-from sys import argv
 from lmf import db
 
 query = {'dimension': 1}
