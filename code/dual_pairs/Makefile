@@ -6,7 +6,8 @@
 # - lmfdb-lite <https://github.com/roed314/lmfdb-lite>
 
 GP = gp -q -D parisizemax=4G
-PYTHON = sage --python3
+SAGE = sage
+PYTHON = $(SAGE) --python3
 
 # Evaluate $(1) in GP with arguments $(2), redirecting standard output
 # to $(3).
@@ -48,17 +49,17 @@ big-image-traces:
 	$(call gp_eval,"to_lmfdb_format(dual_pair_from_big_image_field(Polrev("$(shell sed -ne "s/\"$*\".\(.*\)/\1/p" $(BIG_IMAGE_FILES))")))",big_images.gp,$@)
 
 %-traces.gp: %.gp
-	sage -c 'from dual_pairs.dual_pair_import import dual_pair_import; print(dual_pair_import("'$<'").nice_model().frobenius_traces_lmfdb())' > $@
+	$(SAGE) -c 'from dual_pairs.dual_pair_import import dual_pair_import; print(dual_pair_import("'$<'").nice_model().frobenius_traces_lmfdb())' > $@
 
 GL2_F%-traces.txt:
 	$(MAKE) big-image-traces
 	(for f in $$(($* * $* - 1))*-traces.gp; do echo '("'$$f'", '`cat $$f`')'; done) | sed -e s/-traces\\.gp// | sort -V > $@
 
 dim-1-matches.txt: dim-1-reps.txt
-	sage -c 'load("dim1.sage"); match()' > $@
+	$(SAGE) -c 'load("dim1.sage"); match()' > $@
 
 GL2_F%-matches.txt: GL2_F%-traces.txt GL2_F%-reps.txt
-	sage -c 'load("match.sage"); match('$*')' > $@
+	$(SAGE) -c 'load("match.sage"); match('$*')' > $@
 
 GSp4_F2-matches.txt: | GSp4_F2-reps.txt
-	sage -c 'load("GSp4_F2.sage"); match()' > $@
+	$(SAGE) -c 'load("GSp4_F2.sage"); match()' > $@
