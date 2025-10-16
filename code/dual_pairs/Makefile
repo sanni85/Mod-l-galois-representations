@@ -9,13 +9,8 @@ GP = gp -q -D parisizemax=4G
 SAGE = sage
 PYTHON = $(SAGE) --python3
 
-# Evaluate $(1) in GP with arguments $(2), redirecting standard output
-# to $(3).
-gp_eval_raw = echo $(1) | $(GP) $(2) > $(3)
-gp_catch = "iferr("$(1)",e,write(\"/dev/stderr\",e);quit(1))"
-# Evaluate $(1) in GP with arguments $(2), catching errors and writing
-# the result to $(3).
-gp_eval = $(call gp_eval_raw,"print("$(call gp_catch,$(1))");",$(2),$(3))
+# Evaluate $(1) in GP with arguments $(2), catching errors.
+gp_eval = echo "print(iferr("$(1)",e,write(\"/dev/stderr\",e);quit(1)));" | $(GP) $(2)
 
 BIG_IMAGE_LABELS = 8T12 8T23 24T201 24T1353
 
@@ -46,7 +41,7 @@ big-image-traces:
 	$(MAKE) $(shell sed -e 's/^"\(.*\)".*/\1-traces.gp/' $(BIG_IMAGE_FILES))
 
 %.gp: | $(BIG_IMAGE_FILES)
-	$(call gp_eval,"to_lmfdb_format(dual_pair_from_big_image_field(Polrev("$(shell sed -ne "s/\"$*\".\(.*\)/\1/p" $(BIG_IMAGE_FILES))")))",big_images.gp,$@)
+	$(call gp_eval,"to_lmfdb_format(dual_pair_from_big_image_field(Polrev("$(shell sed -ne "s/\"$*\".\(.*\)/\1/p" $(BIG_IMAGE_FILES))")))",big_images.gp) > $@
 
 %-traces.gp: %.gp
 	$(SAGE) -c 'from dual_pairs.dual_pair_import import dual_pair_import; print(dual_pair_import("'$<'").nice_model().frobenius_traces_lmfdb())' > $@
