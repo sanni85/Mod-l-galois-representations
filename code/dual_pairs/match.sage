@@ -13,7 +13,7 @@ def dual_pair_string(F, r, traces_big):
         X = [x for x in traces_big if x[1] == t]
         if len(X) != 1:
             raise ValueError('no uniquely defined dual pair')
-        with open(X[0][0] + '.gp') as f:
+        with open(X[0][0] + '.dualpair') as f:
             s = f.read().removesuffix('\n')
     else:
         p = R(r['kernel_polynomial'])

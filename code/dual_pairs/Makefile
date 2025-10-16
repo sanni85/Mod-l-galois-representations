@@ -22,6 +22,8 @@ all: dim-1-matches.txt GL2_F3-matches.txt GL2_F5-matches.txt GSp4_F2-matches.txt
 
 .PRECIOUS: %-fields.txt %-reps.txt %-traces.txt
 
+.SECONDARY: %.dualpair %.traces
+
 %-fields.txt:
 	$(PYTHON) download_nf.py $* > $@
 
@@ -34,21 +36,15 @@ GL2_F%-reps.txt:
 GSp4_F2-reps.txt:
 	$(PYTHON) download_reps.py 2 4 > $@
 
-big-image-pairs: $(BIG_IMAGE_FILES)
-	$(MAKE) $(shell sed -ne 's/^"\(.*\)".*/\1.gp/p' $(BIG_IMAGE_FILES))
-
-big-image-traces:
-	$(MAKE) $(shell sed -e 's/^"\(.*\)".*/\1-traces.gp/' $(BIG_IMAGE_FILES))
-
-%.gp: | $(BIG_IMAGE_FILES)
+%.dualpair: | $(BIG_IMAGE_FILES)
 	$(call gp_eval,"to_lmfdb_format(dual_pair_from_big_image_field(Polrev("$(shell sed -ne "s/\"$*\".\(.*\)/\1/p" $(BIG_IMAGE_FILES))")))",big_images.gp) > $@
 
-%-traces.gp: %.gp
+%.traces: %.dualpair
 	$(SAGE) -c 'from dual_pairs.dual_pair_import import dual_pair_import; print(dual_pair_import("'$<'").nice_model().frobenius_traces_lmfdb())' > $@
 
-GL2_F%-traces.txt:
-	$(MAKE) big-image-traces
-	(for f in $$(($* * $* - 1))*-traces.gp; do echo '("'$$f'", '`cat $$f`')'; done) | sed -e s/-traces\\.gp// | sort -V > $@
+GL2_F%-traces.txt: $(BIG_IMAGE_FILES)
+	$(MAKE) $(shell sed -e 's/^"\(.*\)".*/\1.traces/' $(BIG_IMAGE_FILES))
+	(for f in $$(($* * $* - 1))*.traces; do echo '("'$$f'", '`cat $$f`')'; done) | sed -e s/\\.traces// > $@
 
 dim-1-matches.txt: dim-1-reps.txt
 	$(SAGE) -c 'load("dim1.sage"); match()' > $@
