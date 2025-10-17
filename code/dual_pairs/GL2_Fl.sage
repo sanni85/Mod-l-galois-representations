@@ -4,7 +4,12 @@ R.<x> = QQ[]
 
 @cached_function
 def candidates(p, F):
-    return dual_pair_from_sub_GL2_field(p, F)
+    # catch sporadic failure
+    for i in range(8):
+        try:
+            return dual_pair_from_sub_GL2_field(p, F)
+        except ValueError:
+            continue
 
 def dual_pair_string(F, r, traces_big):
     t = r['traces']
