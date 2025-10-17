@@ -1,3 +1,8 @@
+/*
+  Dual pairs of algebras for symplectic 4-dimensional irreducible
+  representations of Gal(Qbar/Q) over F_2
+*/
+
 \r util.gp
 
 \\ Reference: D.P. Roberts, Twin sextic algebras, Section 3

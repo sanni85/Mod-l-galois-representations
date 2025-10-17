@@ -1,4 +1,7 @@
-\r util.gp
+/*
+  Dual pairs of algebras for 2-dimensional irreducible representations
+  of Gal(Qbar/Q) over F_2
+*/
 
 W = 1/4 * [1, 1, 1, 1; 1, 1, -1, -1; 1, -1, 1, -1; 1, -1, -1, 1];
 

@@ -1,4 +1,6 @@
-\\ following functions taken from dual-pairs-experimental/etale-algebras.gp
+/*
+  Some utility functions
+*/
 
 \\ tensor product of two matrices
 mattensor(A, B) =
@@ -27,8 +29,6 @@ algebra_homomorphism_matrix(f, g, a) =
    a = Mod(a, g);
    Mat([Colrev(liftpol(b), e) | b <- powers(a, d - 1)]);
 }
-
-\\ end of functions taken from dual-pairs-experimental/etale-algebras.gp
 
 to_lmfdb_format(D) =
 {
