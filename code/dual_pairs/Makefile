@@ -16,7 +16,7 @@ BIG_IMAGE_LABELS = 8T12 8T23 24T201 24T1353
 
 BIG_IMAGE_FILES = $(BIG_IMAGE_LABELS:=-fields.txt)
 
-all: dim-1-matches.txt GL2_F3-matches.txt GL2_F5-matches.txt GSp4_F2-matches.txt
+all: GL1-matches.txt GL2_F{2,3,5}-matches.txt GSp4_F2-matches.txt
 
 .DELETE_ON_ERROR:
 
@@ -27,8 +27,8 @@ all: dim-1-matches.txt GL2_F3-matches.txt GL2_F5-matches.txt GSp4_F2-matches.txt
 %-fields.txt:
 	$(PYTHON) download_nf.py $* > $@
 
-dim-1-reps.txt:
-	$(PYTHON) download_dim1_reps.py > $@
+GL1-reps.txt:
+	$(PYTHON) download_GL1_reps.py > $@
 
 GL2_F%-reps.txt:
 	$(PYTHON) download_reps.py $* > $@
@@ -46,11 +46,14 @@ GL2_F%-traces.txt: $(BIG_IMAGE_FILES)
 	$(MAKE) $(shell sed -e 's/^"\(.*\)".*/\1.traces/' $(BIG_IMAGE_FILES))
 	(for f in $$(($* * $* - 1))*.traces; do echo '("'$$f'", '`cat $$f`')'; done) | sed -e s/\\.traces// > $@
 
-dim-1-matches.txt: dim-1-reps.txt
-	$(SAGE) -c 'load("dim1.sage"); match()' > $@
+GL1-matches.txt: GL1-reps.txt
+	$(SAGE) -c 'load("GL1.sage"); match()' > $@
+
+GL2_F2-matches.txt: GL2_F2-reps.txt
+	$(SAGE) -c 'load("GL2_F2.sage"); match()' > $@
 
 GL2_F%-matches.txt: GL2_F%-traces.txt GL2_F%-reps.txt
-	$(SAGE) -c 'load("match.sage"); match('$*')' > $@
+	$(SAGE) -c 'load("GL2_Fl.sage"); match('$*')' > $@
 
 GSp4_F2-matches.txt: | GSp4_F2-reps.txt
 	$(SAGE) -c 'load("GSp4_F2.sage"); match()' > $@
