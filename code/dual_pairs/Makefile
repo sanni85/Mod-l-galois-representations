@@ -20,9 +20,8 @@ all: GL1-matches.txt $(patsubst %,GL2_F%-matches.txt, 2 3 5) GSp4_F2-matches.txt
 
 .DELETE_ON_ERROR:
 
-.PRECIOUS: %-fields.txt %-reps.txt %-traces.txt
-
-.SECONDARY: %.dualpair %.traces
+# Do not delete intermediate files
+.SECONDARY:
 
 %-fields.txt:
 	$(PYTHON) download_nf.py $* > $@
