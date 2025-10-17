@@ -21,7 +21,7 @@ def dual_pair_from_data(data):
     return DualPair(A, B, Phi.sage())
 
 def match():
-    with open('dim-1-reps.txt') as f:
+    with open('GL1-reps.txt') as f:
         reps = [eval(x) for x in f.readlines()]
 
     for r in reps:
