@@ -16,7 +16,9 @@ BIG_IMAGE_LABELS = 8T12 8T23 24T201 24T1353
 
 BIG_IMAGE_FILES = $(BIG_IMAGE_LABELS:=-fields.txt)
 
-all: GL1-matches.txt $(patsubst %,GL2_F%-matches.txt, 2 3 5) GSp4_F2-matches.txt
+CODOMAINS = GL1 GL2_F2 GL2_F3 GL2_F5 GSp4_F2
+
+all: $(CODOMAINS:=-matches.txt)
 
 .DELETE_ON_ERROR:
 
