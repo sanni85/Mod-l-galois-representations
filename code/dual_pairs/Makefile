@@ -10,7 +10,7 @@ SAGE = sage
 PYTHON = $(SAGE) --python3
 
 # Evaluate $(1) in GP with arguments $(2), catching errors.
-gp_eval = echo "print(iferr("$(1)",e,write(\"/dev/stderr\",e);quit(1)));" | $(GP) $(2)
+gp_eval = echo "iferr("$(1)",e,write(\"/dev/stderr\",e);quit(1))" | $(GP) $(2)
 
 BIG_IMAGE_LABELS = 8T12 8T23 24T201 24T1353
 
