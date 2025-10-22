@@ -11,33 +11,33 @@ def candidates(p, F):
         except ValueError:
             continue
 
-def dual_pair_string(F, r, traces_big):
-    t = r['traces']
-    if r['image_type'] == 'big':
-        # TODO: replace by grep?
-        X = [x for x in traces_big if x[1] == t]
-        if len(X) != 1:
-            raise ValueError('no uniquely defined dual pair')
-        with open(X[0][0] + '.dualpair') as f:
-            s = f.read().removesuffix('\n')
-    else:
-        p = R(r['kernel_polynomial'])
-        Ds = [D for D in candidates(p, F)
-              if D.nice_model().frobenius_traces_lmfdb() == t]
-        if len(Ds) != 1:
-            raise ValueError('no uniquely defined dual pair')
-        s = str(Ds[0].lmfdb_data())
-    return s
+def dual_pair_string(F, t, p, image_type, traces_big):
+    if image_type == 'big':
+        with open(traces_big[tuple(t)] + '.dualpair') as f:
+            return f.read().removesuffix('\n')
+    Ds = candidates(p, F)
+    if len(Ds) == 1:
+        return str(Ds[0].lmfdb_data())
+    # TODO: pick the correct D using fewer traces
+    Ds = [D for D in Ds if D.nice_model().frobenius_traces_lmfdb() == t]
+    if len(Ds) != 1:
+        raise ValueError('no uniquely defined dual pair')
+    return str(Ds[0].lmfdb_data())
 
 def match(l):
     F = GF(l)
 
     # traces for representations with big image
-    with open('GL2_F' + str(l) + '-traces.txt') as t:
-        traces_big = [eval(x) for x in t.readlines()]
+    with open('GL2_F' + str(l) + '-traces.tsv') as f:
+        tr = [s.split('\t') for s in f.readlines()]
+        traces_big = {tuple(eval(y)): x for x, y in tr}
+        if len(traces_big) != len(tr):
+            raise ValueError('non-unique sequence of traces')
 
-    with open('GL2_F' + str(l) + '-reps.txt') as f:
-        reps = [eval(x) for x in f.readlines()]
+    with open('GL2_F' + str(l) + '-reps.tsv') as f:
+        reps = f.readlines()
 
     for r in reps:
-        print(r['label'] + ': ' + dual_pair_string(F, r, traces_big))
+        label, t, p, image_type = r.split('\t')
+        print(label + '\t' + dual_pair_string(F, eval(t), R(eval(p)),
+                                              image_type, traces_big))

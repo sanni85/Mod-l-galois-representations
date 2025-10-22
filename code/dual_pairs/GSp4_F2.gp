@@ -5,6 +5,8 @@
 
 \r util.gp
 
+default("realprecision", 100);
+
 \\ Reference: D.P. Roberts, Twin sextic algebras, Section 3
 
 duads = concat([[[i, j] | j <- [i+1..6]] | i <- [1..6]]);
@@ -68,22 +70,53 @@ pairs_algebra(f) =
 \\ TODO: adjust precision if needed
 dual_pair_GSp4_F2(f) =
 {
-   my(R = polroots(f), h0, h1, h, q, t0, T, M, red, F, C, D, Phi);
+   my(R = polroots(f), h1, h, q, T, M, red, F, C, D, Phi);
    [h1, q] = pairs_algebra(f);
    if(poldegree(f) == 5,
       R = concat([0], R);
       h1 = subst(f, 'x, 'z) * h1);
-   \\ TODO: can we always take t0 = 0?
-   t0 = 0;
-   T = concat([t0], [substvec(q, ['x, 'y], [R[s[1]], R[s[2]]])
-		     | s <- duads]);
+   T = concat([0], [substvec(q, ['x, 'y], [R[s[1]], R[s[2]]])
+		    | s <- duads]);
    M = Mat([[t^i | t <- T]~ | i <- [0..15]]);
-   h0 = 'z - t0;
-   h = h0 * h1;
+   h = 'z * h1;
    red = [polredabs(q, 1) | q <- factor(h)[,1]];
    F = [r[1] | r <- red];
    C = matconcat([algebra_homomorphism_matrix(h, r[1], r[2]) | r <- red]~);
    D = M * C^-1;
    Phi = bestappr(D~ * Winv * D);
    [F, F, Phi];
+}
+
+\\ partitions of 5 and 6 leading to a_p = 1 mod 2
+ap_1 = [[1, 1, 1, 3], [1, 1, 3], [1, 2, 3], [1, 5], [2, 3], [5]];
+
+ap(h, p) =
+{
+   if(vecsearch(ap_1, apply(poldegree, factormod(h, p)[,1]~)), 1, 0);
+}
+
+compare_traces(h, t) =
+{
+   my(d = poldisc(h), p);
+   for(i = 2, 25,
+      p = prime(i);
+      if(d % p != 0 && t[i] != ap(h, p),
+	 return(0)));
+   return(1);
+}
+
+dual_pair(h, t) =
+{
+   my(H);
+   if(compare_traces(h, t), dual_pair_GSp4_F2(h),
+      H = twin(h); compare_traces(H, t), dual_pair_GSp4_F2(H),
+      error("no match for h = ", h, ", t = ", t));
+}
+
+match() =
+{
+   my(reps = apply(x -> strsplit(x, "	"), readstr("GSp4_F2-reps.tsv")), D);
+   foreach(reps, r,
+      D = dual_pair(Polrev(eval(r[3])), eval(r[2]));
+      print(concat([r[1], "	", Str(to_lmfdb_format(D))])));
 }

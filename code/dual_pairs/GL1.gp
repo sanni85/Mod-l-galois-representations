@@ -4,8 +4,9 @@
 
   Simplified version (only for prime fields) of the code at
   https://gitlab.com/pbruin/abgalrep
-  Returns the dual pair in LMFDB format.
 */
+
+\r util.gp
 
 \\ Return a pair [d, e], where d is the gcd of the elements of v
 \\ and e is a column vector such that v*e = d.
@@ -143,7 +144,7 @@ char_dual_pair_2(D1, chi1, D2, chi2, l, z, z_order) =
       no1 = #orbits1, no2 = #orbits2,
       L1, table1, L2, table2, Mdata, f, incl1, incl2,
       zeta_l, zeta_powers, P0, P, Q0, Q, W, e,
-      polys1, polys2, Phi, d);
+      polys1, polys2);
    [L1, table1] = galois_character_as_table(D1, chi1, z, z_order, 'x);
    [L2, table2] = galois_character_as_table(D2, chi2, z, z_order, 'y);
    Mdata = polcompositum(subst(L1.pol, 'x, 'z),
@@ -175,10 +176,7 @@ char_dual_pair_2(D1, chi1, D2, chi2, l, z, z_order) =
               zeta_powers[liftint(e) + 1]);
    polys1 = concat(['x], vector(no1 - 1, i, L1.pol));
    polys2 = concat(['y], vector(no2 - 1, j, L2.pol));
-   Phi = liftpol(P~ * W * Q) / #orbits1;
-   d = denominator(Phi);
-   [apply(Vecrev, polys1), apply(Vecrev, polys2),
-    [d, [v~ | v <- d * Phi~]]];
+   [polys1, polys2, liftpol(P~ * W * Q) / #orbits1];
 }
 
 \\ Dual pair of algebras attached to a Dirichlet character over F_l
@@ -204,4 +202,15 @@ abgalrep(n, chi, l) =
       d = znorder(Mod(l, o)),
       z = znprimroot(l));
    char_dual_pair_1(D, chi, l, z, l^d - 1);
+}
+
+match() =
+{
+   my(labels = apply(x -> strsplit(x, "	")[1], readstr("GL1-reps.tsv")),
+      m, n, c, D);
+   foreach(labels, label,
+      m = strsplit(label, ".");
+      [n, c] = strsplit(m[4], "-");
+      D = abgalrep(eval(n), eval(c), eval(m[1]));
+      print(concat([label, "	", Str(to_lmfdb_format(D))])));
 }

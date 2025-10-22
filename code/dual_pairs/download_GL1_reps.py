@@ -7,4 +7,4 @@ query = {'dimension': 1}
 projection = {'label': True, 'traces': True}
 
 for x in db.modlgal_reps.search(query, projection):
-    print(x)
+    print(x['label'] + '\t' + str(x['traces']))

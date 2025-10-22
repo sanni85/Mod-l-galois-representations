@@ -16,4 +16,5 @@ projection = {'label': True, 'image_type': True,
               'kernel_polynomial': True, 'traces': True}
 
 for x in db.modlgal_reps.search(query, projection):
-    print(x)
+    print('\t'.join([x['label'], str(x['traces']),
+                     str(x['kernel_polynomial']), x['image_type']]))

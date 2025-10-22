@@ -14,47 +14,55 @@ gp_eval = echo "iferr("$(1)",e,write(\"/dev/stderr\",e);quit(1))" | $(GP) $(2)
 
 BIG_IMAGE_LABELS = 8T12 8T23 24T201 24T1353
 
-BIG_IMAGE_FILES = $(BIG_IMAGE_LABELS:=-fields.txt)
+BIG_IMAGE_FILES = $(BIG_IMAGE_LABELS:=-fields.tsv)
 
 CODOMAINS = GL1 GL2_F2 GL2_F3 GL2_F5 GSp4_F2
 
-all: $(CODOMAINS:=-matches.txt)
+all: dual-pairs.tsv
+
+dual-pairs.tsv: $(CODOMAINS:=-dual-pairs.tsv)
+	sort -V $^ > $@
+
+check: $(CODOMAINS:%=check-%)
+
+check-%: %-dual-pairs.tsv
+	$(SAGE) -c 'load("check.sage"); check("'$*'")'
 
 .DELETE_ON_ERROR:
 
 # Do not delete intermediate files
 .SECONDARY:
 
-%-fields.txt:
+%-fields.tsv:
 	$(PYTHON) download_nf.py $* > $@
 
-GL1-reps.txt:
+GL1-reps.tsv:
 	$(PYTHON) download_GL1_reps.py > $@
 
-GL2_F%-reps.txt:
+GL2_F%-reps.tsv:
 	$(PYTHON) download_reps.py $* > $@
 
-GSp4_F2-reps.txt:
+GSp4_F2-reps.tsv:
 	$(PYTHON) download_reps.py 2 4 > $@
 
 %.dualpair: | $(BIG_IMAGE_FILES)
-	$(call gp_eval,"to_lmfdb_format(dual_pair_from_big_image_field(Polrev("$(shell sed -ne "s/\"$*\".\(.*\)/\1/p" $(BIG_IMAGE_FILES))")))",big_images.gp) > $@
+	$(call gp_eval,"to_lmfdb_format(dual_pair_from_big_image_field(Polrev("$(shell sed -ne "s/$*\t\(.*\)/\1/p" $(BIG_IMAGE_FILES))")))",big_images.gp) > $@
 
 %.traces: %.dualpair
 	$(SAGE) -c 'from dual_pairs.dual_pair_import import dual_pair_import; print(dual_pair_import("'$<'").nice_model().frobenius_traces_lmfdb())' > $@
 
-GL2_F%-traces.txt: $(BIG_IMAGE_FILES)
-	$(MAKE) $(shell sed -e 's/^"\(.*\)".*/\1.traces/' $(BIG_IMAGE_FILES))
-	(for f in $$(($* * $* - 1))*.traces; do echo '("'$$f'", '`cat $$f`')'; done) | sed -e s/\\.traces// > $@
+GL2_F%-traces.tsv: $(BIG_IMAGE_FILES)
+	$(MAKE) $(shell sed -e "s/\(.*\)\t.*/\1.traces/" $(BIG_IMAGE_FILES))
+	(for f in $$(($* * $* - 1))*.traces; do echo -e $$f\\t`cat $$f`; done) | sed -e s/\\.traces// > $@
 
-GL1-matches.txt: GL1-reps.txt
-	$(SAGE) -c 'load("GL1.sage"); match()' > $@
+GL1-dual-pairs.tsv: GL1-reps.tsv
+	$(call gp_eval,"match();",GL1.gp) > $@
 
-GL2_F2-matches.txt: GL2_F2-reps.txt
-	$(SAGE) -c 'load("GL2_F2.sage"); match()' > $@
+GL2_F2-dual-pairs.tsv: GL2_F2-reps.tsv
+	$(call gp_eval,"match();",GL2_F2.gp) > $@
 
-GL2_F%-matches.txt: GL2_F%-traces.txt GL2_F%-reps.txt
+GL2_F%-dual-pairs.tsv: GL2_F%-traces.tsv GL2_F%-reps.tsv
 	$(SAGE) -c 'load("GL2_Fl.sage"); match('$*')' > $@
 
-GSp4_F2-matches.txt: | GSp4_F2-reps.txt
-	$(SAGE) -c 'load("GSp4_F2.sage"); match()' > $@
+GSp4_F2-dual-pairs.tsv: GSp4_F2-reps.tsv
+	$(call gp_eval,"match();",GSp4_F2.gp) > $@

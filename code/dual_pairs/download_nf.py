@@ -13,4 +13,4 @@ query = {'galois_label': argv[1]}
 projection = {'label': True, 'coeffs': True}
 
 for x in db.nf_fields.search(query, projection):
-    print('"' + x['label'] + '"\t' + str(x['coeffs']))
+    print(x['label'] + '\t' + str(x['coeffs']))
