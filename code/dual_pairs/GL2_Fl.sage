@@ -29,15 +29,13 @@ def match(l):
 
     # traces for representations with big image
     with open('GL2_F' + str(l) + '-traces.tsv') as f:
-        tr = [s.split('\t') for s in f.readlines()]
+        tr = [s.removesuffix('\n').split('\t') for s in f]
         traces_big = {tuple(eval(y)): x for x, y in tr}
         if len(traces_big) != len(tr):
             raise ValueError('non-unique sequence of traces')
 
     with open('GL2_F' + str(l) + '-reps.tsv') as f:
-        reps = f.readlines()
-
-    for r in reps:
-        label, t, p, image_type = r.split('\t')
-        print(label + '\t' + dual_pair_string(F, eval(t), R(eval(p)),
-                                              image_type, traces_big))
+        reps = (x.removesuffix('\n').split('\t') for x in f)
+        for label, t, p, image_type in reps:
+            print(label + '\t' + dual_pair_string(F, eval(t), R(eval(p)),
+                                                  image_type, traces_big))

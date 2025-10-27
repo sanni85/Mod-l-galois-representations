@@ -7,14 +7,13 @@ def check(s):
     R = PolynomialRing(QQ, 'x')
 
     with open(s + '-reps.tsv') as f:
-        reps = (x.split('\t') for x in f.readlines())
-        tr = {r[0]: eval(r[1]) for r in reps}
+        reps = (x.removesuffix('\n').split('\t') for x in f)
+        tr = {label: eval(traces) for label, traces, _, _ in reps}
 
     with open(s + '-dual-pairs.tsv') as f:
-        for x in f.readlines():
-            m = x.split('\t')
-            label = m[0]
-            F, G, d_Phi = eval(m[1])
+        pairs = (x.removesuffix('\n').split('\t') for x in f)
+        for label, data in pairs:
+            F, G, d_Phi = eval(data)
             A = FiniteFlatAlgebra(QQ, [R(f) for f in F])
             B = FiniteFlatAlgebra(QQ, [R(g) for g in G])
             Phi = matrix(d_Phi[1]) / d_Phi[0]
