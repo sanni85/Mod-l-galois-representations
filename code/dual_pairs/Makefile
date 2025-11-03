@@ -49,7 +49,7 @@ GSp4_F2-reps.tsv:
 	$(call gp_eval,"to_lmfdb_format(dual_pair_from_big_image_field(Polrev("$(shell sed -ne "s/$*\t\(.*\)/\1/p" $(BIG_IMAGE_FILES))")))",big_images.gp) > $@
 
 %.traces: %.dualpair
-	$(SAGE) -c 'from dual_pairs.dual_pair_import import dual_pair_import; print(dual_pair_import("'$<'").nice_model().frobenius_traces_lmfdb())' > $@
+	$(call gp_eval,"frobenius_traces(dual_pair_import(\"$<\"))",traces.gp) > $@
 
 GL2_F%-traces.tsv: $(BIG_IMAGE_FILES)
 	$(MAKE) $(shell sed -e "s/\(.*\)\t.*/\1.traces/" $(BIG_IMAGE_FILES))

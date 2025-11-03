@@ -2,6 +2,17 @@
   Some utility functions
 */
 
+find(v, P) = for(j = 1, #v, if(P(v[j]), return(j)));
+
+\\ vector p such that vecextract(x, p) = y
+findvec(x, y) = [find(x, t -> t == z) | z <- y];
+
+\\ block matrix formed of square matrices
+matblock(M) =
+{
+   matconcat(matdiagonal([m | m <- M, m != [;]]));
+}
+
 \\ tensor product of two matrices
 mattensor(A, B) =
 {

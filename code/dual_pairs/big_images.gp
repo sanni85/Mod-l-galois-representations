@@ -46,8 +46,6 @@ make_dual_algebra_and_pairing(mu) =
    [['x, f_B], Phi];
 }
 
-find(v, P) = for(j = 1, #v, if(P(v[j]), return(j)));
-
 candidate_incl(K, Aut_K, p) =
 {
    my(L = rnfequation(K, p, 1),
