@@ -26,7 +26,7 @@ dual-pairs.tsv: $(CODOMAINS:=-dual-pairs.tsv)
 check: $(CODOMAINS:%=check-%)
 
 check-%: %-dual-pairs.tsv
-	$(SAGE) -c 'load("check.sage"); check("'$*'")'
+	$(call gp_eval,"check_traces(\"$*\");",traces.gp)
 
 .DELETE_ON_ERROR:
 

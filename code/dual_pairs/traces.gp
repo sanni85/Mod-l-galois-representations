@@ -135,3 +135,18 @@ big_image_traces(l) =
       D = dual_pair_init(from_lmfdb_format(read(concat(s, ".dualpair"))));
       print(concat([s, "	", frobenius_traces(D)])));
 }
+
+check_traces(s) =
+{
+   my(pairs = apply(x -> strsplit(x, "	"),
+		   readstr(concat(s, "-dual-pairs.tsv"))),
+      reps = apply(x -> strsplit(x, "	"),
+		  readstr(concat(s, "-reps.tsv"))),
+      traces = Map(Mat([[x[1], eval(x[2])]~ | x <- reps])~),
+      label, data, D);
+   foreach(pairs, p,
+      [label, data] = [p[1], eval(p[2])];
+      D = dual_pair_init(from_lmfdb_format(data));
+      if(frobenius_traces(D) != mapget(traces, label),
+	 error("mismatch for label ", label)));
+}
