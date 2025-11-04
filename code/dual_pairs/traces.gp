@@ -129,3 +129,11 @@ frobenius_traces(D) =
        liftint(trace(frobenius_matrix(dual_pair_reduce(D, p)))))
     | p <- primes(25)];
 }
+
+big_image_traces(l) =
+{
+   my(labels = externstr(strprintf("cut -f 1 %i*-fields.tsv", l^2 - 1)), D);
+   foreach(labels, s,
+      D = dual_pair_import(concat(s, ".dualpair"));
+      print(concat([s, "	", frobenius_traces(D)])));
+}

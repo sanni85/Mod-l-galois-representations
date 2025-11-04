@@ -48,12 +48,9 @@ GSp4_F2-reps.tsv:
 %.dualpair: | $(BIG_IMAGE_FILES)
 	$(call gp_eval,"to_lmfdb_format(dual_pair_from_big_image_field(Polrev("$(shell sed -ne "s/$*\t\(.*\)/\1/p" $(BIG_IMAGE_FILES))")))",big_images.gp) > $@
 
-%.traces: %.dualpair
-	$(call gp_eval,"frobenius_traces(dual_pair_import(\"$<\"))",traces.gp) > $@
-
 GL2_F%-traces.tsv: $(BIG_IMAGE_FILES)
-	$(MAKE) $(shell sed -e "s/\(.*\)\t.*/\1.traces/" $(BIG_IMAGE_FILES))
-	(for f in $$(($* * $* - 1))*.traces; do echo -e $$f\\t`cat $$f`; done) | sed -e s/\\.traces// > $@
+	$(MAKE) `sed -ne "s/^\($$(($* * $* - 1)).*\)\t.*/\1.dualpair/p" $(BIG_IMAGE_FILES)`
+	$(call gp_eval,"big_image_traces($*)",traces.gp) > $@
 
 GL1-dual-pairs.tsv: GL1-reps.tsv
 	$(call gp_eval,"match();",GL1.gp) > $@
