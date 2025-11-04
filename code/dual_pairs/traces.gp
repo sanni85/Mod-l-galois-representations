@@ -4,15 +4,13 @@
 
 \r util.gp
 
-dual_pair_import(f) =
+dual_pair_init(D) =
 {
-   my(D = read(f),
-      alg1 = [nfinit(Polrev(v)) | v <- D[1]],
-      alg2 = [nfinit(Polrev(v)) | v <- D[2]],
-      B1 = matblock([K[8] | K <- alg1]),
-      B2 = matblock([K[8] | K <- alg2]),
-      phi = B1~^-1 * (1/D[3][1] * Mat([v~ | v <- D[3][2]])~) * B2^-1);
-   [alg1, alg2, phi];
+   my(A = apply(nfinit, D[1]),
+      B = apply(nfinit, D[2]),
+      P = matblock([K[8] | K <- A]),
+      Q = matblock([K[8] | K <- B]));
+   [A, B, P~^-1 * D[3] * Q^-1];
 }
 
 to_col(x) =
@@ -134,6 +132,6 @@ big_image_traces(l) =
 {
    my(labels = externstr(strprintf("cut -f 1 %i*-fields.tsv", l^2 - 1)), D);
    foreach(labels, s,
-      D = dual_pair_import(concat(s, ".dualpair"));
+      D = dual_pair_init(from_lmfdb_format(read(concat(s, ".dualpair"))));
       print(concat([s, "	", frobenius_traces(D)])));
 }

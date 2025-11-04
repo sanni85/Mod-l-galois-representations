@@ -37,14 +37,18 @@ multiplication_tensor(f) =
 algebra_homomorphism_matrix(f, g, a) =
 {
    my(d = poldegree(f), e = poldegree(g));
-   a = Mod(a, g);
-   Mat([Colrev(liftpol(b), e) | b <- powers(a, d - 1)]);
+   Mat([Colrev(liftpol(b), e) | b <- powers(Mod(a, g), d - 1)]);
 }
 
 to_lmfdb_format(D) =
 {
-   my(A, B, Phi, d);
-   [A, B, Phi] = D;
-   d = denominator(Phi);
+   my([A, B, Phi] = D,
+      d = denominator(Phi));
    [apply(Vecrev, A), apply(Vecrev, B), [d, [v~ | v <- d*Phi~]]];
+}
+
+from_lmfdb_format(D) =
+{
+   my([A, B, Phi] = D);
+   [apply(Polrev, A), apply(Polrev, B), 1/Phi[1] * Mat([v~ | v <- Phi[2]])~];
 }
