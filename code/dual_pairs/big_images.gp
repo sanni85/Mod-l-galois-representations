@@ -5,14 +5,6 @@
 
 \r util.gp
 
-\\ express an element of L = (Q[y]/(f))[x]/(g) on the basis
-\\ (1, y, ..., y^(l^2-2), x, y*x, ..., y^(l^2-2)*x^(l^2-l-1))
-algtobasis_rel(g, a, l) =
-{
-   a = liftpol(Mod(a, g));
-   concat([Colrev(polcoef(a, i, 'x), l^2 - 1) | i <- [0..l^2 - l - 1]]);
-}
-
 \\ find generator for an algebra given by a multiplication table
 find_gen(T) =
 {
@@ -68,7 +60,7 @@ candidate_incl(K, Aut_K, p) =
 complete_incl(K, i_1, G, scalars) =
 {
    my(l = #scalars + 1,
-      scalars2 = [subst(u, 'y, 'x) | u <- scalars],
+      scalars2 = subst(scalars, 'y, 'x),
       i = vector(l - 1),
       j, s, t);
    i[1] = i_1;
@@ -90,7 +82,7 @@ good_inclusions(K, g, G, incl_1, scalars) =
     i == Mod(Mod(substvec(liftpol(i), ['x, 'y], ['y, 'x]), g), K.pol)];
 }
 
-hopf_algebra_from_big_image_field(f) =
+hopf_algebra_from_big_image_field(f, K) =
 {
    /*
      The coordinate ring of the group scheme is A = Q × K.
@@ -100,7 +92,6 @@ hopf_algebra_from_big_image_field(f) =
      and absolute degree (l^2 - 1)(l^2 - l).
    */
    my(l = sqrtint(poldegree(f) + 1),
-      K = nfinit(subst(f, 'x, 'y)),
       Aut_K = nfgaloisconj(K),
       g = f / vecprod(['x - Mod(u, K.pol) | u <- Aut_K]),
       \\ projection maps A → Q, A → K
@@ -108,14 +99,14 @@ hopf_algebra_from_big_image_field(f) =
       proj_1 = matconcat([matrix(l^2 - 1, 1), matid(l^2 - 1)]),
       id = matid(l^2),
       \\ inclusion Q → K, multiplication K ⊗ K → K
-      unit_K = algebra_homomorphism_matrix('x, f, 0),
-      mul_K = multiplication_tensor(f),
+      unit_K = nfalgtobasis(K, 1),
+      mul_K = K[9],
       \\ "compositum" map K ⊗ K → L
-      comp = Mat(concat([[algtobasis_rel(g, 'y^j * 'x^i, l)
-			  | j <- [0..l^2 - 2]] | i <- [0..l^2 - 2]])),
+      comp = Mat(concat([[algtobasis_rel(K, g, a * b)
+			  | a <- K.zk] | b <- subst(K.zk, 'y, 'x)])),
       G = nffactor(K, g)[,1],
       order_2 = [u | u <- Aut_K, u != 'y && nfgaloisapply(K, u, u) == 'y][1],
-      order_4, scalar_pol, h, Lsym_to_L, inclusions, incl_1,
+      order_4, scalar_pol, h, Lsym_gen, inclusions, incl_1,
       scalar_mat, isom, candidates, M, mu);
 
    if(l == 3,
@@ -128,21 +119,19 @@ hopf_algebra_from_big_image_field(f) =
    if(#G == 1,
       \\ determine the subalgebra Lsym of L fixed under swapping x and y
       \\ TODO: the element x + y might not always generate Lsym
-      if(!issquare(norm(subst(charpoly(Mod('x + 'y, g)), 'x, 'z)), &h),
+      Lsym_gen = Mod('x + 'y, g);
+      if(!issquare(norm(subst(charpoly(Lsym_gen), 'x, 'z)), &h),
 	 error("polynomial not a square"));
       if(!issquarefree(h),
 	 error("polynomial not square-free: x + y does not generate Lsym"));
-      Lsym_to_L = Mat([algtobasis_rel(g, ('x + 'y)^i, l) |
-		       i <- [0..(l^2 - 1)*(l^2 - l)/2 - 1]]);
       \\ all inclusions K → L factoring via Lsym
-      inclusions = [Lsym_to_L * algebra_homomorphism_matrix(f, h, incl)
-		    | incl <- nfisincl(K, h)],
+      candidates = [subst(incl, 'z, Lsym_gen) | incl <- nfisincl(K, h)];
+      inclusions = [homomorphism_matrix_rel(K, g, incl) | incl <- candidates],
       \\ #G > 1
       incl_1 = candidate_incl(K, Aut_K, G[1]));
 
    foreach(scalar_pol, scalars,
-      scalar_mat = [algebra_homomorphism_matrix(K.pol, K.pol, u)
-		    | u <- scalars[2..l-1]];
+      scalar_mat = [nf_homomorphism_matrix(K, K, u) | u <- scalars[2..l-1]];
       \\ isomorphism A ⊗ A → Q × K^{l+1} × L
       isom = matconcat([mattensor(proj_0, proj_0),
 			mattensor(proj_0, proj_1),
@@ -154,9 +143,7 @@ hopf_algebra_from_big_image_field(f) =
 
       if(#G > 1,
 	 candidates = good_inclusions(K, g, G, incl_1, scalars);
-	 inclusions = [Mat([algtobasis_rel(g, incl^i, l) |
-			    i <- [0..l^2 - 2]])
-		       | incl <- candidates]);
+	 inclusions = [homomorphism_matrix_rel(K, g, incl) | incl <- candidates]);
 
       \\ Try maps K → L until we find one giving a valid Hopf algebra.
       \\ We only need to check coassociativity, all other conditions
@@ -165,7 +152,7 @@ hopf_algebra_from_big_image_field(f) =
 	 M = matconcat([proj_0,
 			proj_1,
 			proj_1,
-			matconcat([s * proj_1 | s <- scalar_mat]~),
+			matconcat(scalar_mat~) * proj_1,
 			unit_K * proj_0,
 			incl * proj_1]~);
 	 mu = matsolve(isom, M);
@@ -175,10 +162,10 @@ hopf_algebra_from_big_image_field(f) =
 
 dual_pair_from_big_image_field(f) =
 {
-   my(B = matconcat([Mat(1), 0; 0, nfinit(f)[8]]),
+   my(K = nfinit(subst(f, 'x, 'y)),
+      B = matconcat([Mat(1), 0; 0, K[8]]),
       F, mu, G, Phi);
-   [F, mu] = hopf_algebra_from_big_image_field(f);
-   mu = mattensor(B, B) * mu * B^-1;
+   [F, mu] = hopf_algebra_from_big_image_field(f, K);
    [G, Phi] = make_dual_algebra_and_pairing(mu);
    [F, G, B~ * Phi];
 }
