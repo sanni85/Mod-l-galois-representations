@@ -94,13 +94,10 @@ hopf_algebra_from_big_image_field(f, K) =
    my(l = sqrtint(poldegree(f) + 1),
       Aut_K = nfgaloisconj(K),
       g = f / vecprod(['x - Mod(u, K.pol) | u <- Aut_K]),
-      \\ projection maps A → Q, A → K
-      proj_0 = matconcat([Mat(1), matrix(1, l^2 - 1)]),
-      proj_1 = matconcat([matrix(l^2 - 1, 1), matid(l^2 - 1)]),
       id = matid(l^2),
-      \\ inclusion Q → K, multiplication K ⊗ K → K
-      unit_K = nfalgtobasis(K, 1),
-      mul_K = K[9],
+      \\ projection maps A → Q, A → K
+      proj_0 = id[1,],
+      proj_1 = id[2..l^2,],
       \\ "compositum" map K ⊗ K → L
       comp = Mat(concat([[algtobasis_rel(K, g, a * b)
 			  | a <- K.zk] | b <- subst(K.zk, 'y, 'x)])),
@@ -119,14 +116,14 @@ hopf_algebra_from_big_image_field(f, K) =
    scalar_mat = powers(nf_homomorphism_matrix(K, K, scalar_pol[2]),
 		       l - 2, matid(l^2 - 1));
 
-   M0 = matconcat([proj_0,
-		   proj_1,
+   \\ homomorphism A → Q × K^{l+1}
+   M0 = matconcat([id,
 		   matconcat(scalar_mat~) * proj_1,
-		   unit_K * proj_0]~);
-   isom = matconcat([mattensor(proj_0, proj_0),
-		     mattensor(proj_0, proj_1),
+		   nfalgtobasis(K, 1) * proj_0]~);
+   \\ isomorphism A ⊗ A → Q × K^{l+1} × L
+   isom = matconcat([mattensor(proj_0, id),
 		     mattensor(proj_1, proj_0),
-		     matconcat([mul_K * mattensor(proj_1, s * proj_1)
+		     matconcat([K[9] * mattensor(proj_1, s * proj_1)
 				| s <- scalar_mat]~),
 		     comp * mattensor(proj_1, proj_1)]~);
 
@@ -163,8 +160,10 @@ hopf_algebra_from_big_image_field(f, K) =
       foreach(candidates, incl,
 	 if(!mapisdefined(incl_map, incl, &M1),
 	    if(#G == 1, incl = subst(incl, 'z, Lsym_gen));
+	    \\ homomorphism A → L
 	    M1 = homomorphism_matrix_rel(K, g, incl) * proj_1;
 	    mapput(incl_map, incl, M1));
+	 \\ homomorphism A → A ⊗ A
 	 mu = matsolve(isom_p, matconcat([M0_p, M1]~));
 	 if(mattensor(mu, id) * mu == mattensor(id, mu) * mu,
 	    return([['x, f], mu]))));
