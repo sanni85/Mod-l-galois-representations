@@ -106,15 +106,29 @@ hopf_algebra_from_big_image_field(f, K) =
 			  | a <- K.zk] | b <- subst(K.zk, 'y, 'x)])),
       G = nffactor(K, g)[,1],
       order_2 = [u | u <- Aut_K, u != 'y && nfgaloisapply(K, u, u) == 'y][1],
-      order_4, scalar_pol, h, Lsym_gen, inclusions, incl_1,
-      scalar_mat, isom, candidates, M, mu);
+      order_4, scalar_pol, scalar_perm, scalar_mat, h, Lsym_gen,
+      candidates, incl_1, incl_map, q, r, isom, isom_p, M0, M0_p, M1, mu);
 
    if(l == 3,
-      scalar_pol = [['y, order_2]],
+      scalar_pol = ['y, order_2];
+      scalar_perm = [[1, 2]],
       l == 5,
       order_4 = [u | u <- Aut_K, u != 'y && u != order_2];
-      scalar_pol = [['y, order_4[1], order_4[2], order_2],
-		    ['y, order_4[2], order_4[1], order_2]]);
+      scalar_pol = ['y, order_4[1], order_2, order_4[2]];
+      scalar_perm = [[1, 2, 4, 3], [1, 4, 2, 3]]);
+   scalar_mat = powers(nf_homomorphism_matrix(K, K, scalar_pol[2]),
+		       l - 2, matid(l^2 - 1));
+
+   M0 = matconcat([proj_0,
+		   proj_1,
+		   matconcat(scalar_mat~) * proj_1,
+		   unit_K * proj_0]~);
+   isom = matconcat([mattensor(proj_0, proj_0),
+		     mattensor(proj_0, proj_1),
+		     mattensor(proj_1, proj_0),
+		     matconcat([mul_K * mattensor(proj_1, s * proj_1)
+				| s <- scalar_mat]~),
+		     comp * mattensor(proj_1, proj_1)]~);
 
    if(#G == 1,
       \\ determine the subalgebra Lsym of L fixed under swapping x and y
@@ -124,38 +138,34 @@ hopf_algebra_from_big_image_field(f, K) =
 	 error("polynomial not a square"));
       if(!issquarefree(h),
 	 error("polynomial not square-free: x + y does not generate Lsym"));
-      \\ all inclusions K → L factoring via Lsym
-      candidates = [subst(incl, 'z, Lsym_gen) | incl <- nfisincl(K, h)];
-      inclusions = [homomorphism_matrix_rel(K, g, incl) | incl <- candidates],
+      candidates = nfisincl(K, h),
       \\ #G > 1
       incl_1 = candidate_incl(K, Aut_K, G[1]));
+   incl_map = Map();
 
-   foreach(scalar_pol, scalars,
-      scalar_mat = [nf_homomorphism_matrix(K, K, u) | u <- scalars[2..l-1]];
-      \\ isomorphism A ⊗ A → Q × K^{l+1} × L
-      isom = matconcat([mattensor(proj_0, proj_0),
-			mattensor(proj_0, proj_1),
-			mattensor(proj_1, proj_0),
-			mul_K * mattensor(proj_1, proj_1),
-			matconcat([mul_K * mattensor(proj_1, s * proj_1)
-				   | s <- scalar_mat]~),
-			comp * mattensor(proj_1, proj_1)]~);
+   foreach(scalar_perm, p,
+      q = concat([[1..l^2],
+		  concat([vector(l^2-1, j, i*(l^2-1)+j+1) | i <- p]),
+		  [l^3-l+2..l^3+l^2-l]]);
+      M0_p = vecextract(M0, q, [1..l^2]);
+      r = concat([[1..2*l^2-1],
+		  concat([vector(l^2-1, j, (i+1)*(l^2-1)+j+1) | i <- p]),
+		  [l^3+l^2-l+1..l^4]]);
+      isom_p = vecextract(isom, r, [1..l^4]);
 
       if(#G > 1,
-	 candidates = good_inclusions(K, g, G, incl_1, scalars);
-	 inclusions = [homomorphism_matrix_rel(K, g, incl) | incl <- candidates]);
+	 candidates = good_inclusions(K, g, G, incl_1,
+				      vecextract(scalar_pol, p)));
 
       \\ Try maps K → L until we find one giving a valid Hopf algebra.
       \\ We only need to check coassociativity, all other conditions
       \\ hold by construction.
-      foreach(inclusions, incl,
-	 M = matconcat([proj_0,
-			proj_1,
-			proj_1,
-			matconcat(scalar_mat~) * proj_1,
-			unit_K * proj_0,
-			incl * proj_1]~);
-	 mu = matsolve(isom, M);
+      foreach(candidates, incl,
+	 if(!mapisdefined(incl_map, incl, &M1),
+	    if(#G == 1, incl = subst(incl, 'z, Lsym_gen));
+	    M1 = homomorphism_matrix_rel(K, g, incl) * proj_1;
+	    mapput(incl_map, incl, M1));
+	 mu = matsolve(isom_p, matconcat([M0_p, M1]~));
 	 if(mattensor(mu, id) * mu == mattensor(id, mu) * mu,
 	    return([['x, f], mu]))));
 }
