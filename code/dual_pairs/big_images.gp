@@ -43,7 +43,7 @@ candidate_incl(K, Aut_K, p) =
    my(L = rnfequation(K, p, 1),
       \\ compute all inclusions K -> L = K[x]/(p)
       \\ (via the corresponding absolute number field)
-      incl_abs = nfisincl(K, L[1]),
+      incl_abs = nfisincl(K, L[1], 2),
       incl_rel = subst(incl_abs, 'x, Mod('x, p) + L[3] * Mod('y, K.pol)),
       \\ find the ones that are do not correspond to just taking of the
       \\ coordinates multiplied by a scalar
@@ -135,7 +135,7 @@ hopf_algebra_from_big_image_field(f, K) =
 	 error("polynomial not a square"));
       if(!issquarefree(h),
 	 error("polynomial not square-free: x + y does not generate Lsym"));
-      candidates = nfisincl(K, h),
+      candidates = nfisincl(K, h, 2),
       \\ #G > 1
       incl_1 = candidate_incl(K, Aut_K, G[1]));
    incl_map = Map();
