@@ -104,7 +104,7 @@ hopf_algebra_from_big_image_field(f, K) =
       G = nffactor(K, g)[,1],
       order_2 = [u | u <- Aut_K, u != 'y && nfgaloisapply(K, u, u) == 'y][1],
       order_4, scalar_pol, scalar_perm, scalar_mat, h, Lsym_gen,
-      candidates, incl_1, incl_map, q, r, isom, isom_p, M0, M0_p, M1, mu);
+      candidates, incl_1, incl_map, j, q, r, isom, isom_p, M0, M0_p, M1, mu);
 
    if(l == 3,
       scalar_pol = ['y, order_2];
@@ -159,9 +159,9 @@ hopf_algebra_from_big_image_field(f, K) =
       \\ hold by construction.
       foreach(candidates, incl,
 	 if(!mapisdefined(incl_map, incl, &M1),
-	    if(#G == 1, incl = subst(incl, 'z, Lsym_gen));
+	    j = if(#G == 1, subst(incl, 'z, Lsym_gen), incl);
 	    \\ homomorphism A → L
-	    M1 = homomorphism_matrix_rel(K, g, incl) * proj_1;
+	    M1 = homomorphism_matrix_rel(K, g, j) * proj_1;
 	    mapput(incl_map, incl, M1));
 	 \\ homomorphism A → A ⊗ A
 	 mu = matsolve(isom_p, matconcat([M0_p, M1]~));
