@@ -1,0 +1,3 @@
+[submodule "code/dual_pairs"]
+	path = code/dual_pairs
+	url = git@gitlab.com:pbruin/dual-pairs-lmfdb.git
